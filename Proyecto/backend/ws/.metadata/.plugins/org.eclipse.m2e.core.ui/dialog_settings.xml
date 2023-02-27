@@ -2,8 +2,14 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
-			<item value="F:\4ºCarrera\SEGUNDO CUATRI\TFG\repositorio\Proyecto\backend\ws\demo"/>
+			<item value="F:\demo"/>
+			<item value="F:\4ºCarrera\demo"/>
+			<item value="F:\4ºCarrera\SEGUNDO CUATRI\demo"/>
+			<item value="F:\4ºCarrera\SEGUNDO CUATRI\TFG\demo"/>
+			<item value="C:\Users\aleca\Desktop\demo"/>
 			<item value="C:\Users\aleca\Downloads\demo\demo"/>
+			<item value="F:\4ºCarrera\SEGUNDO CUATRI\TFG\demo\demo"/>
+			<item value="F:\4ºCarrera\SEGUNDO CUATRI\TFG\repositorio\Proyecto\backend\ws\demo"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
