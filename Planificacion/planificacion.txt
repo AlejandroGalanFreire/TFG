@@ -1,0 +1,39 @@
+TAREAS PARA PLANIFICACION TFG
+
+- Investigacion
+	- páginas similares
+	- fuentes de informacion
+	- APIs
+	- tecnologias
+
+- Analisis de requisitos
+	- Definir el propósito y alcance del proyecto
+	- Definir objetivos del proyecto
+	- Definir requisitos de alto nivel
+
+- Diseño
+	- diagramas de casos de uso
+	- diagramas de clases
+	- diagramas de secuencia
+	- prototipos
+	- diseño BD
+
+- Implementacion
+
+- Pruebas
+	- pruebas unitarias
+	- pruebas de integracion
+	- pruebas de sistema
+	- pruebas de usabilidad (hacer con familiares y amigos poniendoles tareas)
+	- pruebas de calidad (sonarqube)
+
+- revision
+
+- presentacion
+
+- Documentacion
+	documentacion de todos las tareas que constan en este documento
+	mas que poner un apartado concreto en la planificacion, como es algo que se va a ir
+	haciendo paralelamente al desarrollo de los apartados podemos especificarlo antes de la
+	imagen del project diciendo que se realizara dicha documentacion de todas las tareas
+	de forma paralela a su realizacion
