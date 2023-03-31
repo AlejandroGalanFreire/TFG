@@ -1,0 +1,52 @@
+.tableContainer{
+  position: relative;
+  width: 100%;
+  margin: 0;
+  height: 91%;
+
+  ::-webkit-scrollbar{
+    width: 8px;
+    background: #efefef;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background: rgb(84, 172, 121);
+    border-radius: 10px;
+  }
+}
+
+.table1{
+  position: relative;
+  top: 2%;
+  margin-left: 5%;
+  width: 90%;
+  height: 50%;
+  overflow: auto;
+}
+
+.table1Data{
+  position: relative;
+  width: 100%;
+  height: 50%;
+}
+
+th{
+  background-color: rgb(84, 172, 121);
+}
+
+td{
+  background-color: azure;
+}
+
+td, th{
+  border: solid;
+  border-color: rgb(219, 149, 9);
+  border-width: 2px;
+  padding: 20px;
+}
+
+app-pages{
+  position: relative;
+  top: 1%;
+}

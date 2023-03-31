@@ -1,0 +1,29 @@
+app-header{
+  padding: 30px;
+  background: skyblue;
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  top: 0;
+  text-align: center;
+}
+
+app-main{
+  position: absolute;
+  top: 93.7px;
+  bottom: 93.7px;
+  width: 100%;
+  overflow: auto;
+  margin: 0;
+  background-color: antiquewhite;
+}
+
+app-footer{
+  padding: 30px;
+  background: skyblue;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  margin: 0;
+  text-align: center;
+}
