@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="F:\demo2"/>
 			<item value="F:\demo"/>
 			<item value="F:\4ºCarrera\demo"/>
 			<item value="F:\4ºCarrera\SEGUNDO CUATRI\demo"/>
@@ -19,5 +20,9 @@
 			<item value="[groupId].[artifactId]-[version]"/>
 			<item value="[name]"/>
 		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
 	</section>
 </section>
