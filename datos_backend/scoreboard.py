@@ -64,7 +64,7 @@ class Scoreboard(Endpoint):
         self.west_conf_standings_by_day = Endpoint.DataSet(data=data_sets['WestConfStandingsByDay'])
         
         
-objScoreboard = Scoreboard()
+objScoreboard = Scoreboard(game_date="2022-04-10")
 objScoreboard.load_response()
 # primerDataset = objScoreboard.get_response() # G = jugados W = ganados L = perdidos W_PCT = porcentaje de vistorias
 
@@ -73,15 +73,18 @@ scoreboard_dictionary = json.loads(scoreboard_string)
 east_conference = scoreboard_dictionary['resultSets'][4]
 east_conference.pop('name')
 east_conference.pop('headers')
-weast_conference = scoreboard_dictionary['resultSets'][5]
 scoreboard_east_df = pd.DataFrame(east_conference)
 scoreboard_east_df.to_csv('scoreboard_eastConference.csv')
 
-print(scoreboard_dictionary)
-print(type(scoreboard_dictionary['resultSets']))
+weast_conference = scoreboard_dictionary['resultSets'][5]
+weast_conference.pop('name')
+weast_conference.pop('headers')
+weast_conference_df = pd.DataFrame(weast_conference)
+weast_conference_df.to_csv('scoreboard_westConference.csv')
 
 
-## TODO: poner la liga del año pasado
-## TODO: clasificacion de conferencia weast
-## TODO: encontrar el equipo en función del id
-## TODO: almacenar en base de datos y visualizar con la app
+#print(scoreboard_dictionary)
+#print(type(scoreboard_dictionary['resultSets']))
+
+
+

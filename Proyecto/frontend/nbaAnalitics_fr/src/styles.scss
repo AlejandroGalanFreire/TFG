@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+app-root{
+  ::-webkit-scrollbar{
+    width: 8px;
+    background: rgb(216, 157, 157);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background: red;
+    border-radius: 10px;
+  }
+}

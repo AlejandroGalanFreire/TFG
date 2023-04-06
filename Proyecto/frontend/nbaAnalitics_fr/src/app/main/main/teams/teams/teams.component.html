@@ -1,1 +1,16 @@
-<p>teams works!</p>
+<div class="tableContainer">
+  <div class="table1">
+    <table class="table1Data">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of teamsStats">
+          <td>{{ item.team_name }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

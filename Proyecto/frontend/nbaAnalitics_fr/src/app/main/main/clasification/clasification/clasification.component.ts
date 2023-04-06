@@ -9,14 +9,21 @@ import { DataService } from 'src/app/services/data-service.service';
 })
 export class ClasificationComponent implements OnInit {
 
-  data: ElemScoreboard[] = [];
+  eastClasificationData: ElemScoreboard[] = [];
+  westClasificationData: ElemScoreboard[] = [];
 
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.dataService.getData().subscribe(
+    this.dataService.getEastClasification().subscribe(
       (resp: any) => {
-        this.data = JSON.parse(resp)
+        this.eastClasificationData = JSON.parse(resp)
+      }
+    );
+
+    this.dataService.getWestClasification().subscribe(
+      (resp: any) => {
+        this.westClasificationData = JSON.parse(resp)
       }
     );
   }
