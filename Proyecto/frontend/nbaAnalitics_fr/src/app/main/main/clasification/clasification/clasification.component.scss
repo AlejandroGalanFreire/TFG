@@ -16,7 +16,7 @@
   }
 }
 
-.table1{
+.table1, .table2{
   position: relative;
   top: 2%;
   margin-left: 5%;
@@ -26,12 +26,7 @@
 }
 
 .table2{
-  position: relative;
   top: 5%;
-  margin-left: 5%;
-  width: 90%;
-  height: 50%;
-  overflow: auto;
 }
 
 .table1Data{

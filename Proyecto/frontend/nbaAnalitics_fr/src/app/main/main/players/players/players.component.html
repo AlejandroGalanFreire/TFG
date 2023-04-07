@@ -1,1 +1,64 @@
-<p>players works!</p>
+<div class="tableContainer">
+  <div class="table">
+    <table class="tableData">
+      <thead>
+        <tr>
+          <th>Jugador</th>
+          <th>Equipo</th>
+          <th>PJ</th>
+          <th>WON</th>
+          <th>LOST</th>
+          <th>WON_PCT</th>
+          <th>PTS</th>
+          <th>FGM</th>
+          <th>FGA</th>
+          <th>FG_PCT</th>
+          <th>FG3M</th>
+          <th>FG3A</th>
+          <th>FG3_PCT</th>
+          <th>FTM</th>
+          <th>FTA</th>
+          <th>FT_PCT</th>
+          <th>OREB</th>
+          <th>DREB</th>
+          <th>REB</th>
+          <th>AST</th>
+          <th>TOV</th>
+          <th>STL</th>
+          <th>BLK</th>
+          <th>BLKA</th>
+          <th>PF</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of playersStats">
+          <td>{{ item.player_name }}</td>
+          <td>{{ item.team_abbrev }}</td>
+          <td>{{ item.gp }}</td>
+          <td>{{ item.won }}</td>
+          <td>{{ item.lost }}</td>
+          <td>{{ item.won_PCT }}</td>
+          <td>{{ item.pts }}</td>
+          <td>{{ item.fgm }}</td>
+          <td>{{ item.fga }}</td>
+          <td>{{ item.fg_PCT }}</td>
+          <td>{{ item.fg3M }}</td>
+          <td>{{ item.fg3A }}</td>
+          <td>{{ item.fg3_PCT }}</td>
+          <td>{{ item.ftm }}</td>
+          <td>{{ item.fta }}</td>
+          <td>{{ item.ft_PCT }}</td>
+          <td>{{ item.oreb }}</td>
+          <td>{{ item.dreb }}</td>
+          <td>{{ item.reb }}</td>
+          <td>{{ item.ast }}</td>
+          <td>{{ item.tov }}</td>
+          <td>{{ item.stl }}</td>
+          <td>{{ item.blk }}</td>
+          <td>{{ item.blka }}</td>
+          <td>{{ item.pf }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

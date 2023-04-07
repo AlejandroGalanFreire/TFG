@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TeamStats } from 'src/app/models/teamStats';
 import { DataService } from 'src/app/services/data-service.service';
 
@@ -7,7 +7,7 @@ import { DataService } from 'src/app/services/data-service.service';
   templateUrl: './teams.component.html',
   styleUrls: ['./teams.component.scss']
 })
-export class TeamsComponent {
+export class TeamsComponent implements OnInit{
 
   teamsStats: TeamStats[] = [];
 

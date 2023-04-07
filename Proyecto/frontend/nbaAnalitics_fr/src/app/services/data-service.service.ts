@@ -10,6 +10,7 @@ export class DataService {
   private scoreboardEastUrl = 'http://localhost:8080/rest/scoreboard/east';
   private scoreboardWestUrl = 'http://localhost:8080/rest/scoreboard/west';
   private teamsStatsUrl = 'http://localhost:8080/rest/teamstats';
+  private playersStatsUrl = 'http://localhost:8080/rest/playerstats';
 
   constructor(private http: HttpClient) { }
 
@@ -24,5 +25,9 @@ export class DataService {
 
   getTeamsStats(){
     return this.http.get(this.teamsStatsUrl, {responseType: 'text'});
+  }
+
+  getPlayersStats(){
+    return this.http.get(this.playersStatsUrl, {responseType: 'text'});
   }
 }
