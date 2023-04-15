@@ -1,24 +1,11 @@
-<!-- header -->
-<app-header></app-header>
+<!-- <mat-form-field appearance="fill">
+  <mat-label>Input</mat-label>
+  <input placeholder="Name">
+</mat-form-field> -->
 
-<!-- Barra de navegación -->
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="" tooltip="Inicio" placement="bottom">Inicio</a></li>
-      <li><a href="/clasification" tooltip="Clasificación" placement="bottom">Clasificación</a></li>
-      <li><a href="/players" tooltip="Jugadores" placement="bottom">Jugadores</a></li>
-      <li><a href="/teams" tooltip="Equipos" placement="bottom">Equipos</a></li>
-      <li><a href="/matchs" tooltip="Partidos" placement="bottom">Partidos</a></li>
-      <li><a href="/information" tooltip="Información" placement="bottom">Información</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- contenido principal -->
-<div class="routerContainer">
-  <router-outlet></router-outlet>
-</div>
-
-<!-- footer -->
-<app-footer></app-footer>
+<mat-form-field class="example-full-width" appearance="fill">
+  <mat-label>Choose a date</mat-label>
+  <input matInput [matDatepicker]="picker">
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+<button mat-raised-button (click)="picker.open()">Open</button>
