@@ -6,5 +6,16 @@
   <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
   <mat-datepicker #picker></mat-datepicker>
 </mat-form-field>
+<div class="gamesContainer row">
+  <div class="game col-3" *ngFor="let item of gamesStats">
+    <div>
+      <img src="assets/img/{{item[0].team_abbreviation}}.png">
+      VS
+      <img src="assets/img/{{item[1].team_abbreviation}}.png">
+    </div>
+    <div class="estadisticas">
+      <button>Estadísticas</button>
+    </div>
+  </div>
+</div>
 
-<div *ngFor="let item of gamesStats">{{item[0].team_abbreviation}} vs {{item[1].team_abbreviation}}</div>

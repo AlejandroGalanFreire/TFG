@@ -5,3 +5,22 @@ mat-form-field{
   height: 90px;
   background-color: whitesmoke;
 }
+
+.gamesContainer{
+  display: flex;
+  gap: 10px;
+}
+
+.game{
+  margin-left: 2.5%;
+  //width: 25%;
+  border: 5px solid;
+  padding: 15px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.estadisticas{
+  text-align: center;
+}

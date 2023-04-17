@@ -24,8 +24,7 @@ export class MatchsComponent {
       + this.formatMonthAndDay(date.getDate());
       this.dataService.getGamesStatsByDate(this.selectedDate).subscribe(
         (resp: any) => {
-          this.gamesStats = JSON.parse(resp)
-          console.log(this.gamesStats[0][0].team_abbreviation);
+          this.gamesStats = JSON.parse(resp);
         }
       );
     });
@@ -44,4 +43,9 @@ export class MatchsComponent {
     }
     return numero.toString();
   }
+
+  getImage(item: string){
+    return `assets/img/ATL.png`;
+  }
+
 }
