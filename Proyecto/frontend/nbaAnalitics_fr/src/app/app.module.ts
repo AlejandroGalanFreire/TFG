@@ -19,6 +19,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatchDetailComponent } from './main/main/matchs/matchs/match-detail/match-detail.component';
 
 const appRoutes: Routes=[
   {path: '', component: HomeComponent},
@@ -26,7 +27,8 @@ const appRoutes: Routes=[
   {path: 'players', component: PlayersComponent},
   {path: 'teams', component: TeamsComponent},
   {path: 'information', component: InfoComponent},
-  {path: 'matchs', component: MatchsComponent}
+  {path: 'matchs', component: MatchsComponent},
+  {path: 'matchDetail', component: MatchDetailComponent}
 ]
 
 @NgModule({
@@ -39,7 +41,8 @@ const appRoutes: Routes=[
     PlayersComponent,
     TeamsComponent,
     InfoComponent,
-    MatchsComponent
+    MatchsComponent,
+    MatchDetailComponent
   ],
   imports: [
     BrowserModule,

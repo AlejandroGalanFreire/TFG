@@ -3,6 +3,7 @@ import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { GameStats } from 'src/app/models/gameStats';
 import { DataService } from 'src/app/services/data-service.service';
+import { HomeService } from '../../services/home.service';
 
 @Component({
   selector: 'app-matchs',
@@ -16,7 +17,8 @@ export class MatchsComponent {
   currentDate: Observable<Date> = this.currentDateSubject.asObservable();
   selectedDate: string = "";
 
-  constructor(private dataService: DataService){}
+  constructor(private dataService: DataService,
+    private readonly homeService: HomeService){}
 
   ngOnInit(): void {
     this.currentDate.subscribe(date => {
@@ -44,8 +46,8 @@ export class MatchsComponent {
     return numero.toString();
   }
 
-  getImage(item: string){
-    return `assets/img/ATL.png`;
+  setMatchSelectedDetail(item: GameStats[]){
+    this.homeService.setMatchSelectedDetail(item);
   }
 
 }

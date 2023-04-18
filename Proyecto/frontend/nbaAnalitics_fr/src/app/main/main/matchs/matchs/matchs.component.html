@@ -14,7 +14,9 @@
       <img src="assets/img/{{item[1].team_abbreviation}}.png">
     </div>
     <div class="estadisticas">
-      <button>Estadísticas</button>
+      <button [routerLink]="['/matchDetail']"
+              routerLinkActive="router-link-active"
+              (click)="setMatchSelectedDetail(item)">Estadísticas</button>
     </div>
   </div>
 </div>
