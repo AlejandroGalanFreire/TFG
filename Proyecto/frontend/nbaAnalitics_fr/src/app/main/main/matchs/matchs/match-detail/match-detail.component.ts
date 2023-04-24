@@ -16,7 +16,7 @@ export class MatchDetailComponent implements OnInit{
   ngOnInit(): void {
     this.homeService.currentMatch.subscribe(data => {
       this.stats = data;
-
+      console.log(this.stats);
     });
   }
 
