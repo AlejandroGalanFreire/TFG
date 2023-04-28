@@ -28,6 +28,10 @@ export class GameStats{
 	tov:number;
 	pf:number;
 	plus_minus:number;
+  period1Score:number;
+  period2Score:number;
+  period3Score:number;
+  period4Score:number;
 
   constructor(id:number,
     season_id:number,
@@ -57,7 +61,11 @@ export class GameStats{
     stl:number,
     blk:number,
     pf:number,
-    plus_minus:number){
+    plus_minus:number,
+    period1Score:number,
+    period2Score:number,
+    period3Score:number,
+    period4Score:number){
       this.id = id;
       this.season_id = season_id;
       this.team_id = team_id;
@@ -87,6 +95,10 @@ export class GameStats{
       this.plus_minus = plus_minus;
       this.pf = pf;
       this.pts = pts;
+      this.period1Score = period1Score;
+      this.period2Score = period2Score;
+      this.period3Score = period3Score;
+      this.period4Score = period4Score;
   }
 
 }

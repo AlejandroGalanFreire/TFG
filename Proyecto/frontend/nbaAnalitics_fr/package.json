@@ -23,7 +23,9 @@
     "@material/tooltip": "^14.0.0",
     "@popperjs/core": "^2.11.7",
     "bootstrap": "^5.2.3",
+    "chart.js": "^4.3.0",
     "jquery": "^3.6.4",
+    "ng2-charts": "^4.1.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
@@ -32,6 +34,7 @@
     "@angular-devkit/build-angular": "^15.2.0",
     "@angular/cli": "~15.2.0",
     "@angular/compiler-cli": "^15.2.0",
+    "@types/chart.js": "^2.9.37",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",

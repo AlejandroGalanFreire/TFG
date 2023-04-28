@@ -20,6 +20,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatchDetailComponent } from './main/main/matchs/matchs/match-detail/match-detail.component';
+import { NgChartsModule  } from 'ng2-charts';
 
 const appRoutes: Routes=[
   {path: '', component: HomeComponent},
@@ -54,6 +55,7 @@ const appRoutes: Routes=[
     MatInputModule,
     MatNativeDateModule,
     BrowserAnimationsModule,
+    NgChartsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
