@@ -25,21 +25,8 @@ export class MatchDetailComponent implements OnInit{
     this.homeService.currentMatch.subscribe(data => {
       this.stats = data;
 
-      this.initLineChart()
-      // first teams
-      // const team1 = this.stats[0];
-      // if(team1){
-      //   const periodsTeam1 = [team1.period1Score, team1.period2Score, team1.period3Score, team1.period4Score]
-      //   this.lineChartData = [
-      //     {
-      //       data: periodsTeam1,
-      //       label: team1.team_name,
-      //       backgroundColor: 'rgba(77, 192, 232, 0.3)',
-      //       borderColor: 'rgba(77, 192, 232, 0.8)',
-      //       fill: false
-      //     }
-      //   ];
-      // }
+      this.initLineChart();
+      this.initBarChart();
 
     });
   }
@@ -49,33 +36,57 @@ export class MatchDetailComponent implements OnInit{
     const ctx = lineChartCanvas.getContext('2d');
 
     const team1 = this.stats[0];
+    const team2 = this.stats[1];
 
     var lineChartData = {
       labels: ["1º Cuarto","2º Cuarto","3º Cuarto","4º Cuarto "],
-      datasets: [{
-        label: team1.team_name,
-        data: [team1.period1Score, team1.period2Score, team1.period3Score, team1.period4Score]
-      }]
-    };
-
-    var lineChartOptions = {
-      legend: {
-        display: true,
-        position: 'top',
-        labels: {
-          boxWidth: 80,
-          fontColor: 'black'
+      datasets: [
+        {
+          label: team1.team_name,
+          data: [team1.period1Score, team1.period2Score, team1.period3Score, team1.period4Score]
+        },
+        {
+          label: team2.team_name,
+          data: [team2.period1Score, team2.period2Score, team2.period3Score, team2.period4Score]
         }
-      }
-    }
+      ]
+    };
 
     if(ctx){
       var lineChart = new Chart(ctx, {
         type: 'line',
         data: lineChartData,
-        // options: lineChartOptions
       });
     }
   }
 
+
+  initBarChart(){
+    var barChartCanvas = document.getElementById("barChart") as HTMLCanvasElement;
+    const ctx = barChartCanvas.getContext('2d');
+
+    const team1 = this.stats[0];
+    const team2 = this.stats[1];
+
+    var barChartData = {
+      labels: ["Asistencias","Rebotes", "Robos"],
+      datasets: [
+        {
+          label: team1.team_name,
+          data: [team1.ast, team1.reb, team1.stl]
+        },
+        {
+          label: team2.team_name,
+          data: [team2.ast, team2.reb, team2.stl]
+        }
+      ]
+    };
+
+    if(ctx){
+      var barChart = new Chart(ctx, {
+        type: 'bar',
+        data: barChartData,
+      });
+    }
+  }
 }
