@@ -25,8 +25,10 @@ export class MatchDetailComponent implements OnInit{
     this.homeService.currentMatch.subscribe(data => {
       this.stats = data;
 
+      // creación de los gráficos
       this.initLineChart();
       this.initBarChart();
+      this.initRadarChart();
 
     });
   }
@@ -49,7 +51,10 @@ export class MatchDetailComponent implements OnInit{
           label: team2.team_name,
           data: [team2.period1Score, team2.period2Score, team2.period3Score, team2.period4Score]
         }
-      ]
+      ],
+      options: {
+        responsive: true
+      }
     };
 
     if(ctx){
@@ -86,6 +91,35 @@ export class MatchDetailComponent implements OnInit{
       var barChart = new Chart(ctx, {
         type: 'bar',
         data: barChartData,
+      });
+    }
+  }
+
+  initRadarChart(){
+    var radarChartCanvas = document.getElementById("radarChart") as HTMLCanvasElement;
+    const ctx = radarChartCanvas.getContext('2d');
+
+    const team1 = this.stats[0];
+    const team2 = this.stats[1];
+
+    var radarChartData = {
+      labels: ["Tiros","Tiros libres", "Triples"],
+      datasets: [
+        {
+          label: team1.team_name,
+          data: [team1.fg_pct * 100, team1.ft_pct * 100, team1.fg3_pct * 100]
+        },
+        {
+          label: team2.team_name,
+          data: [team2.fg_pct * 100, team2.ft_pct * 100, team2.fg3_pct * 100]
+        }
+      ]
+    };
+
+    if(ctx){
+      var radarChart = new Chart(ctx, {
+        type: 'radar',
+        data: radarChartData,
       });
     }
   }
