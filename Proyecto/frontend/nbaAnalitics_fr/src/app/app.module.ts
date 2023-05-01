@@ -21,6 +21,9 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatchDetailComponent } from './main/main/matchs/matchs/match-detail/match-detail.component';
 import { NgChartsModule  } from 'ng2-charts';
+import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './pipes/filter.pipe';
+import { PlayerDetailComponent } from './main/main/players/players/player-detail/player-detail/player-detail.component';
 
 const appRoutes: Routes=[
   {path: '', component: HomeComponent},
@@ -29,7 +32,8 @@ const appRoutes: Routes=[
   {path: 'teams', component: TeamsComponent},
   {path: 'information', component: InfoComponent},
   {path: 'matchs', component: MatchsComponent},
-  {path: 'matchDetail', component: MatchDetailComponent}
+  {path: 'matchDetail', component: MatchDetailComponent},
+  {path: 'playerDetail', component: PlayerDetailComponent}
 ]
 
 @NgModule({
@@ -43,7 +47,9 @@ const appRoutes: Routes=[
     TeamsComponent,
     InfoComponent,
     MatchsComponent,
-    MatchDetailComponent
+    MatchDetailComponent,
+    FilterPipe,
+    PlayerDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +62,7 @@ const appRoutes: Routes=[
     MatNativeDateModule,
     BrowserAnimationsModule,
     NgChartsModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

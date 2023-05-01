@@ -3,7 +3,6 @@ import { HomeService } from '../../../services/home.service';
 import { GameStats } from 'src/app/models/gameStats';
 import { ChartDataset, ChartOptions } from 'chart.js';
 import Chart from 'chart.js/auto';
-// import { Chart } from 'chart.js/dist';
 
 @Component({
   selector: 'app-match-detail',

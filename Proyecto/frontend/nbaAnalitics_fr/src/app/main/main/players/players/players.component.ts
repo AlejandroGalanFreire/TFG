@@ -10,6 +10,7 @@ import { DataService } from 'src/app/services/data-service.service';
 export class PlayersComponent implements OnInit{
 
   playersStats: PlayerStats[] = [];
+  filterData = '';
 
   constructor(private dataService: DataService){}
 

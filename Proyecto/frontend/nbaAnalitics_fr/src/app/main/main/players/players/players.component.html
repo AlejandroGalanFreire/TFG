@@ -1,3 +1,4 @@
+<input type="text" class="form-control" placeholder="Buscar..." name = "filterData" [(ngModel)]="filterData">
 <div class="tableContainer">
   <div class="table">
     <table class="tableData">
@@ -31,8 +32,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let item of playersStats">
-          <td>{{ item.player_name }}</td>
+        <tr *ngFor="let item of playersStats | filter:filterData">
+          <td><a href="/playerDetail">{{ item.player_name }}</a></td>
           <td>{{ item.team_abbrev }}</td>
           <td>{{ item.gp }}</td>
           <td>{{ item.won }}</td>
