@@ -21,7 +21,7 @@ public class PlayerStatsController {
 	 * @return todos los jugadores y sus estadísticas
 	 */
 	@GetMapping("/playerstats")
-	public List<PlayerStats> getTeamsStats(){
+	public List<PlayerStats> getPlayerStats(){
 		return psService.findAllPlayersStats();
 	}
 }

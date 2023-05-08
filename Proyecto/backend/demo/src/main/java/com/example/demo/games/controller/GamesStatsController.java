@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.games.model.GameStats;
+import com.example.demo.games.model.Periods;
 import com.example.demo.games.service.GamesStatsService;
 
 @RestController
@@ -43,7 +44,21 @@ public class GamesStatsController {
 			if(!hasGame(allTeamsOfGames.get(i), games)) {
 				GameStats[] game = new GameStats[2];
 				game[0] = allTeamsOfGames.get(i);
+				// obtener puntos en los distintos cuartos del equipo
+				Periods cuartosTeam1 = gsService.findPeriodsOfTeamInGame(Integer.parseInt(game[0].getGame_id()), game[0].getTeam_id());
+				game[0].setPeriod1Score(cuartosTeam1.getPeriod1Score());
+				game[0].setPeriod2Score(cuartosTeam1.getPeriod2Score());
+				game[0].setPeriod3Score(cuartosTeam1.getPeriod3Score());
+				game[0].setPeriod4Score(cuartosTeam1.getPeriod4Score());
+				
 				game[1] = findOpponent(allTeamsOfGames.get(i), allTeamsOfGames);
+				// obtener puntos en los distintos cuartos del equipo
+				Periods cuartosTeam2 = gsService.findPeriodsOfTeamInGame(Integer.parseInt(game[1].getGame_id()), game[1].getTeam_id());
+				game[1].setPeriod1Score(cuartosTeam2.getPeriod1Score());
+				game[1].setPeriod2Score(cuartosTeam2.getPeriod2Score());
+				game[1].setPeriod3Score(cuartosTeam2.getPeriod3Score());
+				game[1].setPeriod4Score(cuartosTeam2.getPeriod4Score());
+				
 				games.add(game);				
 			}
 		}

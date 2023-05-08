@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PlayerStats } from 'src/app/models/playerStats';
 import { DataService } from 'src/app/services/data-service.service';
+import { HomeService } from '../../services/home.service';
 
 @Component({
   selector: 'app-players',
@@ -12,7 +13,8 @@ export class PlayersComponent implements OnInit{
   playersStats: PlayerStats[] = [];
   filterData = '';
 
-  constructor(private dataService: DataService){}
+  constructor(private dataService: DataService,
+    private readonly homeService: HomeService){}
 
   ngOnInit(): void {
     this.dataService.getPlayersStats().subscribe(
@@ -20,5 +22,9 @@ export class PlayersComponent implements OnInit{
         this.playersStats = JSON.parse(resp)
       }
     );
+  }
+
+  setPlayerSelectedDetail(player: PlayerStats) {
+    this.homeService.setPlayerSelectedDetail(player);
   }
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeService } from '../../../services/home.service';
 import { GameStats } from 'src/app/models/gameStats';
-import { ChartDataset, ChartOptions } from 'chart.js';
 import Chart from 'chart.js/auto';
 
 @Component({
@@ -12,17 +11,14 @@ import Chart from 'chart.js/auto';
 export class MatchDetailComponent implements OnInit{
 
   private stats: GameStats[] = [];
-  public lineChartData: ChartDataset[] = []; // datos a mostrar en el gráfico
-  public lineChartLabels: Array<any> = ['1º cuarto', '2º cuarto', '3º cuarto', '4º cuarto'];
-  public lineChartOptions: ChartOptions = {
-    responsive: true,
-  };
+
 
   constructor(private readonly homeService: HomeService){ }
 
   ngOnInit(): void {
     this.homeService.currentMatch.subscribe(data => {
       this.stats = data;
+      console.log(data)
 
       // creación de los gráficos
       this.initLineChart();
@@ -57,7 +53,7 @@ export class MatchDetailComponent implements OnInit{
     };
 
     if(ctx){
-      var lineChart = new Chart(ctx, {
+      new Chart(ctx, {
         type: 'line',
         data: lineChartData,
       });

@@ -14,4 +14,11 @@
 		FROM gamesstats
 		WHERE game_date = #{date}
 	</select>
+	
+	<select id="findPeriodsOfTeamInGame" resultType="com.example.demo.games.model.Periods">
+		SELECT * 
+		FROM periods
+		WHERE game_id = #{game_id} and team_id = #{team_id};
+	</select>
+	
 </mapper>

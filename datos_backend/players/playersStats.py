@@ -31,7 +31,7 @@ class LeagueDashPlayerStats(Endpoint):
                  period=Period.default,
                  plus_minus=PlusMinus.default,
                  rank=Rank.default,
-                 season=Season.previous_season,
+                 season=Season.current_season,
                  season_type_all_star=SeasonTypeAllStar.default,
                  college_nullable='',
                  conference_nullable=ConferenceNullable.default,
@@ -131,6 +131,10 @@ playersStats_dictionary = json.loads(playersStats_string)
 playersStats_data = playersStats_dictionary['resultSets'][0]
 playersStats_data.pop('name')
 header = playersStats_data.pop('headers')
+# quitamos los decimales de los minutos (lo dejamos como número entero)
+for i in range(len(playersStats_data['rowSet'])):
+    playersStats_data['rowSet'][i][10] = int(playersStats_data['rowSet'][i][10])
+
 print(header)
 playersStats_df = pd.DataFrame(playersStats_data)
 playersStats_df.to_csv('playersStats.csv')

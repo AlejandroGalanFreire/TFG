@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.games.mapper.GamesStatsMapper;
 import com.example.demo.games.model.GameStats;
+import com.example.demo.games.model.Periods;
 
 @Service
 public class GamesStatsServiceImpl implements GamesStatsService {
@@ -22,6 +23,11 @@ public class GamesStatsServiceImpl implements GamesStatsService {
 	@Override
 	public List<GameStats> findAllGamesStatsByDate(String date) {
 		return gsMapper.findAllGamesStatsByDate(date);
+	}
+
+	@Override
+	public Periods findPeriodsOfTeamInGame(int game_id, int team_id) {
+		return gsMapper.findPeriodsOfTeamInGame(game_id, team_id);
 	}
 
 }

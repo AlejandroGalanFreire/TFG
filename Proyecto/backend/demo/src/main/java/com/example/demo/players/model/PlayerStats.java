@@ -32,6 +32,7 @@ public class PlayerStats {
 	private int blka; 
 	private int pf;
 	private int pts;
+	private int min;
 	
 	public int getId() {
 		return id;
@@ -212,6 +213,12 @@ public class PlayerStats {
 	}
 	public void setPts(int pts) {
 		this.pts = pts;
+	}
+	public int getMin() {
+		return min;
+	}
+	public void setMin(int min) {
+		this.min = min;
 	}
 	
 }
