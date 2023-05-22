@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientModule } from '@angular/common/http';
 import { PlayersComponent } from './players.component';
+import { FilterPipe } from 'src/app/pipes/filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 describe('PlayersComponent', () => {
   let component: PlayersComponent;
@@ -8,7 +10,14 @@ describe('PlayersComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PlayersComponent ]
+      declarations: [
+        PlayersComponent,
+        FilterPipe
+      ],
+      imports: [
+        HttpClientModule,
+        FormsModule
+      ]
     })
     .compileComponents();
 
