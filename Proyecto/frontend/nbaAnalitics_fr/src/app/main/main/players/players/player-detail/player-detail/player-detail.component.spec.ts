@@ -20,4 +20,10 @@ describe('PlayerDetailComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // it('should create calculatePlayerPerformance', () => {
+  //   const spy = spyOn(component, 'calculatePlayerPerformance').and.callThrough();
+  //   component.calculatePlayerPerformance();
+  //   expect(spy).toHaveBeenCalled();
+  // });
 });

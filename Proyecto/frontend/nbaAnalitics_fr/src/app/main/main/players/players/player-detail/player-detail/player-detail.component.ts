@@ -21,15 +21,15 @@ export class PlayerDetailComponent implements OnInit {
   ngOnInit(): void {
     this.homeService.playerSelected.subscribe(data => {
       this.playerStats = data;
-      console.log(data);
+      // console.log(data);
       this.calculatePlayerPerformance();
 
       // creación de los gráficos
-      console.log(this.val)
-      console.log(this.EFF_PerGame)
-      console.log(this.EFF_PerMinute)
-      console.log(this.pointsCreated);
-      console.log(this.trueShootingPercentage);
+      // console.log(this.val)
+      // console.log(this.EFF_PerGame)
+      // console.log(this.EFF_PerMinute)
+      // console.log(this.pointsCreated);
+      // console.log(this.trueShootingPercentage);
 
     });
   }

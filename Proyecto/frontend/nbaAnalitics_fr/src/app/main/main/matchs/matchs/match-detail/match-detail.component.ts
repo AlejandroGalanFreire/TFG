@@ -18,7 +18,7 @@ export class MatchDetailComponent implements OnInit{
   ngOnInit(): void {
     this.homeService.currentMatch.subscribe(data => {
       this.stats = data;
-      console.log(data)
+      //console.log(data)
 
       // creación de los gráficos
       this.initLineChart();
