@@ -18,8 +18,6 @@ export class HomeService {
   public playerSelected: Observable<PlayerStats> =
     this.playerSelectedSubject.asObservable();
 
-  constructor() { }
-
   setMatchSelectedDetail(item: GameStats[]) {
     this.currentMatchSubject.next(item);
   }

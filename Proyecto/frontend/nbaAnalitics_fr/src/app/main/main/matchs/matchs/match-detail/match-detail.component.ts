@@ -10,7 +10,10 @@ import Chart from 'chart.js/auto';
 })
 export class MatchDetailComponent implements OnInit{
 
-  private stats: GameStats[] = [];
+  public stats: GameStats[] = [];
+  private lineChart: any;
+  private barChart: any;
+  private radarChart: any;
 
 
   constructor(private readonly homeService: HomeService){ }
@@ -18,24 +21,20 @@ export class MatchDetailComponent implements OnInit{
   ngOnInit(): void {
     this.homeService.currentMatch.subscribe(data => {
       this.stats = data;
-      //console.log(data)
 
       // creación de los gráficos
-      this.initLineChart();
-      this.initBarChart();
-      this.initRadarChart();
+      this.initLineChart(this.stats[0], this.stats[1]);
+      this.initBarChart(this.stats[0], this.stats[1]);
+      this.initRadarChart(this.stats[0], this.stats[1]);
 
     });
   }
 
-  initLineChart(){
-    var lineChartCanvas = document.getElementById("lineChart") as HTMLCanvasElement;
+  initLineChart(team1: any, team2: any){
+    const lineChartCanvas = document.getElementById("lineChart") as HTMLCanvasElement;
     const ctx = lineChartCanvas.getContext('2d');
 
-    const team1 = this.stats[0];
-    const team2 = this.stats[1];
-
-    var lineChartData = {
+    const lineChartData = {
       labels: ["1º Cuarto","2º Cuarto","3º Cuarto","4º Cuarto "],
       datasets: [
         {
@@ -53,7 +52,7 @@ export class MatchDetailComponent implements OnInit{
     };
 
     if(ctx){
-      new Chart(ctx, {
+      this.lineChart = new Chart(ctx, {
         type: 'line',
         data: lineChartData,
       });
@@ -61,14 +60,11 @@ export class MatchDetailComponent implements OnInit{
   }
 
 
-  initBarChart(){
-    var barChartCanvas = document.getElementById("barChart") as HTMLCanvasElement;
+  initBarChart(team1: any, team2: any){
+    const barChartCanvas = document.getElementById("barChart") as HTMLCanvasElement;
     const ctx = barChartCanvas.getContext('2d');
 
-    const team1 = this.stats[0];
-    const team2 = this.stats[1];
-
-    var barChartData = {
+    const barChartData = {
       labels: ["Asistencias","Rebotes", "Robos"],
       datasets: [
         {
@@ -83,21 +79,18 @@ export class MatchDetailComponent implements OnInit{
     };
 
     if(ctx){
-      var barChart = new Chart(ctx, {
+      this.barChart = new Chart(ctx, {
         type: 'bar',
         data: barChartData,
       });
     }
   }
 
-  initRadarChart(){
-    var radarChartCanvas = document.getElementById("radarChart") as HTMLCanvasElement;
+  initRadarChart(team1: any, team2: any){
+    const radarChartCanvas = document.getElementById("radarChart") as HTMLCanvasElement;
     const ctx = radarChartCanvas.getContext('2d');
 
-    const team1 = this.stats[0];
-    const team2 = this.stats[1];
-
-    var radarChartData = {
+    const radarChartData = {
       labels: ["Tiros","Tiros libres", "Triples"],
       datasets: [
         {
@@ -112,7 +105,7 @@ export class MatchDetailComponent implements OnInit{
     };
 
     if(ctx){
-      var radarChart = new Chart(ctx, {
+      this.radarChart = new Chart(ctx, {
         type: 'radar',
         data: radarChartData,
       });

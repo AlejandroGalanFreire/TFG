@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { GameStats } from 'src/app/models/gameStats';
 import { DataService } from 'src/app/services/data-service.service';
@@ -33,7 +32,8 @@ export class MatchsComponent {
 
   }
 
-  dateEvent(event: MatDatepickerInputEvent<Date>) {
+  // event es del tipo MatDatepickerInputEvent
+  dateEvent(event: any) {
     if(event.value){
       this.currentDateSubject.next(event.value);
     }
@@ -46,7 +46,8 @@ export class MatchsComponent {
     return numero.toString();
   }
 
-  setMatchSelectedDetail(item: GameStats[]){
+  // item es del tipo GameStats[]
+  setMatchSelectedDetail(item: any){
     this.homeService.setMatchSelectedDetail(item);
   }
 

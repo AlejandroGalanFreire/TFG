@@ -35,4 +35,27 @@ describe('MatchsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should create dateEvent', () => {
+    const spy = spyOn(component, 'dateEvent').and.callThrough();
+    const eventMock = {
+      value: new Date()
+    }
+    component.dateEvent(eventMock);
+    expect(spy).toHaveBeenCalled();
+  });
+
+  it('should create setMatchSelectedDetail', () => {
+    const spy = spyOn(component, 'setMatchSelectedDetail').and.callThrough();
+    const games = [
+      {
+        name: 'team1'
+      },
+      {
+        name: 'team2'
+      }
+    ];
+    component.setMatchSelectedDetail(games);
+    expect(spy).toHaveBeenCalled();
+  });
 });

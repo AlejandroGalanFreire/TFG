@@ -21,9 +21,9 @@ describe('PlayerDetailComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  // it('should create calculatePlayerPerformance', () => {
-  //   const spy = spyOn(component, 'calculatePlayerPerformance').and.callThrough();
-  //   component.calculatePlayerPerformance();
-  //   expect(spy).toHaveBeenCalled();
-  // });
+  it('should create calculatePlayerPerformance', () => {
+    const spy = spyOn(component, 'calculatePlayerPerformance').and.callThrough();
+    component.calculatePlayerPerformance();
+    expect(spy).toHaveBeenCalled();
+  });
 });
