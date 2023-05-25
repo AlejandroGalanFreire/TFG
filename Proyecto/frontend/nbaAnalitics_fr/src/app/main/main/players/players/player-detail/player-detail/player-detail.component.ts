@@ -41,8 +41,8 @@ export class PlayerDetailComponent implements OnInit {
     const ast = this.playerStats.ast;
     const stl = this.playerStats.stl;
     const blk = this.playerStats.blk;
-    const succesfulShots = this.playerStats.fg3M + this.playerStats.fgm + this.playerStats.ftm;
-    const missedShots = (this.playerStats.fg3A - this.playerStats.fg3M) +
+    const succesfulShots = this.playerStats.fg3m + this.playerStats.fgm + this.playerStats.ftm;
+    const missedShots = (this.playerStats.fg3a - this.playerStats.fg3m) +
       (this.playerStats.fga - this.playerStats.fgm) + (this.playerStats.fta - this.playerStats.ftm);
     const tov = this.playerStats.tov;
     this.val = points + rebounds + ast + stl + blk + succesfulShots - missedShots - tov;
@@ -54,7 +54,7 @@ export class PlayerDetailComponent implements OnInit {
     const ast = this.playerStats.ast;
     const stl = this.playerStats.stl;
     const blk = this.playerStats.blk;
-    const missedShots = (this.playerStats.fg3A - this.playerStats.fg3M) +
+    const missedShots = (this.playerStats.fg3a - this.playerStats.fg3m) +
       (this.playerStats.fga - this.playerStats.fgm) + (this.playerStats.fta - this.playerStats.ftm);
     const tov = this.playerStats.tov;
     const EFF = points + rebounds + ast + stl + blk - missedShots - tov;
@@ -67,7 +67,7 @@ export class PlayerDetailComponent implements OnInit {
   }
 
   calculateTrueShootingPercentage() {
-    const fieldShotsAttempted = this.playerStats.fg3A + this.playerStats.fga
+    const fieldShotsAttempted = this.playerStats.fg3a + this.playerStats.fga
     const freeShotsAttempted = this.playerStats.fta;
     const TS = this.playerStats.pts / (2*(fieldShotsAttempted + 0.44*freeShotsAttempted));
     this.trueShootingPercentage = 100 - TS;

@@ -2,18 +2,18 @@ package com.example.demo.scoreboard.model;
 
 public class ElemScoreboard {
 	private int id;
-	private int team_id;
-	private String league_id;
-	private int season_id;
+	private int teamId;
+	private String leagueId;
+	private int seasonId;
 	private String standingsdate;
 	private String conference;
 	private String team;
 	private int played;
 	private int won;
 	private int lost;
-	private double won_pct;
-	private String home_record;
-	private String road_record;
+	private double wonPct;
+	private String homeRecord;
+	private String roadRecord;
 
 	public int getId() {
 		return id;
@@ -23,28 +23,28 @@ public class ElemScoreboard {
 		this.id = id;
 	}
 
-	public int getTeam_id() {
-		return team_id;
+	public int getTeamId() {
+		return teamId;
 	}
 
-	public void setTeam_id(int team_id) {
-		this.team_id = team_id;
+	public void setTeamId(int teamId) {
+		this.teamId = teamId;
 	}
 
-	public String getLeague_id() {
-		return league_id;
+	public String getLeagueId() {
+		return leagueId;
 	}
 
-	public void setLeague_id(String league_id) {
-		this.league_id = league_id;
+	public void setLeagueId(String leagueId) {
+		this.leagueId = leagueId;
 	}
 
-	public int getSeason_id() {
-		return season_id;
+	public int getSeasonId() {
+		return seasonId;
 	}
 
-	public void setSeason_id(int season_id) {
-		this.season_id = season_id;
+	public void setSeasonId(int seasonId) {
+		this.seasonId = seasonId;
 	}
 
 	public String getStandingsdate() {
@@ -95,28 +95,28 @@ public class ElemScoreboard {
 		this.lost = lost;
 	}
 
-	public double getWon_pct() {
-		return won_pct;
+	public double getWonPct() {
+		return wonPct;
 	}
 
-	public void setWon_pct(double won_pct) {
-		this.won_pct = won_pct;
+	public void setWonPct(double wonPct) {
+		this.wonPct = wonPct;
 	}
 
-	public String getHome_record() {
-		return home_record;
+	public String getHomeRecord() {
+		return homeRecord;
 	}
 
-	public void setHome_record(String home_record) {
-		this.home_record = home_record;
+	public void setHomeRecord(String homeRecord) {
+		this.homeRecord = homeRecord;
 	}
 
-	public String getRoad_record() {
-		return road_record;
+	public String getRoadRecord() {
+		return roadRecord;
 	}
 
-	public void setRoad_record(String road_record) {
-		this.road_record = road_record;
+	public void setRoadRecord(String roadRecord) {
+		this.roadRecord = roadRecord;
 	}
 
 }

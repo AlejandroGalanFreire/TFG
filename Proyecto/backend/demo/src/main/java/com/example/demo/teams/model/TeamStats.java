@@ -3,27 +3,27 @@ package com.example.demo.teams.model;
 public class TeamStats {
 	
 	private int idTeamsStats;
-	private String team_name; 
+	private String teamName; 
 	private double min;
-	private int FGM; 
-	private int FGA; 
-	private double FG_PCT; 
-	private int FG3M;
-	private int FG3A;
-	private double FG3_PCT; 
-	private int FTM;
-	private int FTA;
-	private double FT_PCT; 
-	private int OREB;
-	private int DREB;
-	private int REB;
-	private int AST;
-	private double TOV; 
-	private int STL;
-	private int BLK; 
-	private int BLKA; 
-	private int PF;
-	private int PTS;
+	private int fgm; 
+	private int fga; 
+	private double fgPct; 
+	private int fg3m;
+	private int fg3a;
+	private double fg3Pct; 
+	private int ftm;
+	private int fta;
+	private double ftPct; 
+	private int oreb;
+	private int dreb;
+	private int reb;
+	private int ast;
+	private double tov; 
+	private int stl;
+	private int blk; 
+	private int blka; 
+	private int pf;
+	private int pts;
 	
 	public int getIdTeamsStats() {
 		return idTeamsStats;
@@ -31,11 +31,11 @@ public class TeamStats {
 	public void setIdTeamsStats(int idTeamsStats) {
 		this.idTeamsStats = idTeamsStats;
 	}
-	public String getTeam_name() {
-		return team_name;
+	public String getTeamName() {
+		return teamName;
 	}
-	public void setTeam_name(String team_name) {
-		this.team_name = team_name;
+	public void setTeamName(String teamName) {
+		this.teamName = teamName;
 	}
 	public double getMin() {
 		return min;
@@ -43,119 +43,119 @@ public class TeamStats {
 	public void setMin(double min) {
 		this.min = min;
 	}
-	public int getFGM() {
-		return FGM;
+	public int getFgm() {
+		return fgm;
 	}
-	public void setFGM(int fGM) {
-		FGM = fGM;
+	public void setFgm(int fgm) {
+		this.fgm = fgm;
 	}
-	public int getFGA() {
-		return FGA;
+	public int getFga() {
+		return fga;
 	}
-	public void setFGA(int fGA) {
-		FGA = fGA;
+	public void setFga(int fga) {
+		this.fga = fga;
 	}
-	public double getFG_PCT() {
-		return FG_PCT;
+	public double getFgPct() {
+		return fgPct;
 	}
-	public void setFG_PCT(double fG_PCT) {
-		FG_PCT = fG_PCT;
+	public void setFgPct(double fgPct) {
+		this.fgPct = fgPct;
 	}
-	public int getFG3M() {
-		return FG3M;
+	public int getFg3m() {
+		return fg3m;
 	}
-	public void setFG3M(int fG3M) {
-		FG3M = fG3M;
+	public void setFg3m(int fg3m) {
+		this.fg3m = fg3m;
 	}
-	public int getFG3A() {
-		return FG3A;
+	public int getFg3a() {
+		return fg3a;
 	}
-	public void setFG3A(int fG3A) {
-		FG3A = fG3A;
+	public void setFg3a(int fg3a) {
+		this.fg3a = fg3a;
 	}
-	public double getFG3_PCT() {
-		return FG3_PCT;
+	public double getFg3Pct() {
+		return fg3Pct;
 	}
-	public void setFG3_PCT(double fG3_PCT) {
-		FG3_PCT = fG3_PCT;
+	public void setFg3Pct(double fg3Pct) {
+		this.fg3Pct = fg3Pct;
 	}
-	public int getFTM() {
-		return FTM;
+	public int getFtm() {
+		return ftm;
 	}
-	public void setFTM(int fTM) {
-		FTM = fTM;
+	public void setFtm(int ftm) {
+		this.ftm = ftm;
 	}
-	public int getFTA() {
-		return FTA;
+	public int getFta() {
+		return fta;
 	}
-	public void setFTA(int fTA) {
-		FTA = fTA;
+	public void setFta(int fta) {
+		this.fta = fta;
 	}
-	public double getFT_PCT() {
-		return FT_PCT;
+	public double getFtPct() {
+		return ftPct;
 	}
-	public void setFT_PCT(double fT_PCT) {
-		FT_PCT = fT_PCT;
+	public void setFtPct(double ftPct) {
+		this.ftPct = ftPct;
 	}
-	public int getOREB() {
-		return OREB;
+	public int getOReb() {
+		return oreb;
 	}
-	public void setOREB(int oREB) {
-		OREB = oREB;
+	public void setOreb(int oreb) {
+		this.oreb = oreb;
 	}
-	public int getDREB() {
-		return DREB;
+	public int getDreb() {
+		return dreb;
 	}
-	public void setDREB(int dREB) {
-		DREB = dREB;
+	public void setDreb(int dreb) {
+		this.dreb = dreb;
 	}
-	public int getREB() {
-		return REB;
+	public int getReb() {
+		return reb;
 	}
-	public void setREB(int rEB) {
-		REB = rEB;
+	public void setReb(int reb) {
+		this.reb = reb;
 	}
-	public int getAST() {
-		return AST;
+	public int getAst() {
+		return ast;
 	}
-	public void setAST(int aST) {
-		AST = aST;
+	public void setAst(int ast) {
+		this.ast = ast;
 	}
 	public double getTOV() {
-		return TOV;
+		return tov;
 	}
 	public void setTOV(double tOV) {
-		TOV = tOV;
+		tov = tOV;
 	}
 	public int getSTL() {
-		return STL;
+		return stl;
 	}
 	public void setSTL(int sTL) {
-		STL = sTL;
+		stl = sTL;
 	}
 	public int getBLK() {
-		return BLK;
+		return blk;
 	}
 	public void setBLK(int bLK) {
-		BLK = bLK;
+		blk = bLK;
 	}
 	public int getBLKA() {
-		return BLKA;
+		return blka;
 	}
 	public void setBLKA(int bLKA) {
-		BLKA = bLKA;
+		blka = bLKA;
 	}
 	public int getPF() {
-		return PF;
+		return pf;
 	}
 	public void setPF(int pF) {
-		PF = pF;
+		pf = pF;
 	}
 	public int getPTS() {
-		return PTS;
+		return pts;
 	}
 	public void setPTS(int pTS) {
-		PTS = pTS;
+		pts = pTS;
 	}
 
 }

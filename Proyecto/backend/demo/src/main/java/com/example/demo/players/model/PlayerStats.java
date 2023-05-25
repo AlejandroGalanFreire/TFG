@@ -3,25 +3,25 @@ package com.example.demo.players.model;
 public class PlayerStats {
 
 	private int id;
-	private int player_id;
-	private String player_name;
+	private int playerId;
+	private String playerName;
 	private String nickname;
-	private int team_id;
-	private String team_abbrev; 
+	private int teamId;
+	private String teamAbbrev; 
 	private double age;
 	private int gp;
 	private int won;
 	private int lost;
-	private double won_PCT;
+	private double wonPct;
 	private int fgm; 
 	private int fga; 
-	private double fg_PCT; 
-	private int fg3M;
-	private int fg3A;
-	private double fg3_PCT; 
+	private double fgPct; 
+	private int fg3m;
+	private int fg3a;
+	private double fg3Pct; 
 	private int ftm;
 	private int fta;
-	private double ft_PCT; 
+	private double ftPct; 
 	private int oreb;
 	private int dreb;
 	private int reb;
@@ -40,17 +40,17 @@ public class PlayerStats {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getPlayer_id() {
-		return player_id;
+	public int getPlayerId() {
+		return playerId;
 	}
-	public void setPlayer_id(int player_id) {
-		this.player_id = player_id;
+	public void setPlayerId(int playerId) {
+		this.playerId = playerId;
 	}
-	public String getPlayer_name() {
-		return player_name;
+	public String getPlayerName() {
+		return playerName;
 	}
-	public void setPlayer_name(String player_name) {
-		this.player_name = player_name;
+	public void setPlayerName(String playerName) {
+		this.playerName = playerName;
 	}
 	public String getNickname() {
 		return nickname;
@@ -58,17 +58,17 @@ public class PlayerStats {
 	public void setNickname(String nickname) {
 		this.nickname = nickname;
 	}
-	public int getTeam_id() {
-		return team_id;
+	public int getTeamId() {
+		return teamId;
 	}
-	public void setTeam_id(int team_id) {
-		this.team_id = team_id;
+	public void setTeamId(int teamId) {
+		this.teamId = teamId;
 	}
-	public String getTeam_abbrev() {
-		return team_abbrev;
+	public String getTeamAbbrev() {
+		return teamAbbrev;
 	}
-	public void setTeam_abbrev(String team_abbrev) {
-		this.team_abbrev = team_abbrev;
+	public void setTeamAbbrev(String teamAbbrev) {
+		this.teamAbbrev = teamAbbrev;
 	}
 	public double getAge() {
 		return age;
@@ -94,11 +94,11 @@ public class PlayerStats {
 	public void setLost(int lost) {
 		this.lost = lost;
 	}
-	public double getWon_PCT() {
-		return won_PCT;
+	public double getWonPct() {
+		return wonPct;
 	}
-	public void setWon_PCT(double won_PCT) {
-		this.won_PCT = won_PCT;
+	public void setWonPct(double wonPct) {
+		this.wonPct = wonPct;
 	}
 	public int getFgm() {
 		return fgm;
@@ -112,29 +112,29 @@ public class PlayerStats {
 	public void setFga(int fga) {
 		this.fga = fga;
 	}
-	public double getFg_PCT() {
-		return fg_PCT;
+	public double getFgPct() {
+		return fgPct;
 	}
-	public void setFg_PCT(double fg_PCT) {
-		this.fg_PCT = fg_PCT;
+	public void setFgPct(double fgPct) {
+		this.fgPct = fgPct;
 	}
-	public int getFg3M() {
-		return fg3M;
+	public int getFg3m() {
+		return fg3m;
 	}
-	public void setFg3M(int fg3m) {
-		fg3M = fg3m;
+	public void setFg3m(int fg3m) {
+		this.fg3m = fg3m;
 	}
-	public int getFg3A() {
-		return fg3A;
+	public int getFg3a() {
+		return fg3a;
 	}
-	public void setFg3A(int fg3a) {
-		fg3A = fg3a;
+	public void setFg3a(int fg3a) {
+		this.fg3a = fg3a;
 	}
-	public double getFg3_PCT() {
-		return fg3_PCT;
+	public double getFg3Pct() {
+		return fg3Pct;
 	}
-	public void setFg3_PCT(double fg3_PCT) {
-		this.fg3_PCT = fg3_PCT;
+	public void setFg3Pct(double fg3Pct) {
+		this.fg3Pct = fg3Pct;
 	}
 	public int getFtm() {
 		return ftm;
@@ -148,11 +148,11 @@ public class PlayerStats {
 	public void setFta(int fta) {
 		this.fta = fta;
 	}
-	public double getFt_PCT() {
-		return ft_PCT;
+	public double getFtPct() {
+		return ftPct;
 	}
-	public void setFt_PCT(double ft_PCT) {
-		this.ft_PCT = ft_PCT;
+	public void setFtPct(double ftPct) {
+		this.ftPct = ftPct;
 	}
 	public int getOreb() {
 		return oreb;

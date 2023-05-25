@@ -1,24 +1,24 @@
 package com.example.demo.games.model;
 
 public class Periods {
-	private int game_id;
-	private int team_id;
+	private int gameId;
+	private int teamId;
 	private int period1Score;
 	private int period2Score;
 	private int period3Score;
 	private int period4Score;
 	
-	public int getGame_id() {
-		return game_id;
+	public int getGameId() {
+		return gameId;
 	}
-	public void setGame_id(int game_id) {
-		this.game_id = game_id;
+	public void setGameId(int gameId) {
+		this.gameId = gameId;
 	}
-	public int getTeam_id() {
-		return team_id;
+	public int getTeamId() {
+		return teamId;
 	}
-	public void setTeam_id(int team_id) {
-		this.team_id = team_id;
+	public void setTeamId(int teamId) {
+		this.teamId = teamId;
 	}
 	public int getPeriod1Score() {
 		return period1Score;

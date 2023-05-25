@@ -8,7 +8,7 @@ export class FilterPipe implements PipeTransform {
   transform(value: any, arg: any): any {
     const resultData =  [];
     for(const data of value){
-      if(data.player_name.toLowerCase().indexOf(arg.toLowerCase()) > -1 || data.team_abbrev.toLowerCase().indexOf(arg.toLowerCase()) > -1){
+      if(data.playerName.toLowerCase().indexOf(arg.toLowerCase()) > -1 || data.teamAbbrev.toLowerCase().indexOf(arg.toLowerCase()) > -1){
         resultData.push(data);
       }
     }

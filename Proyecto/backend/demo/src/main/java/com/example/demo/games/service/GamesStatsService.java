@@ -9,5 +9,5 @@ public interface GamesStatsService {
 
 	List<GameStats> findAllGamesStats();
 	List<GameStats> findAllGamesStatsByDate(String date);
-	Periods findPeriodsOfTeamInGame(int game_id, int team_id);
+	Periods findPeriodsOfTeamInGame(int gameId, int teamId);
 }

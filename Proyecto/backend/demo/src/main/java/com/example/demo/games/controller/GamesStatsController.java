@@ -45,7 +45,7 @@ public class GamesStatsController {
 				GameStats[] game = new GameStats[2];
 				game[0] = allTeamsOfGames.get(i);
 				// obtener puntos en los distintos cuartos del equipo
-				Periods cuartosTeam1 = gsService.findPeriodsOfTeamInGame(Integer.parseInt(game[0].getGame_id()), game[0].getTeam_id());
+				Periods cuartosTeam1 = gsService.findPeriodsOfTeamInGame(Integer.parseInt(game[0].getGameId()), game[0].getTeamId());
 				game[0].setPeriod1Score(cuartosTeam1.getPeriod1Score());
 				game[0].setPeriod2Score(cuartosTeam1.getPeriod2Score());
 				game[0].setPeriod3Score(cuartosTeam1.getPeriod3Score());
@@ -53,7 +53,7 @@ public class GamesStatsController {
 				
 				game[1] = findOpponent(allTeamsOfGames.get(i), allTeamsOfGames);
 				// obtener puntos en los distintos cuartos del equipo
-				Periods cuartosTeam2 = gsService.findPeriodsOfTeamInGame(Integer.parseInt(game[1].getGame_id()), game[1].getTeam_id());
+				Periods cuartosTeam2 = gsService.findPeriodsOfTeamInGame(Integer.parseInt(game[1].getGameId()), game[1].getTeamId());
 				game[1].setPeriod1Score(cuartosTeam2.getPeriod1Score());
 				game[1].setPeriod2Score(cuartosTeam2.getPeriod2Score());
 				game[1].setPeriod3Score(cuartosTeam2.getPeriod3Score());
@@ -84,7 +84,7 @@ public class GamesStatsController {
 	 * param allTeams todos los equipos para buscar el oponente
 	 */
 	private GameStats findOpponent(GameStats gameStats, List<GameStats> allTeams) {
-		String[] matchup = new String[2];
+		String[] matchup;
 		if(gameStats.getMatchup().contains("@")) {
 			matchup = gameStats.getMatchup().replace(" ", "").split("@");			
 		}else {
@@ -92,7 +92,7 @@ public class GamesStatsController {
 		}
 		
 		for(int i = 0; i < allTeams.size(); i++) {
-			if(allTeams.get(i).getTeam_abbreviation().equals(matchup[1])) {
+			if(allTeams.get(i).getTeamAbbreviation().equals(matchup[1])) {
 				return allTeams.get(i);
 			}
 		}

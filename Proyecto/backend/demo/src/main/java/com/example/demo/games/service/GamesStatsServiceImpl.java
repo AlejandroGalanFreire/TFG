@@ -26,8 +26,8 @@ public class GamesStatsServiceImpl implements GamesStatsService {
 	}
 
 	@Override
-	public Periods findPeriodsOfTeamInGame(int game_id, int team_id) {
-		return gsMapper.findPeriodsOfTeamInGame(game_id, team_id);
+	public Periods findPeriodsOfTeamInGame(int gameId, int teamId) {
+		return gsMapper.findPeriodsOfTeamInGame(gameId, teamId);
 	}
 
 }

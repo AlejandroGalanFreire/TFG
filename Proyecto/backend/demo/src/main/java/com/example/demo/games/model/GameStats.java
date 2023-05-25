@@ -5,25 +5,25 @@ import java.util.Objects;
 public class GameStats {
 
 	private int id;
-	private int season_id;
-	private int team_id;
-	private String team_abbreviation; 
-	private String team_name;
-	private String game_id;
-	private String game_date;
+	private int seasonId;
+	private int teamId;
+	private String teamAbbreviation; 
+	private String teamName;
+	private String gameId;
+	private String gameDate;
 	private String matchup;
-	private String WL;
+	private String wl;
 	private int min;
 	private int pts;
 	private int fgm; 
 	private int fga; 
-	private double fg_pct; 
+	private double fgPct; 
 	private int fg3m;
 	private int fg3a;
-	private double fg3_pct; 
+	private double fg3Pct; 
 	private int ftm;
 	private int fta;
-	private double ft_pct; 
+	private double ftPct; 
 	private int oreb;
 	private int dreb;
 	private int reb;
@@ -32,7 +32,7 @@ public class GameStats {
 	private int blk;
 	private int tov;
 	private int pf;
-	private int plus_minus;
+	private int plusMinus;
 	private int period1Score;
 	private int period2Score;
 	private int period3Score;
@@ -44,41 +44,41 @@ public class GameStats {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getSeason_id() {
-		return season_id;
+	public int getSeasonId() {
+		return seasonId;
 	}
-	public void setSeason_id(int season_id) {
-		this.season_id = season_id;
+	public void setSeasonId(int seasonId) {
+		this.seasonId = seasonId;
 	}
-	public int getTeam_id() {
-		return team_id;
+	public int getTeamId() {
+		return teamId;
 	}
-	public void setTeam_id(int team_id) {
-		this.team_id = team_id;
+	public void setTeamId(int teamId) {
+		this.teamId = teamId;
 	}
-	public String getTeam_abbreviation() {
-		return team_abbreviation;
+	public String getTeamAbbreviation() {
+		return teamAbbreviation;
 	}
-	public void setTeam_abbreviation(String team_abbreviation) {
-		this.team_abbreviation = team_abbreviation;
+	public void setTeamAbbreviation(String teamAbbreviation) {
+		this.teamAbbreviation = teamAbbreviation;
 	}
-	public String getTeam_name() {
-		return team_name;
+	public String getTeamName() {
+		return teamName;
 	}
-	public void setTeam_name(String team_name) {
-		this.team_name = team_name;
+	public void setTeamName(String teamName) {
+		this.teamName = teamName;
 	}
-	public String getGame_id() {
-		return game_id;
+	public String getGameId() {
+		return gameId;
 	}
-	public void setGame_id(String game_id) {
-		this.game_id = game_id;
+	public void setGameId(String gameId) {
+		this.gameId = gameId;
 	}
-	public String getGame_date() {
-		return game_date;
+	public String getGameDate() {
+		return gameDate;
 	}
-	public void setGame_date(String game_date) {
-		this.game_date = game_date;
+	public void setGameDate(String gameDate) {
+		this.gameDate = gameDate;
 	}
 	public String getMatchup() {
 		return matchup;
@@ -87,10 +87,10 @@ public class GameStats {
 		this.matchup = matchup;
 	}
 	public String getWL() {
-		return WL;
+		return wl;
 	}
 	public void setWL(String wL) {
-		WL = wL;
+		wl = wL;
 	}
 	public int getMin() {
 		return min;
@@ -116,11 +116,11 @@ public class GameStats {
 	public void setFga(int fga) {
 		this.fga = fga;
 	}
-	public double getFg_pct() {
-		return fg_pct;
+	public double getFgPct() {
+		return fgPct;
 	}
-	public void setFg_pct(double fg_pct) {
-		this.fg_pct = fg_pct;
+	public void setFgPct(double fgPct) {
+		this.fgPct = fgPct;
 	}
 	public int getFg3m() {
 		return fg3m;
@@ -134,11 +134,11 @@ public class GameStats {
 	public void setFg3a(int fg3a) {
 		this.fg3a = fg3a;
 	}
-	public double getFg3_pct() {
-		return fg3_pct;
+	public double getFg3Pct() {
+		return fg3Pct;
 	}
-	public void setFg3_pct(double fg3_pct) {
-		this.fg3_pct = fg3_pct;
+	public void setFg3Pct(double fg3Pct) {
+		this.fg3Pct = fg3Pct;
 	}
 	public int getFtm() {
 		return ftm;
@@ -152,11 +152,11 @@ public class GameStats {
 	public void setFta(int fta) {
 		this.fta = fta;
 	}
-	public double getFt_pct() {
-		return ft_pct;
+	public double getFtPct() {
+		return ftPct;
 	}
-	public void setFt_pct(double ft_pct) {
-		this.ft_pct = ft_pct;
+	public void setFtPct(double ftPct) {
+		this.ftPct = ftPct;
 	}
 	public int getOreb() {
 		return oreb;
@@ -206,11 +206,11 @@ public class GameStats {
 	public void setPf(int pf) {
 		this.pf = pf;
 	}
-	public int getPlus_minus() {
-		return plus_minus;
+	public int getPlusMinus() {
+		return plusMinus;
 	}
-	public void setPlus_minus(int plus_minus) {
-		this.plus_minus = plus_minus;
+	public void setPlusMinus(int plusMinus) {
+		this.plusMinus = plusMinus;
 	}
 	public int getPeriod1Score() {
 		return period1Score;
@@ -240,9 +240,9 @@ public class GameStats {
 	
 	@Override
 	public int hashCode() {
-		return Objects.hash(WL, ast, blk, dreb, fg3_pct, fg3a, fg3m, fg_pct, fga, fgm, ft_pct, fta, ftm, game_date,
-				game_id, id, matchup, min, oreb, pf, plus_minus, pts, reb, season_id, stl, team_abbreviation, team_id,
-				team_name, tov);
+		return Objects.hash(wl, ast, blk, dreb, fg3Pct, fg3a, fg3m, fgPct, fga, fgm, ftPct, fta, ftm, gameDate,
+				gameId, id, matchup, min, oreb, pf, plusMinus, pts, reb, seasonId, stl, teamAbbreviation, teamId,
+				teamName, tov);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -253,17 +253,17 @@ public class GameStats {
 		if (getClass() != obj.getClass())
 			return false;
 		GameStats other = (GameStats) obj;
-		return Objects.equals(WL, other.WL) && ast == other.ast && blk == other.blk && dreb == other.dreb
-				&& Double.doubleToLongBits(fg3_pct) == Double.doubleToLongBits(other.fg3_pct) && fg3a == other.fg3a
-				&& fg3m == other.fg3m && Double.doubleToLongBits(fg_pct) == Double.doubleToLongBits(other.fg_pct)
+		return Objects.equals(wl, other.wl) && ast == other.ast && blk == other.blk && dreb == other.dreb
+				&& Double.doubleToLongBits(fg3Pct) == Double.doubleToLongBits(other.fg3Pct) && fg3a == other.fg3a
+				&& fg3m == other.fg3m && Double.doubleToLongBits(fgPct) == Double.doubleToLongBits(other.fgPct)
 				&& fga == other.fga && fgm == other.fgm
-				&& Double.doubleToLongBits(ft_pct) == Double.doubleToLongBits(other.ft_pct) && fta == other.fta
-				&& ftm == other.ftm && Objects.equals(game_date, other.game_date)
-				&& Objects.equals(game_id, other.game_id) && id == other.id && Objects.equals(matchup, other.matchup)
-				&& min == other.min && oreb == other.oreb && pf == other.pf && plus_minus == other.plus_minus
-				&& pts == other.pts && reb == other.reb && season_id == other.season_id && stl == other.stl
-				&& Objects.equals(team_abbreviation, other.team_abbreviation) && team_id == other.team_id
-				&& Objects.equals(team_name, other.team_name) && tov == other.tov;
+				&& Double.doubleToLongBits(ftPct) == Double.doubleToLongBits(other.ftPct) && fta == other.fta
+				&& ftm == other.ftm && Objects.equals(gameDate, other.gameDate)
+				&& Objects.equals(gameId, other.gameId) && id == other.id && Objects.equals(matchup, other.matchup)
+				&& min == other.min && oreb == other.oreb && pf == other.pf && plusMinus == other.plusMinus
+				&& pts == other.pts && reb == other.reb && seasonId == other.seasonId && stl == other.stl
+				&& Objects.equals(teamAbbreviation, other.teamAbbreviation) && teamId == other.teamId
+				&& Objects.equals(teamName, other.teamName) && tov == other.tov;
 	}
 	
 	

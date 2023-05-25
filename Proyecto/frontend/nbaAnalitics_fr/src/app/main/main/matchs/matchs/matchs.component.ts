@@ -26,6 +26,8 @@ export class MatchsComponent {
       this.dataService.getGamesStatsByDate(this.selectedDate).subscribe(
         (resp: any) => {
           this.gamesStats = JSON.parse(resp);
+          console.log(resp);
+          console.log(this.gamesStats);
         }
       );
     });

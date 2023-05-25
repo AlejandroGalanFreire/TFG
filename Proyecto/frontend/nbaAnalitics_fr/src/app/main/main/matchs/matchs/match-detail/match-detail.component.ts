@@ -38,11 +38,11 @@ export class MatchDetailComponent implements OnInit{
       labels: ["1º Cuarto","2º Cuarto","3º Cuarto","4º Cuarto "],
       datasets: [
         {
-          label: team1.team_name,
+          label: team1.teamName,
           data: [team1.period1Score, team1.period2Score, team1.period3Score, team1.period4Score]
         },
         {
-          label: team2.team_name,
+          label: team2.teamName,
           data: [team2.period1Score, team2.period2Score, team2.period3Score, team2.period4Score]
         }
       ],
@@ -95,11 +95,11 @@ export class MatchDetailComponent implements OnInit{
       datasets: [
         {
           label: team1.team_name,
-          data: [team1.fg_pct * 100, team1.ft_pct * 100, team1.fg3_pct * 100]
+          data: [team1.fgPct * 100, team1.ftPct * 100, team1.fg3Pct * 100]
         },
         {
           label: team2.team_name,
-          data: [team2.fg_pct * 100, team2.ft_pct * 100, team2.fg3_pct * 100]
+          data: [team2.fgPct * 100, team2.ftPct * 100, team2.fg3Pct * 100]
         }
       ]
     };

@@ -1,16 +1,16 @@
 export class TeamStats{
   id!: number;
-  team_name!: string;
+  teamName!: string;
   min!: number;
   fgm!: number;
   fga!: number;
-  fg_PCT!: number;
-  fg3M!: number;
-  fg3A!: number;
-  fg3_PCT!: number;
+  fgPct!: number;
+  fg3m!: number;
+  fg3a!: number;
+  fg3Pct!: number;
   ftm!: number;
   fta!: number;
-  ft_PCT!: number;
+  ftPct!: number;
   oreb!: number;
   dreb!: number;
   reb!: number;

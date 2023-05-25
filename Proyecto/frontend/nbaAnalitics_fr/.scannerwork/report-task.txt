@@ -1,6 +1,0 @@
-projectKey=nbaAnalitics_fr
-serverUrl=http://localhost:9000
-serverVersion=9.9.1.69595
-dashboardUrl=http://localhost:9000/dashboard?id=nbaAnalitics_fr
-ceTaskId=AYhJb637WNLAn1tgJ55F
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AYhJb637WNLAn1tgJ55F
