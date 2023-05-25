@@ -1,5 +1,7 @@
 package com.example.demo.players.model;
 
+import java.util.Objects;
+
 public class PlayerStats {
 
 	private int id;
@@ -219,6 +221,34 @@ public class PlayerStats {
 	}
 	public void setMin(int min) {
 		this.min = min;
+	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(age, ast, blk, blka, dreb, fg3Pct, fg3a, fg3m, fgPct, fga, fgm, ftPct, fta, ftm, gp, id,
+				lost, min, nickname, oreb, pf, playerId, playerName, pts, reb, stl, teamAbbrev, teamId, tov, won,
+				wonPct);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		PlayerStats other = (PlayerStats) obj;
+		return Double.doubleToLongBits(age) == Double.doubleToLongBits(other.age) && ast == other.ast
+				&& blk == other.blk && blka == other.blka && dreb == other.dreb
+				&& Double.doubleToLongBits(fg3Pct) == Double.doubleToLongBits(other.fg3Pct) && fg3a == other.fg3a
+				&& fg3m == other.fg3m && Double.doubleToLongBits(fgPct) == Double.doubleToLongBits(other.fgPct)
+				&& fga == other.fga && fgm == other.fgm
+				&& Double.doubleToLongBits(ftPct) == Double.doubleToLongBits(other.ftPct) && fta == other.fta
+				&& ftm == other.ftm && gp == other.gp && id == other.id && lost == other.lost && min == other.min
+				&& Objects.equals(nickname, other.nickname) && oreb == other.oreb && pf == other.pf
+				&& playerId == other.playerId && Objects.equals(playerName, other.playerName) && pts == other.pts
+				&& reb == other.reb && stl == other.stl && Objects.equals(teamAbbrev, other.teamAbbrev)
+				&& teamId == other.teamId && Double.doubleToLongBits(tov) == Double.doubleToLongBits(other.tov)
+				&& won == other.won && Double.doubleToLongBits(wonPct) == Double.doubleToLongBits(other.wonPct);
 	}
 	
 }

@@ -67,7 +67,7 @@ public class GamesStatsController {
 	}
 
 	/*
-	 * Devuelve si el equipo pasado por parámetro ya ha sido almacenado en su equipo correspondiente
+	 * Devuelve si el equipo pasado por parámetro ya ha sido almacenado en su enfrentamiento correspondiente
 	 */
 	private boolean hasGame(GameStats team, List<GameStats[]> games) {
 		for(int i = 0; i < games.size(); i++) {
