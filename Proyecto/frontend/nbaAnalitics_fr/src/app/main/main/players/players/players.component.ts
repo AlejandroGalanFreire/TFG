@@ -19,7 +19,7 @@ export class PlayersComponent implements OnInit{
   ngOnInit(): void {
     this.dataService.getPlayersStats().subscribe(
       (resp: any) => {
-        this.playersStats = JSON.parse(resp)
+        this.playersStats = JSON.parse(resp);
       }
     );
   }

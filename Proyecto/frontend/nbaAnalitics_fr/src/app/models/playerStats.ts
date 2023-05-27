@@ -30,5 +30,5 @@ export class PlayerStats{
 	pf!: number;
 	pts!: number;
   min!: number;
-
+  urlPicture!: string;
 }

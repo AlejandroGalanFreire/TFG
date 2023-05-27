@@ -68,11 +68,11 @@ export class MatchDetailComponent implements OnInit{
       labels: ["Asistencias","Rebotes", "Robos"],
       datasets: [
         {
-          label: team1.team_name,
+          label: team1.teamName,
           data: [team1.ast, team1.reb, team1.stl]
         },
         {
-          label: team2.team_name,
+          label: team2.teamName,
           data: [team2.ast, team2.reb, team2.stl]
         }
       ]
@@ -94,11 +94,11 @@ export class MatchDetailComponent implements OnInit{
       labels: ["Tiros","Tiros libres", "Triples"],
       datasets: [
         {
-          label: team1.team_name,
+          label: team1.teamName,
           data: [team1.fgPct * 100, team1.ftPct * 100, team1.fg3Pct * 100]
         },
         {
-          label: team2.team_name,
+          label: team2.teamName,
           data: [team2.fgPct * 100, team2.ftPct * 100, team2.fg3Pct * 100]
         }
       ]
