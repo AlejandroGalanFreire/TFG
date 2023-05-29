@@ -8,4 +8,9 @@
 		SELECT * 
 		FROM teamsstats
 	</select>
+	
+	<select id="findAllTeamsStatsFiveLastYears" resultType="com.example.demo.teams.model.TeamStatsByYear">
+		SELECT * 
+		FROM teamstatsyearbyyear
+	</select>
 </mapper>

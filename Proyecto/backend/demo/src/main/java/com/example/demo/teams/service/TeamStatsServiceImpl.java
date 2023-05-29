@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.teams.mapper.TeamStatsMapper;
 import com.example.demo.teams.model.TeamStats;
+import com.example.demo.teams.model.TeamStatsByYear;
 
 @Service
 public class TeamStatsServiceImpl implements TeamStatsService {
@@ -17,6 +18,11 @@ public class TeamStatsServiceImpl implements TeamStatsService {
 	@Override
 	public List<TeamStats> findAllTeamsStats() {
 		return tsMapper.findAllTeamsStats();
+	}
+
+	@Override
+	public List<TeamStatsByYear> findAllTeamsStatsFiveLastYears() {
+		return tsMapper.findAllTeamsStatsFiveLastYears();
 	}
 
 }
