@@ -32,14 +32,9 @@
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="org.apache.ibatis.annotations.Mapper"/>
     <fullyQualifiedTypeName name="com.example.demo.games.mapper.GamesStatsMapper"/>
-    <fullyQualifiedTypeName name="com.example.demo.games.service.GamesStatsService"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
-    <fullyQualifiedTypeName name="com.example.demo.games.model.GameStats"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
-    <fullyQualifiedTypeName name="com.example.demo.games.model.Periods"/>
     <fullyQualifiedTypeName name="com.example.demo.players.service.PlayerStatsService"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="com.example.demo.players.service.PlayerStatsServiceImpl"/>
     <fullyQualifiedTypeName name="org.mockito.Mock"/>
     <fullyQualifiedTypeName name="com.example.demo.players.controller.PlayerStatsController"/>
@@ -54,4 +49,13 @@
     <fullyQualifiedTypeName name="nl.jqno.equalsverifier.EqualsVerifier"/>
     <fullyQualifiedTypeName name="nl.jqno.equalsverifier.Warning"/>
     <fullyQualifiedTypeName name="com.example.demo.players.model.PlayerStats"/>
+    <fullyQualifiedTypeName name="org.junit.Test"/>
+    <fullyQualifiedTypeName name="com.example.demo.games.controller.GamesStatsController"/>
+    <fullyQualifiedTypeName name="com.example.demo.games.service.GamesStatsService"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.time.Period"/>
+    <fullyQualifiedTypeName name="com.example.demo.games.model.Periods"/>
+    <fullyQualifiedTypeName name="com.example.demo.games.model.GameStats"/>
+    <fullyQualifiedTypeName name="com.example.demo.teams.model.TeamStatsByYear"/>
 </qualifiedTypeNameHistroy>

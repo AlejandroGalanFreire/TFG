@@ -23,6 +23,7 @@ import { NgChartsModule  } from 'ng2-charts';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './pipes/filter.pipe';
 import { PlayerDetailComponent } from './main/main/players/players/player-detail/player-detail/player-detail.component';
+import { TeamsDetailComponent } from './main/main/teams/teams/teams-detail/teams-detail/teams-detail.component';
 
 const appRoutes: Routes=[
   {path: '', component: HomeComponent},
@@ -32,7 +33,8 @@ const appRoutes: Routes=[
   {path: 'information', component: InfoComponent},
   {path: 'matchs', component: MatchsComponent},
   {path: 'matchDetail', component: MatchDetailComponent},
-  {path: 'playerDetail', component: PlayerDetailComponent}
+  {path: 'playerDetail', component: PlayerDetailComponent},
+  {path: 'teamDetail', component: TeamsDetailComponent}
 ]
 
 @NgModule({
@@ -48,7 +50,8 @@ const appRoutes: Routes=[
     MatchsComponent,
     MatchDetailComponent,
     FilterPipe,
-    PlayerDetailComponent
+    PlayerDetailComponent,
+    TeamsDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,25 @@
+<!-- gráfico de líneas para el progreso del equipo -->
+<div class="title">Progreso 5 años</div>
+<div class="lineChartContainer">
+  <canvas id="lineChart"></canvas>
+</div>
+
+ <!-- gráfico de barras para las asistencias -->
+ <div class="title">Asistencias</div>
+ <div class="barChartContainer">
+   <canvas id="barChartAst"></canvas>
+ </div>
+
+ <div class="colorPercentagesBar">
+  <div class="element"
+    *ngFor="let item of teamStatsByYear"
+    [style.width.%]="100/5"
+    [style.backgroundColor]="getColorByFinal(item)">
+  </div>
+ </div>
+
+  <!-- gráficos tipo radar para comparar tiros realizados con tiros anotados -->
+  <div class="title">Porcentajes</div>
+  <div class="radarChartContainer">
+    <canvas id="radarChart"></canvas>
+  </div>

@@ -29,7 +29,7 @@
       </thead>
       <tbody>
         <tr *ngFor="let item of teamsStats">
-          <td>{{ item.teamName }}</td>
+          <td><button [routerLink]="['/teamDetail']" (click)="setTeamSelectedDetail(item.teamId)">{{ item.teamName }}</button></td>
           <td>{{ item.pts }}</td>
           <td>{{ item.min }}</td>
           <td>{{ item.fgm }}</td>

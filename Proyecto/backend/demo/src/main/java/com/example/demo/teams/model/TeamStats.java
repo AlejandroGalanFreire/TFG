@@ -1,8 +1,11 @@
 package com.example.demo.teams.model;
 
+import java.util.Objects;
+
 public class TeamStats {
 	
 	private int idTeamsStats;
+	private String teamId;
 	private String teamName; 
 	private double min;
 	private int fgm; 
@@ -24,12 +27,17 @@ public class TeamStats {
 	private int blka; 
 	private int pf;
 	private int pts;
-	
 	public int getIdTeamsStats() {
 		return idTeamsStats;
 	}
 	public void setIdTeamsStats(int idTeamsStats) {
 		this.idTeamsStats = idTeamsStats;
+	}
+	public String getTeamId() {
+		return teamId;
+	}
+	public void setTeamId(String teamId) {
+		this.teamId = teamId;
 	}
 	public String getTeamName() {
 		return teamName;
@@ -97,7 +105,7 @@ public class TeamStats {
 	public void setFtPct(double ftPct) {
 		this.ftPct = ftPct;
 	}
-	public int getOReb() {
+	public int getOreb() {
 		return oreb;
 	}
 	public void setOreb(int oreb) {
@@ -121,41 +129,67 @@ public class TeamStats {
 	public void setAst(int ast) {
 		this.ast = ast;
 	}
-	public double getTOV() {
+	public double getTov() {
 		return tov;
 	}
-	public void setTOV(double tOV) {
-		tov = tOV;
+	public void setTov(double tov) {
+		this.tov = tov;
 	}
-	public int getSTL() {
+	public int getStl() {
 		return stl;
 	}
-	public void setSTL(int sTL) {
-		stl = sTL;
+	public void setStl(int stl) {
+		this.stl = stl;
 	}
-	public int getBLK() {
+	public int getBlk() {
 		return blk;
 	}
-	public void setBLK(int bLK) {
-		blk = bLK;
+	public void setBlk(int blk) {
+		this.blk = blk;
 	}
-	public int getBLKA() {
+	public int getBlka() {
 		return blka;
 	}
-	public void setBLKA(int bLKA) {
-		blka = bLKA;
+	public void setBlka(int blka) {
+		this.blka = blka;
 	}
-	public int getPF() {
+	public int getPf() {
 		return pf;
 	}
-	public void setPF(int pF) {
-		pf = pF;
+	public void setPf(int pf) {
+		this.pf = pf;
 	}
-	public int getPTS() {
+	public int getPts() {
 		return pts;
 	}
-	public void setPTS(int pTS) {
-		pts = pTS;
+	public void setPts(int pts) {
+		this.pts = pts;
 	}
-
+	@Override
+	public int hashCode() {
+		return Objects.hash(ast, blk, blka, dreb, fg3Pct, fg3a, fg3m, fgPct, fga, fgm, ftPct, fta, ftm, idTeamsStats,
+				min, oreb, pf, pts, reb, stl, teamId, teamName, tov);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		TeamStats other = (TeamStats) obj;
+		return ast == other.ast && blk == other.blk && blka == other.blka && dreb == other.dreb
+				&& Double.doubleToLongBits(fg3Pct) == Double.doubleToLongBits(other.fg3Pct) && fg3a == other.fg3a
+				&& fg3m == other.fg3m && Double.doubleToLongBits(fgPct) == Double.doubleToLongBits(other.fgPct)
+				&& fga == other.fga && fgm == other.fgm
+				&& Double.doubleToLongBits(ftPct) == Double.doubleToLongBits(other.ftPct) && fta == other.fta
+				&& ftm == other.ftm && idTeamsStats == other.idTeamsStats
+				&& Double.doubleToLongBits(min) == Double.doubleToLongBits(other.min) && oreb == other.oreb
+				&& pf == other.pf && pts == other.pts && reb == other.reb && stl == other.stl
+				&& Objects.equals(teamId, other.teamId) && Objects.equals(teamName, other.teamName)
+				&& Double.doubleToLongBits(tov) == Double.doubleToLongBits(other.tov);
+	}
+	
+	
 }

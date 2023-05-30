@@ -1,6 +1,6 @@
 export class TeamStatsByYear{
   id!: number;
-  teamId!: string;
+  teamId!: number;
   teamCity!: string;
   teamName!: string;
   year!: string;
@@ -12,7 +12,7 @@ export class TeamStatsByYear{
   divRank!: number;
   poWins!: number;
   poLosses!: number;
-  nbaFinalAppearance!: string;
+  nbaFinalsAppearance!: string;
   fgm!: number;
   fga!: number;
   fgPct!: number;
