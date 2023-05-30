@@ -10,7 +10,6 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import { ClasificationComponent } from './main/main/clasification/clasification/clasification.component';
 import { PlayersComponent } from './main/main/players/players/players.component';
 import { TeamsComponent } from './main/main/teams/teams/teams.component';
-import { InfoComponent } from './main/main/help/info/info.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MatchsComponent } from './main/main/matchs/matchs/matchs.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -30,7 +29,6 @@ const appRoutes: Routes=[
   {path: 'clasification', component: ClasificationComponent},
   {path: 'players', component: PlayersComponent},
   {path: 'teams', component: TeamsComponent},
-  {path: 'information', component: InfoComponent},
   {path: 'matchs', component: MatchsComponent},
   {path: 'matchDetail', component: MatchDetailComponent},
   {path: 'playerDetail', component: PlayerDetailComponent},
@@ -46,7 +44,6 @@ const appRoutes: Routes=[
     ClasificationComponent,
     PlayersComponent,
     TeamsComponent,
-    InfoComponent,
     MatchsComponent,
     MatchDetailComponent,
     FilterPipe,

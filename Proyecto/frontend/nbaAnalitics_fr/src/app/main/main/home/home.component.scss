@@ -1,1 +1,62 @@
-// style for home
+.contenidoInicial{
+  background-color: white;
+  border: 1px solid black;
+  font-size: 25px;
+  flex-direction: column;
+  display: flex;
+  overflow: auto;
+  padding: 10px;
+
+  ::-webkit-scrollbar{
+    width: 8px;
+    height: 8px;
+    background: #efefef;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background: rgb(84, 172, 121);
+    border-radius: 10px;
+  }
+}
+
+.contenidoInicial p{
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 1.5;
+}
+
+h1{
+  font-size: 35px;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+}
+
+.inicio{
+  display: flex;
+  gap: 20px;
+  height: 100%;
+  width: 100%;
+}
+
+.contenidoFotograficoDerecha{
+  display: flex;
+  flex-direction: column;
+  margin-right: 5%;
+}
+
+.contenidoFotograficoIzquierda{
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+}
+
+
