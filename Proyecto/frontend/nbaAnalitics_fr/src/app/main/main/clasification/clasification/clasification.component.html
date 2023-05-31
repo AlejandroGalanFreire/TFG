@@ -1,4 +1,14 @@
-<div class="tableContainer">
+<!-- Menu desplegable -->
+<div class="toggleButton">
+  <button mat-flat-button [matMenuTriggerFor]="menu">Seleccione la liga</button>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="changeLeague('NBA')">NBA</button>
+    <button mat-menu-item (click)="changeLeague('ACB')">ACB</button>
+  </mat-menu>
+</div>
+
+<!-- <div class="tableContainer">
   <div class="table1">
     <table class="table1Data">
       <caption>East clasification</caption>
@@ -46,4 +56,4 @@
       </tbody>
     </table>
   </div>
-</div>
+</div> -->

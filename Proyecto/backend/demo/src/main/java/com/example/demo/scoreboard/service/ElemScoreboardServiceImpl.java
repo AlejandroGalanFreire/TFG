@@ -15,13 +15,8 @@ public class ElemScoreboardServiceImpl implements ElemScoreboardService {
 	private ElemScoreboardMapper esMapper;
 
 	@Override
-	public List<ElemScoreboard> findEastClasification() {
-		return esMapper.findEastClasification();
-	}
-
-	@Override
-	public List<ElemScoreboard> findWestClasification() {
-		return esMapper.findWestClasification();
+	public List<ElemScoreboard> getClasification(String league) {
+		return esMapper.getClasification(league);
 	}
 
 }

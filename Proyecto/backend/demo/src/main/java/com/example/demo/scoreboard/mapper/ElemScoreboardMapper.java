@@ -9,7 +9,6 @@ import com.example.demo.scoreboard.model.ElemScoreboard;
 @Mapper
 public interface ElemScoreboardMapper {
 	
-	List<ElemScoreboard> findEastClasification();
-	List<ElemScoreboard> findWestClasification();
+	List<ElemScoreboard> getClasification(String league);
 	
 }

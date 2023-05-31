@@ -23,6 +23,8 @@ import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './pipes/filter.pipe';
 import { PlayerDetailComponent } from './main/main/players/players/player-detail/player-detail/player-detail.component';
 import { TeamsDetailComponent } from './main/main/teams/teams/teams-detail/teams-detail/teams-detail.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
 
 const appRoutes: Routes=[
   {path: '', component: HomeComponent},
@@ -62,6 +64,8 @@ const appRoutes: Routes=[
     BrowserAnimationsModule,
     NgChartsModule,
     FormsModule,
+    MatButtonModule,
+    MatMenuModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

@@ -4,15 +4,9 @@
     "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
     
 <mapper namespace="com.example.demo.scoreboard.mapper.ElemScoreboardMapper">
-	<select id="findEastClasification" resultType="com.example.demo.scoreboard.model.ElemScoreboard">
+	<select id="getClasification" resultType="com.example.demo.scoreboard.model.ElemScoreboard">
 		SELECT * 
 		FROM scoreboard 
-		WHERE conference = 'East'
-	</select>
-	
-	<select id="findWestClasification" resultType="com.example.demo.scoreboard.model.ElemScoreboard">
-		SELECT * 
-		FROM scoreboard 
-		WHERE conference = 'West'
+		WHERE league = #{league}
 	</select>
 </mapper>

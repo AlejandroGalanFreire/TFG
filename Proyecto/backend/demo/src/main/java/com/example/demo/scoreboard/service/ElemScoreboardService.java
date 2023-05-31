@@ -6,6 +6,5 @@ import com.example.demo.scoreboard.model.ElemScoreboard;
 
 public interface ElemScoreboardService {
 	
-	List<ElemScoreboard> findEastClasification();
-	List<ElemScoreboard> findWestClasification();
+	List<ElemScoreboard> getClasification(String league);
 }

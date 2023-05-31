@@ -9,21 +9,23 @@ import { DataService } from 'src/app/services/data-service.service';
 })
 export class ClasificationComponent implements OnInit {
 
-  eastClasificationData: ElemScoreboard[] = [];
-  westClasificationData: ElemScoreboard[] = [];
+  leagueSelected: string = '';
+
+  clasification: ElemScoreboard[] = [];
 
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.dataService.getEastClasification().subscribe(
-      (resp: any) => {
-        this.eastClasificationData = JSON.parse(resp)
-      }
-    );
+    this.changeLeague('NBA');
+  }
 
-    this.dataService.getWestClasification().subscribe(
+  changeLeague(league: string){
+    this.leagueSelected = league;
+
+    this.dataService.getClasification(this.leagueSelected).subscribe(
       (resp: any) => {
-        this.westClasificationData = JSON.parse(resp)
+        this.clasification = JSON.parse(resp)
+        console.log(this.clasification);
       }
     );
   }

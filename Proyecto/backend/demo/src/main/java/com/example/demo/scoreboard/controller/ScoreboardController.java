@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.scoreboard.model.ElemScoreboard;
@@ -20,18 +21,9 @@ public class ScoreboardController {
 	/**
 	 * @return la clasificación de la conferencia este
 	 */
-	@GetMapping("/east")
-	public List<ElemScoreboard> getEastScoreboard(){
-		return esService.findEastClasification();
-		
-	}
-	
-	/**
-	 * @return la clasificación de la conferencia oeste
-	 */
-	@GetMapping("/west")
-	public List<ElemScoreboard> getWestScoreboard(){
-		return esService.findWestClasification();
+	@GetMapping("/clasification")
+	public List<ElemScoreboard> getClasification(@RequestParam String league){
+		return esService.getClasification(league);
 		
 	}
 }
