@@ -8,10 +8,10 @@
   </mat-menu>
 </div>
 
-<!-- <div class="tableContainer">
-  <div class="table1">
+<div class="tableContainer">
+  <div *ngFor="let conference of leagueSelected.conferences" class="table1">
     <table class="table1Data">
-      <caption>East clasification</caption>
+      <caption>Clasification</caption>
       <thead>
         <tr>
           <th>Nombre</th>
@@ -22,38 +22,14 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let item of eastClasificationData">
-          <td>{{ item.team }}</td>
-          <td>{{ item.won }}</td>
-          <td>{{ item.lost }}</td>
-          <td>{{ item.played }}</td>
-          <td>{{ item.wonPct }}</td>
+        <tr *ngFor="let item of clasification">
+          <td *ngIf="item.conference === conference">{{ item.team }}</td>
+          <td *ngIf="item.conference === conference">{{ item.won }}</td>
+          <td *ngIf="item.conference === conference">{{ item.lost }}</td>
+          <td *ngIf="item.conference === conference">{{ item.played }}</td>
+          <td *ngIf="item.conference === conference">{{ item.wonPct }}</td>
         </tr>
       </tbody>
     </table>
   </div>
-
-  <div class="table2">
-    <table class="table1Data">
-      <caption>West clasification</caption>
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>V</th>
-          <th>D</th>
-          <th>P</th>
-          <th>V%</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let item of westClasificationData">
-          <td>{{ item.team }}</td>
-          <td>{{ item.won }}</td>
-          <td>{{ item.lost }}</td>
-          <td>{{ item.played }}</td>
-          <td>{{ item.wonPct }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div> -->
+</div>

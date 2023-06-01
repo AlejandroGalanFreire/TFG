@@ -8,6 +8,7 @@ import { Injectable } from '@angular/core';
 export class DataService {
 
   private scoreboardEastUrl = 'http://localhost:8080/rest/scoreboard/clasification';
+  private leagueUrl = 'http://localhost:8080/rest/league';
   private teamsStatsUrl = 'http://localhost:8080/rest/teamstats';
   private teamsStatsByYearUrl = 'http://localhost:8080/rest/teamstatsbyyear';
   private playersStatsUrl = 'http://localhost:8080/rest/playerstats';
@@ -20,6 +21,15 @@ export class DataService {
     return this.http.get(this.scoreboardEastUrl, {
       params:{
         league: leagueSelected
+      },
+      responseType: 'text'
+    });
+  }
+
+  getLeague(leagueName: string){
+    return this.http.get(this.leagueUrl, {
+      params:{
+        leagueName: leagueName
       },
       responseType: 'text'
     });

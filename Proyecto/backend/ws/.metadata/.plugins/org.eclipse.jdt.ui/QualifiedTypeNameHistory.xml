@@ -33,7 +33,6 @@
     <fullyQualifiedTypeName name="org.apache.ibatis.annotations.Mapper"/>
     <fullyQualifiedTypeName name="com.example.demo.games.mapper.GamesStatsMapper"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
     <fullyQualifiedTypeName name="com.example.demo.players.service.PlayerStatsService"/>
     <fullyQualifiedTypeName name="com.example.demo.players.service.PlayerStatsServiceImpl"/>
     <fullyQualifiedTypeName name="org.mockito.Mock"/>
@@ -58,4 +57,5 @@
     <fullyQualifiedTypeName name="com.example.demo.games.model.Periods"/>
     <fullyQualifiedTypeName name="com.example.demo.games.model.GameStats"/>
     <fullyQualifiedTypeName name="com.example.demo.teams.model.TeamStatsByYear"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
 </qualifiedTypeNameHistroy>

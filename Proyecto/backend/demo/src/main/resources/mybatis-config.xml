@@ -9,5 +9,6 @@
  		<mapper resource="mapper/TeamStatsMapper.xml"/>
  		<mapper resource="mapper/PlayerStatsMapper.xml"/>
  		<mapper resource="mapper/GamesStatsMapper.xml"/>
+ 		<mapper resource="mapper/LeagueMapper.xml"/>
  	</mappers>
  </configuration>
