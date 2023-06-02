@@ -18,3 +18,11 @@
 <div class="radarChartContainer">
   <canvas id="radarChart"></canvas>
 </div>
+
+<!-- Buscador para filtrar por el jugador que quieres comparar -->
+<input type="text" class="form-control" placeholder="Buscar jugador para comparar" name = "filterPlayers"
+  [(ngModel)]="filterPlayers" (keydown)="setAllPlayers()">
+<div *ngIf="filterPlayers.length > 0">
+  <button *ngFor="let player of allPlayers | filter: filterPlayers" (click)="openMenuDialog(player)">{{ player.playerName }}</button>
+</div>
+

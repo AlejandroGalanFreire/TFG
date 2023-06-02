@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { HomeService } from 'src/app/main/main/services/home.service';
 import { PlayerStats } from 'src/app/models/playerStats';
 import Chart from 'chart.js/auto';
+import { DataService } from 'src/app/services/data-service.service';
+import { Observable, Subscription } from 'rxjs';
+import { MatDialog } from '@angular/material/dialog';
+import { ComparativeDialogComponent } from 'src/app/main/main/comparativeDialog/comparative-dialog/comparative-dialog.component';
 
 @Component({
   selector: 'app-player-detail',
@@ -19,8 +23,13 @@ export class PlayerDetailComponent implements OnInit {
   private barChart: any;
   private pieChart: any;
   private radarChart: any;
+  public allPlayers: PlayerStats[] = [];
+  filterPlayers = '';
 
-  constructor(private readonly homeService: HomeService){ }
+
+  constructor(private dataService: DataService,
+    private readonly homeService: HomeService,
+    public comparativeDialog: MatDialog){ }
 
   ngOnInit(): void {
     this.homeService.playerSelected.subscribe(data => {
@@ -184,6 +193,19 @@ export class PlayerDetailComponent implements OnInit {
         data: radarChartData,
       });
     }
+  }
+
+  setAllPlayers(){
+    this.homeService.allPlayers.subscribe(data => {
+      this.allPlayers = data.filter(player => player.playerId !== this.playerStats.playerId);
+    });
+  }
+
+  openMenuDialog(playerToCompare: PlayerStats){
+    debugger;
+    this.comparativeDialog.open(ComparativeDialogComponent, {
+      data: {playerDetail: this.playerStats, playerToCompare: playerToCompare}
+    })
   }
 
 }

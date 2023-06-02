@@ -20,6 +20,7 @@ export class PlayersComponent implements OnInit{
     this.dataService.getPlayersStats().subscribe(
       (resp: any) => {
         this.playersStats = JSON.parse(resp);
+        this.homeService.setAllPlayers(this.playersStats);
       }
     );
   }

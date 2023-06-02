@@ -25,6 +25,8 @@ import { PlayerDetailComponent } from './main/main/players/players/player-detail
 import { TeamsDetailComponent } from './main/main/teams/teams/teams-detail/teams-detail/teams-detail.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ComparativeDialogComponent } from './main/main/comparativeDialog/comparative-dialog/comparative-dialog.component';
 
 const appRoutes: Routes=[
   {path: '', component: HomeComponent},
@@ -50,7 +52,8 @@ const appRoutes: Routes=[
     MatchDetailComponent,
     FilterPipe,
     PlayerDetailComponent,
-    TeamsDetailComponent
+    TeamsDetailComponent,
+    ComparativeDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -66,6 +69,7 @@ const appRoutes: Routes=[
     FormsModule,
     MatButtonModule,
     MatMenuModule,
+    MatDialogModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
