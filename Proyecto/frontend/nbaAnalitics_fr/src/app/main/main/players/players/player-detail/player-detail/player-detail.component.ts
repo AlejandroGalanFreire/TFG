@@ -3,7 +3,6 @@ import { HomeService } from 'src/app/main/main/services/home.service';
 import { PlayerStats } from 'src/app/models/playerStats';
 import Chart from 'chart.js/auto';
 import { DataService } from 'src/app/services/data-service.service';
-import { Observable, Subscription } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 import { ComparativeDialogComponent } from 'src/app/main/main/comparativeDialog/comparative-dialog/comparative-dialog.component';
 
@@ -15,11 +14,6 @@ import { ComparativeDialogComponent } from 'src/app/main/main/comparativeDialog/
 export class PlayerDetailComponent implements OnInit {
 
   public playerStats: PlayerStats = new PlayerStats();
-  public val: number = 0; // rendimiento global del jugador
-  public EFF_PerGame: number = 0; // eficiencia del jugador por partido
-  public EFF_PerMinute: number = 0; // eficiencia del jugador por minuto
-  public pointsCreated = 0; // puntos creados por el jugador a través de asistencias
-  public trueShootingPercentage = 0; // porcentaje real de acierto en tiros
   private barChart: any;
   private pieChart: any;
   private radarChart: any;
@@ -35,61 +29,61 @@ export class PlayerDetailComponent implements OnInit {
     this.homeService.playerSelected.subscribe(data => {
       this.playerStats = data;
       this.playerStats.urlPicture = 'https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/' + this.playerStats.playerId + '.png'
-      this.calculatePlayerPerformance();
+      this.calculatePlayerPerformance(this.playerStats);
 
       // creación de los gráficos
-      this.initializeBarChart();
-      this.initializePieChart();
-      this.initializeRadarChart();
+      this.initializeBarChart(this.playerStats);
+      this.initializePieChart(this.playerStats);
+      this.initializeRadarChart(this.playerStats);
     });
   }
 
-  calculatePlayerPerformance(){
-    this.calculateVal();
-    this.calculateEFF();
-    this.calculatePointsCreated();
-    this.calculateTrueShootingPercentage();
+  calculatePlayerPerformance(player: PlayerStats){
+    this.calculateVal(player);
+    this.calculateEFF(player);
+    this.calculatePointsCreated(player);
+    this.calculateTrueShootingPercentage(player);
   }
 
-  calculateVal(){
-    const points = this.playerStats.pts;
-    const rebounds = this.playerStats.reb;
-    const ast = this.playerStats.ast;
-    const stl = this.playerStats.stl;
-    const blk = this.playerStats.blk;
-    const succesfulShots = this.playerStats.fg3m + this.playerStats.fgm + this.playerStats.ftm;
-    const missedShots = (this.playerStats.fg3a - this.playerStats.fg3m) +
-      (this.playerStats.fga - this.playerStats.fgm) + (this.playerStats.fta - this.playerStats.ftm);
-    const tov = this.playerStats.tov;
-    this.val = points + rebounds + ast + stl + blk + succesfulShots - missedShots - tov;
+  calculateVal(player: PlayerStats){
+    const points = player.pts;
+    const rebounds = player.reb;
+    const ast = player.ast;
+    const stl = player.stl;
+    const blk = player.blk;
+    const succesfulShots = player.fg3m + player.fgm + player.ftm;
+    const missedShots = (player.fg3a - player.fg3m) +
+      (player.fga - player.fgm) + (player.fta - player.ftm);
+    const tov = player.tov;
+    player.val = points + rebounds + ast + stl + blk + succesfulShots - missedShots - tov;
   }
 
-  calculateEFF() {
-    const points = this.playerStats.pts;
-    const rebounds = this.playerStats.reb;
-    const ast = this.playerStats.ast;
-    const stl = this.playerStats.stl;
-    const blk = this.playerStats.blk;
-    const missedShots = (this.playerStats.fg3a - this.playerStats.fg3m) +
-      (this.playerStats.fga - this.playerStats.fgm) + (this.playerStats.fta - this.playerStats.ftm);
-    const tov = this.playerStats.tov;
+  calculateEFF(player: PlayerStats) {
+    const points = player.pts;
+    const rebounds = player.reb;
+    const ast = player.ast;
+    const stl = player.stl;
+    const blk = player.blk;
+    const missedShots = (player.fg3a - player.fg3m) +
+      (player.fga - player.fgm) + (player.fta - player.ftm);
+    const tov = player.tov;
     const EFF = points + rebounds + ast + stl + blk - missedShots - tov;
-    this.EFF_PerGame = EFF / this.playerStats.gp;
-    this.EFF_PerMinute = (EFF / this.playerStats.min) * 48;
+    player.EFF_PerGame = EFF / player.gp;
+    player.EFF_PerMinute = (EFF / player.min) * 48;
   }
 
-  calculatePointsCreated() {
-    this.pointsCreated = this.playerStats.pts + (1.42 * this.playerStats.ast);
+  calculatePointsCreated(player: PlayerStats) {
+    player.pointsCreated = player.pts + (1.42 * player.ast);
   }
 
-  calculateTrueShootingPercentage() {
-    const fieldShotsAttempted = this.playerStats.fg3a + this.playerStats.fga
-    const freeShotsAttempted = this.playerStats.fta;
-    const TS = this.playerStats.pts / (2*(fieldShotsAttempted + 0.44*freeShotsAttempted));
-    this.trueShootingPercentage = TS*100;
+  calculateTrueShootingPercentage(player: PlayerStats) {
+    const fieldShotsAttempted = player.fg3a + player.fga
+    const freeShotsAttempted = player.fta;
+    const TS = player.pts / (2*(fieldShotsAttempted + 0.44*freeShotsAttempted));
+    player.trueShootingPercentage = TS*100;
   }
 
-  initializeBarChart(){
+  initializeBarChart(player: PlayerStats){
     const barChartCanvas = document.getElementById("barChart") as HTMLCanvasElement;
     const ctx = barChartCanvas.getContext('2d');
 
@@ -97,13 +91,13 @@ export class PlayerDetailComponent implements OnInit {
       labels: ["Valoración", "EFF por partido", "Puntos creados", "Porcentaje real de tiro"],
       datasets: [
         {
-          label: this.playerStats.playerName,
-          data: [this.val, this.EFF_PerGame, this.pointsCreated, this.trueShootingPercentage],
+          label: player.playerName,
+          data: [player.val, player.EFF_PerGame, player.pointsCreated, player.trueShootingPercentage],
           backgroundColor: [
-            (this.val < 1000) ? 'red' : (this.val < 2000) ? 'yellow' : 'green',
-            (this.EFF_PerGame < 15) ? 'red' : (this.EFF_PerGame < 20) ? 'yellow' : 'green',
-            (this.pointsCreated < 1000) ? 'red' : (this.pointsCreated < 2000) ? 'yellow' : 'green',
-            (this.trueShootingPercentage < 30) ? 'red' : (this.trueShootingPercentage < 50) ? 'yellow' : 'green'
+            (player.val < 1000) ? 'red' : (player.val < 2000) ? 'yellow' : 'green',
+            (player.EFF_PerGame < 15) ? 'red' : (player.EFF_PerGame < 20) ? 'yellow' : 'green',
+            (player.pointsCreated < 1000) ? 'red' : (player.pointsCreated < 2000) ? 'yellow' : 'green',
+            (player.trueShootingPercentage < 30) ? 'red' : (player.trueShootingPercentage < 50) ? 'yellow' : 'green'
           ]
         }
       ]
@@ -117,7 +111,7 @@ export class PlayerDetailComponent implements OnInit {
     }
   }
 
-  initializePieChart(){
+  initializePieChart(player: PlayerStats){
     const pieChartCanvas = document.getElementById("pieChart") as HTMLCanvasElement;
     const ctx = pieChartCanvas.getContext('2d');
 
@@ -132,8 +126,8 @@ export class PlayerDetailComponent implements OnInit {
       ],
       datasets: [{
         label: 'My First Dataset',
-        data: [this.playerStats.dreb, this.playerStats.pf, this.playerStats.blk, this.playerStats.oreb, this.playerStats.ftm
-          + this.playerStats.fgm + this.playerStats.fg3m, this.playerStats.ast],
+        data: [player.dreb, player.pf, player.blk, player.oreb, player.ftm
+          + player.fgm + player.fg3m, player.ast],
         backgroundColor: [
           'red',
           'yellow',
@@ -154,7 +148,7 @@ export class PlayerDetailComponent implements OnInit {
     }
   }
 
-  initializeRadarChart(){
+  initializeRadarChart(player: PlayerStats){
     const radarChartCanvas = document.getElementById("radarChart") as HTMLCanvasElement;
     const ctx = radarChartCanvas.getContext('2d');
 
@@ -165,8 +159,8 @@ export class PlayerDetailComponent implements OnInit {
         'triples',
       ],
       datasets: [{
-        label: 'My First Dataset',
-        data: [this.playerStats.fta, this.playerStats.fga, this.playerStats.fg3a],
+        label: 'tiros intentados',
+        data: [player.fta, player.fga, player.fg3a],
         fill: true,
         backgroundColor: 'rgba(255, 99, 132, 0.2)',
         borderColor: 'rgb(255, 99, 132)',
@@ -175,8 +169,8 @@ export class PlayerDetailComponent implements OnInit {
         pointHoverBackgroundColor: '#fff',
         pointHoverBorderColor: 'rgb(255, 99, 132)'
       }, {
-        label: 'My Second Dataset',
-        data: [this.playerStats.ftm, this.playerStats.fgm, this.playerStats.fg3m],
+        label: 'tiros anotados',
+        data: [player.ftm, player.fgm, player.fg3m],
         fill: true,
         backgroundColor: 'rgba(54, 162, 235, 0.2)',
         borderColor: 'rgb(54, 162, 235)',
@@ -202,8 +196,11 @@ export class PlayerDetailComponent implements OnInit {
   }
 
   openMenuDialog(playerToCompare: PlayerStats){
-    debugger;
+    this.calculatePlayerPerformance(playerToCompare);
+    console.log(playerToCompare);
     this.comparativeDialog.open(ComparativeDialogComponent, {
+      width: '900px',
+      height: '900px',
       data: {playerDetail: this.playerStats, playerToCompare: playerToCompare}
     })
   }

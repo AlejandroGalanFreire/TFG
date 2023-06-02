@@ -31,4 +31,9 @@ export class PlayerStats{
 	pts!: number;
   min!: number;
   urlPicture!: string;
+  val!: number;
+  EFF_PerGame!:number;
+  EFF_PerMinute!: number;
+  pointsCreated!: number;
+  trueShootingPercentage!:number;
 }

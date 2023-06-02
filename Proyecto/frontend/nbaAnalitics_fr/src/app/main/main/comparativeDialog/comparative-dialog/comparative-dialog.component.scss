@@ -1,0 +1,21 @@
+.colorPercentagesBar{
+  display: flex;
+  width: 100%;
+  height: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+
+  .element:first-child{
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+  }
+
+  .element:last-child{
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+  }
+
+  .element{
+    border: 1px solid white;
+  }
+}
