@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ComparativeDialogComponent } from './comparative-dialog.component';
+import { ComparativePlayersDialogComponent } from './comparativePlayers-dialog.component';
 
 describe('ComparativeDialogComponent', () => {
-  let component: ComparativeDialogComponent;
-  let fixture: ComponentFixture<ComparativeDialogComponent>;
+  let component: ComparativePlayersDialogComponent;
+  let fixture: ComponentFixture<ComparativePlayersDialogComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ComparativeDialogComponent ]
+      declarations: [ ComparativePlayersDialogComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ComparativeDialogComponent);
+    fixture = TestBed.createComponent(ComparativePlayersDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

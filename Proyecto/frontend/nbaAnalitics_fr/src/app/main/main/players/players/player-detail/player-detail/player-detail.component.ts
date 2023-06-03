@@ -4,7 +4,8 @@ import { PlayerStats } from 'src/app/models/playerStats';
 import Chart from 'chart.js/auto';
 import { DataService } from 'src/app/services/data-service.service';
 import { MatDialog } from '@angular/material/dialog';
-import { ComparativeDialogComponent } from 'src/app/main/main/comparativeDialog/comparative-dialog/comparative-dialog.component';
+import { ComparativePlayersDialogComponent } from 'src/app/main/main/comparativeDialog/comparative-dialog/comparativePlayers-dialog.component';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 @Component({
   selector: 'app-player-detail',
@@ -32,6 +33,7 @@ export class PlayerDetailComponent implements OnInit {
       this.calculatePlayerPerformance(this.playerStats);
 
       // creación de los gráficos
+      // Chart.register(ChartDataLabels);
       this.initializeBarChart(this.playerStats);
       this.initializePieChart(this.playerStats);
       this.initializeRadarChart(this.playerStats);
@@ -197,8 +199,7 @@ export class PlayerDetailComponent implements OnInit {
 
   openMenuDialog(playerToCompare: PlayerStats){
     this.calculatePlayerPerformance(playerToCompare);
-    console.log(playerToCompare);
-    this.comparativeDialog.open(ComparativeDialogComponent, {
+    this.comparativeDialog.open(ComparativePlayersDialogComponent, {
       width: '900px',
       height: '900px',
       data: {playerDetail: this.playerStats, playerToCompare: playerToCompare}

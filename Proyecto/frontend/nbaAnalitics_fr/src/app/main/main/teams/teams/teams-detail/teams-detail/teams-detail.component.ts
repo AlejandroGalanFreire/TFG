@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HomeService } from 'src/app/main/main/services/home.service';
 import { TeamStatsByYear } from 'src/app/models/teamStatsByYear';
 import Chart from 'chart.js/auto';
+import { MatDialog } from '@angular/material/dialog';
+import { ComparativeTeamsDialogComponent } from 'src/app/main/main/comparativeDialog/comparative-dialog/comparative-teams-dialog/comparative-teams-dialog.component';
 
 @Component({
   selector: 'app-teams-detail',
@@ -19,8 +21,11 @@ export class TeamsDetailComponent implements OnInit {
   private thirdYear = this.teamStatsByYear[2];
   private fourthYear = this.teamStatsByYear[3];
   private fifthYear = this.teamStatsByYear[4];
+  filterTeams = '';
+  public allTeams: TeamStatsByYear[] = [];
 
-  constructor(private readonly homeService: HomeService) { }
+  constructor(private readonly homeService: HomeService,
+    public comparativeDialog: MatDialog) { }
 
   ngOnInit(): void {
     this.homeService.teamSelected.subscribe(data => {
@@ -146,6 +151,20 @@ export class TeamsDetailComponent implements OnInit {
         data: radarChartData,
       });
     }
+  }
+
+  setAllTeams(){
+    this.homeService.allTeams.subscribe(data => {
+      this.allTeams = data.filter(team => team.teamId !== this.fifthYear.teamId);
+    });
+  }
+
+  openMenuDialog(teamToCompare: TeamStatsByYear){
+    this.comparativeDialog.open(ComparativeTeamsDialogComponent, {
+      width: '900px',
+      height: '900px',
+      data: {teamDetail: this.teamStatsByYear, teamToCompare: teamToCompare}
+    })
   }
 
 }

@@ -1,0 +1,19 @@
+.colorPercentagesBar{
+  display: flex;
+  width: 100%;
+  height: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.tresPts, .tirosLibres, .trueShooting, .dosPts{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.tresPtsGraphs, .tirosLibresGraphs, .trueShootingGraphs, .dosPtsGraphs{
+  width: 80%;
+}
+.data{
+  display: flex;
+  align-items: center;
+}

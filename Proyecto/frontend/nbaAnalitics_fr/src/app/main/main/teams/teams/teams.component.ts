@@ -27,6 +27,7 @@ export class TeamsComponent implements OnInit{
     this.dataService.getTeamsStatsLastFiveYears().subscribe(
       (resp: any) => {
         this.teamsStatsByYear = JSON.parse(resp)
+        this.homeService.setAllTeams(this.teamsStatsByYear);
       }
     );
   }

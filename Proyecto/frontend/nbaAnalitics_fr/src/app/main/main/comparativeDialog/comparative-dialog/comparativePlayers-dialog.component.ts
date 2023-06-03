@@ -4,19 +4,18 @@ import Chart from 'chart.js/auto';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 @Component({
-  selector: 'app-comparative-dialog',
-  templateUrl: './comparative-dialog.component.html',
-  styleUrls: ['./comparative-dialog.component.scss']
+  selector: 'app-comparativePlayers-dialog',
+  templateUrl: './comparativePlayers-dialog.component.html',
+  styleUrls: ['./comparativePlayers-dialog.component.scss']
 })
-export class ComparativeDialogComponent implements OnInit{
+export class ComparativePlayersDialogComponent implements OnInit{
 
   private barChart: any;
 
   constructor(
-    public dialogRef: MatDialogRef<ComparativeDialogComponent>,
+    public dialogRef: MatDialogRef<ComparativePlayersDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-  ) {console.log(data);
-  }
+  ) {}
 
   ngOnInit(): void {
     this.initializeBarChart();
@@ -51,10 +50,10 @@ export class ComparativeDialogComponent implements OnInit{
     };
 
     if(ctx){
-      Chart.register(ChartDataLabels);
       this.barChart = new Chart(ctx, {
         type: 'bar',
         data: barChartData,
+        plugins: [ChartDataLabels],
         options: {
           indexAxis: 'y',
           plugins: {

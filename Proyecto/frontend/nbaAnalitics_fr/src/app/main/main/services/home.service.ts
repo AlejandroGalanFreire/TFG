@@ -29,6 +29,11 @@ export class HomeService {
   public teamSelected: Observable<TeamStatsByYear[]> =
     this.teamSelectedSubject.asObservable();
 
+  private readonly allTeamsSubject: BehaviorSubject<TeamStatsByYear[]> =
+    new BehaviorSubject<TeamStatsByYear[]>([]);
+  public allTeams: Observable<TeamStatsByYear[]> =
+    this.allTeamsSubject.asObservable();
+
   setMatchSelectedDetail(item: GameStats[]) {
     this.currentMatchSubject.next(item);
   }
@@ -43,5 +48,9 @@ export class HomeService {
 
   setTeamSelectedDetail(teamData: TeamStatsByYear[]) {
     this.teamSelectedSubject.next(teamData);
+  }
+
+  setAllTeams(teams: TeamStatsByYear[]) {
+    this.allTeamsSubject.next(teams);
   }
 }

@@ -23,6 +23,6 @@
 <input type="text" class="form-control" placeholder="Buscar jugador para comparar" name = "filterPlayers"
   [(ngModel)]="filterPlayers" (keydown)="setAllPlayers()">
 <div *ngIf="filterPlayers.length > 0">
-  <button *ngFor="let player of allPlayers | filter: filterPlayers" (click)="openMenuDialog(player)">{{ player.playerName }}</button>
+  <button *ngFor="let player of allPlayers | filterPlayer: filterPlayers" (click)="openMenuDialog(player)">{{ player.playerName }}</button>
 </div>
 

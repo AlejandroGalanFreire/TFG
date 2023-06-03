@@ -1,0 +1,69 @@
+<!-- gráfico de barras para comparar las estadísticas globales de los equipos -->
+<div class="title">Eficiencia por partido</div>
+<div class="barChartContainer">
+  <canvas id="barChartComparativeTeams"></canvas>
+</div>
+
+<!-- barras para ver la comparación de porcentajes entre los jugadores -->
+<div class="tresPts">
+  <div class="data">
+    %3P
+  </div>
+  <div class="tresPtsGraphs">
+    <div class="colorPercentagesBar">
+      <div class="tresPtsTeam1"
+        [style.width.%]="data.teamDetail.fg3Pct * 100"
+        [style.backgroundColor]="'yellow'">
+      </div>
+     </div>
+
+     <div class="colorPercentagesBar">
+      <div class="tresPtsTeam2"
+        [style.width.%]="data.teamToCompare.fg3Pct * 100"
+        [style.backgroundColor]="'blue'">
+      </div>
+     </div>
+  </div>
+</div>
+
+<div class="tirosLibres">
+  <div class="data">
+    %TL
+  </div>
+  <div class="tirosLibresGraphs">
+    <div class="colorPercentagesBar">
+      <div class="tirosLibresTeam1"
+        [style.width.%]="data.teamDetail.ftPct * 100"
+        [style.backgroundColor]="'yellow'">
+      </div>
+     </div>
+
+     <div class="colorPercentagesBar">
+      <div class="tirosLibresTeam2"
+        [style.width.%]="data.teamToCompare.ftPct * 100"
+        [style.backgroundColor]="'blue'">
+      </div>
+     </div>
+  </div>
+</div>
+
+<div class="dosPts">
+  <div class="data">
+    %2P
+  </div>
+  <div class="dosPtsGraphs">
+    <div class="colorPercentagesBar">
+      <div class="dosPtsTeam1"
+        [style.width.%]="data.teamDetail.fgPct * 100"
+        [style.backgroundColor]="'yellow'">
+      </div>
+     </div>
+
+     <div class="colorPercentagesBar">
+      <div class="dosPtsTeam2"
+        [style.width.%]="data.teamToCompare.fgPct * 100"
+        [style.backgroundColor]="'blue'">
+      </div>
+     </div>
+  </div>
+</div>

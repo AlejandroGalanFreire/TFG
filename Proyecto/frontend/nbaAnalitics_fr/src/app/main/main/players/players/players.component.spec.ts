@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientModule } from '@angular/common/http';
 import { PlayersComponent } from './players.component';
-import { FilterPipe } from 'src/app/pipes/filter.pipe';
+import { FilterPlayersPipe } from 'src/app/pipes/playerPipes/filterPlayers.pipe';
 import { FormsModule } from '@angular/forms';
 
 describe('PlayersComponent', () => {
@@ -12,7 +12,7 @@ describe('PlayersComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [
         PlayersComponent,
-        FilterPipe
+        FilterPlayersPipe
       ],
       imports: [
         HttpClientModule,

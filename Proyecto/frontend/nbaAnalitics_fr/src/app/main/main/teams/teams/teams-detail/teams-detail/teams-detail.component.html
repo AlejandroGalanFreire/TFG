@@ -4,23 +4,28 @@
   <canvas id="lineChart"></canvas>
 </div>
 
- <!-- gráfico de barras para las asistencias -->
- <div class="title">Asistencias</div>
- <div class="barChartContainer">
-   <canvas id="barChartAst"></canvas>
- </div>
+<!-- gráfico de barras para las asistencias -->
+<div class="title">Asistencias</div>
+<div class="barChartContainer">
+  <canvas id="barChartAst"></canvas>
+</div>
 
- <!-- Barra para saber que año llegó o ganó la copa -->
- <div class="colorPercentagesBar">
-  <div class="element"
-    *ngFor="let item of teamStatsByYear"
-    [style.width.%]="100/5"
+<!-- Barra para saber que año llegó o ganó la copa -->
+<div class="colorPercentagesBar">
+  <div class="element" *ngFor="let item of teamStatsByYear" [style.width.%]="100/5"
     [style.backgroundColor]="getColorByFinal(item)">
   </div>
- </div>
+</div>
 
-  <!-- gráficos tipo radar para comparar tiros realizados con tiros anotados -->
-  <div class="title">Porcentajes</div>
-  <div class="radarChartContainer">
-    <canvas id="radarChart"></canvas>
-  </div>
+<!-- gráficos tipo radar para comparar tiros realizados con tiros anotados -->
+<div class="title">Porcentajes</div>
+<div class="radarChartContainer">
+  <canvas id="radarChart"></canvas>
+</div>
+
+<!-- Buscador para filtrar por el equipo que quieres comparar -->
+<input type="text" class="form-control" placeholder="Buscar equipo para comparar" name = "filterTeams"
+  [(ngModel)]="filterTeams" (keydown)="setAllTeams()">
+<div *ngIf="filterTeams.length > 0">
+  <button *ngFor="let team of allTeams | filterTeam: filterTeams" (click)="openMenuDialog(team)">{{ team.teamName }}</button>
+</div>

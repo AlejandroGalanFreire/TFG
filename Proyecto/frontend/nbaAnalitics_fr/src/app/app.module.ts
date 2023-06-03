@@ -20,13 +20,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatchDetailComponent } from './main/main/matchs/matchs/match-detail/match-detail.component';
 import { NgChartsModule  } from 'ng2-charts';
 import { FormsModule } from '@angular/forms';
-import { FilterPipe } from './pipes/filter.pipe';
+import { FilterPlayersPipe } from './pipes/playerPipes/filterPlayers.pipe';
 import { PlayerDetailComponent } from './main/main/players/players/player-detail/player-detail/player-detail.component';
 import { TeamsDetailComponent } from './main/main/teams/teams/teams-detail/teams-detail/teams-detail.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import {MatDialogModule} from '@angular/material/dialog';
-import { ComparativeDialogComponent } from './main/main/comparativeDialog/comparative-dialog/comparative-dialog.component';
+import { ComparativePlayersDialogComponent } from './main/main/comparativeDialog/comparative-dialog/comparativePlayers-dialog.component';
+import { ComparativeTeamsDialogComponent } from './main/main/comparativeDialog/comparative-dialog/comparative-teams-dialog/comparative-teams-dialog.component';
+import { FilterTeamsPipe } from './pipes/teamPipes/filterTeams.pipe';
 
 const appRoutes: Routes=[
   {path: '', component: HomeComponent},
@@ -50,10 +52,12 @@ const appRoutes: Routes=[
     TeamsComponent,
     MatchsComponent,
     MatchDetailComponent,
-    FilterPipe,
+    FilterPlayersPipe,
+    FilterTeamsPipe,
     PlayerDetailComponent,
     TeamsDetailComponent,
-    ComparativeDialogComponent
+    ComparativePlayersDialogComponent,
+    ComparativeTeamsDialogComponent
   ],
   imports: [
     BrowserModule,

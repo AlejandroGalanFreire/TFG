@@ -1,0 +1,90 @@
+<!-- gráfico de barras para comparar la eficiencia de los jugadores -->
+<div class="title">Eficiencia por partido</div>
+<div class="barChartContainer">
+  <canvas id="barChartComparative"></canvas>
+</div>
+
+<!-- barras para ver la comparación de porcentajes entre los jugadores -->
+<div class="tresPts">
+  <div class="data">
+    %3P
+  </div>
+  <div class="tresPtsGraphs">
+    <div class="colorPercentagesBar">
+      <div class="tresPtsPlayer1"
+        [style.width.%]="data.playerDetail.fg3Pct * 100"
+        [style.backgroundColor]="'yellow'">
+      </div>
+     </div>
+
+     <div class="colorPercentagesBar">
+      <div class="tresPtsPlayer2"
+        [style.width.%]="data.playerToCompare.fg3Pct * 100"
+        [style.backgroundColor]="'blue'">
+      </div>
+     </div>
+  </div>
+</div>
+
+<div class="tirosLibres">
+  <div class="data">
+    %TL
+  </div>
+  <div class="tirosLibresGraphs">
+    <div class="colorPercentagesBar">
+      <div class="tirosLibresPlayer1"
+        [style.width.%]="data.playerDetail.ftPct * 100"
+        [style.backgroundColor]="'yellow'">
+      </div>
+     </div>
+
+     <div class="colorPercentagesBar">
+      <div class="tirosLibresPlayer2"
+        [style.width.%]="data.playerToCompare.ftPct * 100"
+        [style.backgroundColor]="'blue'">
+      </div>
+     </div>
+  </div>
+</div>
+
+<div class="dosPts">
+  <div class="data">
+    %2P
+  </div>
+  <div class="dosPtsGraphs">
+    <div class="colorPercentagesBar">
+      <div class="dosPtsPlayer1"
+        [style.width.%]="data.playerDetail.fgPct * 100"
+        [style.backgroundColor]="'yellow'">
+      </div>
+     </div>
+
+     <div class="colorPercentagesBar">
+      <div class="dosPtsPlayer2"
+        [style.width.%]="data.playerToCompare.fgPct * 100"
+        [style.backgroundColor]="'blue'">
+      </div>
+     </div>
+  </div>
+</div>
+
+<div class="trueShooting">
+  <div class="data">
+    %TS
+  </div>
+  <div class="trueShootingGraphs">
+    <div class="colorPercentagesBar">
+      <div class="trueShootingPlayer1"
+        [style.width.%]="data.playerDetail.trueShootingPercentage"
+        [style.backgroundColor]="'yellow'">
+      </div>
+     </div>
+
+     <div class="colorPercentagesBar">
+      <div class="trueShootingPlayer2"
+        [style.width.%]="data.playerToCompare.trueShootingPercentage"
+        [style.backgroundColor]="'blue'">
+      </div>
+     </div>
+  </div>
+</div>

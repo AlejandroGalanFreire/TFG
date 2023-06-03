@@ -27,10 +27,8 @@ export class ClasificationComponent implements OnInit {
         this.dataService.getClasification(this.leagueSelected.leagueName).subscribe(
           (resp: any) => {
             this.clasification = JSON.parse(resp);
-            console.log(this.clasification);
           }
         );
-        console.log(this.leagueSelected);
       }
     );
   }
