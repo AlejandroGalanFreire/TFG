@@ -52,10 +52,11 @@
     <fullyQualifiedTypeName name="com.example.demo.games.controller.GamesStatsController"/>
     <fullyQualifiedTypeName name="com.example.demo.games.service.GamesStatsService"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.time.Period"/>
     <fullyQualifiedTypeName name="com.example.demo.games.model.Periods"/>
     <fullyQualifiedTypeName name="com.example.demo.games.model.GameStats"/>
     <fullyQualifiedTypeName name="com.example.demo.teams.model.TeamStatsByYear"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.example.demo.league.model.LeagueDto"/>
 </qualifiedTypeNameHistroy>

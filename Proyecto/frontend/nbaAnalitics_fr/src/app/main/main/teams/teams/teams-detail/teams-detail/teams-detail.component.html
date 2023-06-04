@@ -5,7 +5,7 @@
 </div>
 
 <!-- gráfico de barras para las asistencias -->
-<div class="title">Asistencias</div>
+<div class="title">Asistencias, rebotes, bloqueos, robos y pérdidas</div>
 <div class="barChartContainer">
   <canvas id="barChartAst"></canvas>
 </div>
@@ -23,9 +23,20 @@
   <canvas id="radarChart"></canvas>
 </div>
 
+<!-- gráfico de barras para las asistencias, rebotes, bloqueos, robos y perdidas -->
+<div class="title">Actuación en PlayOff</div>
+<div class="barChartContainer">
+  <canvas id="barChartPlayOff"></canvas>
+</div>
+
+<div *ngIf="fourthYear.nbaFinalsAppearance === 'N/A'">No ha llegado a las finales</div>
+<div *ngIf="fourthYear.nbaFinalsAppearance === 'FINALS APPEARANCE'">Bicampeón</div>
+<div *ngIf="fourthYear.nbaFinalsAppearance === 'LEAGUE CHAMPION'">Campeón</div>
+
 <!-- Buscador para filtrar por el equipo que quieres comparar -->
 <input type="text" class="form-control" placeholder="Buscar equipo para comparar" name = "filterTeams"
   [(ngModel)]="filterTeams" (keydown)="setAllTeams()">
 <div *ngIf="filterTeams.length > 0">
   <button *ngFor="let team of allTeams | filterTeam: filterTeams" (click)="openMenuDialog(team)">{{ team.teamName }}</button>
 </div>
+

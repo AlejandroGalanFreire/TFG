@@ -12,7 +12,7 @@
   <div class="tresPtsGraphs">
     <div class="colorPercentagesBar">
       <div class="tresPtsTeam1"
-        [style.width.%]="data.teamDetail.fg3Pct * 100"
+        [style.width.%]="data.teamDetail[4].fg3Pct * 100"
         [style.backgroundColor]="'yellow'">
       </div>
      </div>
@@ -33,7 +33,7 @@
   <div class="tirosLibresGraphs">
     <div class="colorPercentagesBar">
       <div class="tirosLibresTeam1"
-        [style.width.%]="data.teamDetail.ftPct * 100"
+        [style.width.%]="data.teamDetail[4].ftPct * 100"
         [style.backgroundColor]="'yellow'">
       </div>
      </div>
@@ -54,7 +54,7 @@
   <div class="dosPtsGraphs">
     <div class="colorPercentagesBar">
       <div class="dosPtsTeam1"
-        [style.width.%]="data.teamDetail.fgPct * 100"
+        [style.width.%]="data.teamDetail[4].fgPct * 100"
         [style.backgroundColor]="'yellow'">
       </div>
      </div>

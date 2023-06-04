@@ -65,15 +65,15 @@ export class MatchDetailComponent implements OnInit{
     const ctx = barChartCanvas.getContext('2d');
 
     const barChartData = {
-      labels: ["Asistencias","Rebotes", "Robos"],
+      labels: ["Asistencias","Rebotes", "Robos", "Pérdidas", "Faltas", "Bloqueos"],
       datasets: [
         {
           label: team1.teamName,
-          data: [team1.ast, team1.reb, team1.stl]
+          data: [team1.ast, team1.reb, team1.stl, team1.tov, team1.pf, team1.blk]
         },
         {
           label: team2.teamName,
-          data: [team2.ast, team2.reb, team2.stl]
+          data: [team2.ast, team2.reb, team2.stl, team2.tov, team2.pf, team2.blk]
         }
       ]
     };

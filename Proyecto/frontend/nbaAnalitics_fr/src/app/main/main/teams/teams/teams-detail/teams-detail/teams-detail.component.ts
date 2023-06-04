@@ -19,8 +19,8 @@ export class TeamsDetailComponent implements OnInit {
   private firstYear = this.teamStatsByYear[0];
   private secondYear = this.teamStatsByYear[1];
   private thirdYear = this.teamStatsByYear[2];
-  private fourthYear = this.teamStatsByYear[3];
-  private fifthYear = this.teamStatsByYear[4];
+  public fourthYear = this.teamStatsByYear[3];
+  public fifthYear = this.teamStatsByYear[4];
   filterTeams = '';
   public allTeams: TeamStatsByYear[] = [];
 
@@ -35,11 +35,13 @@ export class TeamsDetailComponent implements OnInit {
       this.thirdYear = this.teamStatsByYear[2];
       this.fourthYear = this.teamStatsByYear[3];
       this.fifthYear = this.teamStatsByYear[4];
+      console.log(this.fifthYear);
 
       // creación de los gráficos
       this.initLineChart();
       this.initBarChart();
       this.initRadarChart();
+      this.initPlayOffChart();
     });
   }
 
@@ -149,6 +151,32 @@ export class TeamsDetailComponent implements OnInit {
       this.radarChart = new Chart(ctx, {
         type: 'radar',
         data: radarChartData,
+      });
+    }
+  }
+
+  initPlayOffChart() {
+    const barChartCanvas = document.getElementById("barChartPlayOff") as HTMLCanvasElement;
+    const ctx = barChartCanvas.getContext('2d');
+
+    const barChartData = {
+      labels: ["Actuación en PlayOff"],
+      datasets: [
+        {
+          label: "Victorias",
+          data: [this.fifthYear.poWins]
+        },
+        {
+          label: "Derrotas",
+          data: [this.fifthYear.poLosses]
+        }
+      ]
+    };
+
+    if (ctx) {
+      this.barChart = new Chart(ctx, {
+        type: 'bar',
+        data: barChartData,
       });
     }
   }
