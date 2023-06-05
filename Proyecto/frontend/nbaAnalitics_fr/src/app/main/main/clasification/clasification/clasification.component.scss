@@ -25,7 +25,11 @@
   overflow: auto;
   margin-bottom: 20px;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  flex-direction: column;
+  color: white;
 }
 
 .toggleButton{
@@ -45,16 +49,17 @@ caption{
 }
 
 th{
-  background-color: rgb(84, 172, 121);
+  background-color: rgb(71, 69, 69) ;
+  font-weight: 500 !important;
 }
 
 td{
-  background-color: azure;
+  background-color: rgb(107, 106, 106);
 }
 
 td, th{
   border: solid;
-  border-color: rgb(219, 149, 9);
+  border-color: rgb(201, 196, 196);
   border-width: 2px;
   padding: 20px;
 }
@@ -65,4 +70,19 @@ td, th{
 
 button{
   font-size: 18px;
+}
+
+.conferencia{
+  border: 1px solid black;
+  margin-bottom: 10px;
+  font-size: 24px;
+  padding: 20px;
+  color: white;
+  background-color: rgb(71, 69, 69);
+  border-radius: 5px;
+}
+
+img{
+  width: 50px;
+  height: 50px;
 }

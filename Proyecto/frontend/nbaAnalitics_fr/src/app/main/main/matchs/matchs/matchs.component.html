@@ -9,9 +9,9 @@
 <div class="gamesContainer row">
   <div class="game col-3" *ngFor="let item of gamesStats">
     <div>
-      <img src="assets/img/{{item[0].teamAbbreviation}}.png" alt="firstTeamIcon">
+      <img src="assets/img/{{item[0].teamId}}.png" alt="firstTeamIcon">
       VS
-      <img src="assets/img/{{item[1].teamAbbreviation}}.png" alt="secondTeamIcon">
+      <img src="assets/img/{{item[1].teamId}}.png" alt="secondTeamIcon">
     </div>
     <div class="estadisticas">
       <button [routerLink]="['/matchDetail']"

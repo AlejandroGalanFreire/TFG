@@ -13,6 +13,7 @@ export class ClasificationComponent implements OnInit {
 
   leagueSelected: League = new League();
   clasification: ElemScoreboard[] = [];
+  currentIndex = 0;
 
   constructor(private dataService: DataService) {}
 
@@ -31,6 +32,15 @@ export class ClasificationComponent implements OnInit {
         );
       }
     );
+  }
+
+  resetIndex() {
+    this.currentIndex = 0;
+  }
+
+  getIndex(){
+    this.currentIndex++;
+    return this.currentIndex;
   }
 
 }

@@ -10,11 +10,14 @@
   </div>
 
   <div class="tableContainer">
-    <div *ngFor="let conference of leagueSelected.conferences" class="table1">
+    <div *ngFor="let conference of leagueSelected.conferences;" class="table1">
+      {{resetIndex()}}
+      <div class="conferencia">{{conference}}</div>
       <table class="table1Data">
         <caption>Clasification</caption>
         <thead>
           <tr>
+            <th class="customTh">Posición</th>
             <th class="customTh">Nombre</th>
             <th class="customTh">V</th>
             <th class="customTh">D</th>
@@ -23,8 +26,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let item of clasification">
-            <td *ngIf="item.conference === conference">{{ item.team }}</td>
+          <tr *ngFor="let item of clasification;">
+            <td *ngIf="item.conference === conference">{{ getIndex() }}</td>
+            <td *ngIf="item.conference === conference">
+              <img src="assets/img/{{item.teamId}}.png" alt="teamIcon">
+              {{ item.team }}
+            </td>
             <td *ngIf="item.conference === conference">{{ item.won }}</td>
             <td *ngIf="item.conference === conference">{{ item.lost }}</td>
             <td *ngIf="item.conference === conference">{{ item.played }}</td>

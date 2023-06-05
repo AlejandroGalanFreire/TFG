@@ -15,7 +15,7 @@ app-home{
   width: 100%;
   overflow: auto;
   margin: 0;
-  background-color: #F0F2A6;;
+  background-color: #B1DDF1;
 }
 
 app-footer{
@@ -64,6 +64,10 @@ a:link, a:visited, a:active {
   text-decoration:none;
   color: white;
 }
+a{
+  width: 100%;
+  text-align: center;
+}
 
 .routerContainer{
   position: absolute;
@@ -72,6 +76,6 @@ a:link, a:visited, a:active {
   width: 100%;
   overflow: auto;
   margin: 0;
-  background-color: #F0F2A6;;
+  background-color: #B1DDF1;
 }
 
