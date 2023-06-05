@@ -3,15 +3,19 @@
 app-root{
   ::-webkit-scrollbar{
     width: 8px;
-    background: rgb(216, 157, 157);
+    background: #DA4167;
     border-radius: 10px;
   }
 
   ::-webkit-scrollbar-thumb{
-    background: red;
+    background: rgb(71, 69, 69);
     border-radius: 10px;
   }
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #F0F2A6;
+}

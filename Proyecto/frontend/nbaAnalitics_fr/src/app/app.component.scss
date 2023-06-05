@@ -1,6 +1,6 @@
 app-header{
   padding: 30px;
-  background: skyblue;
+  background: #036180;
   position: absolute;
   width: 100%;
   margin: 0;
@@ -15,12 +15,12 @@ app-home{
   width: 100%;
   overflow: auto;
   margin: 0;
-  background-color: antiquewhite;
+  background-color: #F0F2A6;;
 }
 
 app-footer{
   padding: 30px;
-  background: skyblue;
+  background: #036180;
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -30,7 +30,7 @@ app-footer{
 
 nav{
   position: relative;
-  top: 93.7px;
+  top: 89px;
 }
 
 ul{
@@ -42,13 +42,22 @@ ul{
 
   li{
     border-radius: 5px;
-    width: 9%;
-    text-align: center;
+    width: 10%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(71, 69, 69);
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    font-size: 18px;
   }
+
+}
+
+.active {
+  color: #DA4167 !important;
 }
 
 a:link, a:visited, a:active {
@@ -63,5 +72,6 @@ a:link, a:visited, a:active {
   width: 100%;
   overflow: auto;
   margin: 0;
-  background-color: antiquewhite;
+  background-color: #F0F2A6;;
 }
+

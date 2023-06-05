@@ -16,23 +16,32 @@
   }
 }
 
-.table1, .table2{
+.table1{
   position: relative;
   top: 2%;
   margin-left: 5%;
   width: 90%;
   height: 50%;
   overflow: auto;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.table2{
-  top: 5%;
+.toggleButton{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 18.5%;
 }
 
 .table1Data{
   position: relative;
-  width: 100%;
+  width: 70%;
   height: 50%;
+}
+
+caption{
+  display: none;
 }
 
 th{
@@ -48,4 +57,12 @@ td, th{
   border-color: rgb(219, 149, 9);
   border-width: 2px;
   padding: 20px;
+}
+
+.customTh{
+  width: 100px !important;
+}
+
+button{
+  font-size: 18px;
 }

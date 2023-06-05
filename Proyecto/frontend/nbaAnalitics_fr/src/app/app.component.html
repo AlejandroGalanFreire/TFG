@@ -5,11 +5,11 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="">Inicio</a></li>
-      <li><a href="/clasification">Clasificación</a></li>
-      <li><a href="/players">Jugadores</a></li>
-      <li><a href="/teams">Equipos</a></li>
-      <li><a href="/matchs">Partidos</a></li>
+      <li><a [routerLink]="['/home']" routerLinkActive="active">Inicio</a></li>
+      <li><a [routerLink]="['/clasification']" routerLinkActive="active">Clasificación</a></li>
+      <li><a [routerLink]="['/players']" routerLinkActive="active">Jugadores</a></li>
+      <li><a [routerLink]="['/teams']" routerLinkActive="active">Equipos</a></li>
+      <li><a [routerLink]="['/matchs']" routerLinkActive="active">Partidos</a></li>
     </ul>
   </div>
 </nav>

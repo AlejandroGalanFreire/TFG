@@ -1,35 +1,37 @@
 <!-- Menu desplegable para ver todas las ligas disponibles -->
-<div class="toggleButton">
-  <button mat-flat-button [matMenuTriggerFor]="menu">Seleccione la liga</button>
+<div class="contenido">
+  <div class="toggleButton">
+    <button mat-flat-button [matMenuTriggerFor]="menu">Seleccione la liga</button>
 
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item (click)="changeLeague('NBA')">NBA</button>
-    <button mat-menu-item (click)="changeLeague('ACB')">ACB</button>
-  </mat-menu>
-</div>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="changeLeague('NBA')">NBA</button>
+      <button mat-menu-item (click)="changeLeague('ACB')">ACB</button>
+    </mat-menu>
+  </div>
 
-<div class="tableContainer">
-  <div *ngFor="let conference of leagueSelected.conferences" class="table1">
-    <table class="table1Data">
-      <caption>Clasification</caption>
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>V</th>
-          <th>D</th>
-          <th>P</th>
-          <th>V%</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let item of clasification">
-          <td *ngIf="item.conference === conference">{{ item.team }}</td>
-          <td *ngIf="item.conference === conference">{{ item.won }}</td>
-          <td *ngIf="item.conference === conference">{{ item.lost }}</td>
-          <td *ngIf="item.conference === conference">{{ item.played }}</td>
-          <td *ngIf="item.conference === conference">{{ item.wonPct }}</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="tableContainer">
+    <div *ngFor="let conference of leagueSelected.conferences" class="table1">
+      <table class="table1Data">
+        <caption>Clasification</caption>
+        <thead>
+          <tr>
+            <th class="customTh">Nombre</th>
+            <th class="customTh">V</th>
+            <th class="customTh">D</th>
+            <th class="customTh">P</th>
+            <th class="customTh">V%</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of clasification">
+            <td *ngIf="item.conference === conference">{{ item.team }}</td>
+            <td *ngIf="item.conference === conference">{{ item.won }}</td>
+            <td *ngIf="item.conference === conference">{{ item.lost }}</td>
+            <td *ngIf="item.conference === conference">{{ item.played }}</td>
+            <td *ngIf="item.conference === conference">{{ item.wonPct }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

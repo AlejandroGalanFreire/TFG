@@ -6,18 +6,6 @@
   display: flex;
   overflow: auto;
   padding: 10px;
-
-  ::-webkit-scrollbar{
-    width: 8px;
-    height: 8px;
-    background: #efefef;
-    border-radius: 10px;
-  }
-
-  ::-webkit-scrollbar-thumb{
-    background: rgb(84, 172, 121);
-    border-radius: 10px;
-  }
 }
 
 .contenidoInicial p{
@@ -43,17 +31,18 @@ img{
 .inicio{
   display: flex;
   gap: 20px;
-  height: 100%;
   width: 100%;
 }
 
 .contenidoFotograficoDerecha{
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin-right: 5%;
 }
 
 .contenidoFotograficoIzquierda{
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin-left: 5%;
