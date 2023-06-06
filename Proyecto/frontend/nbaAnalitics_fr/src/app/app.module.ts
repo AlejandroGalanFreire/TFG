@@ -31,7 +31,8 @@ import { ComparativeTeamsDialogComponent } from './main/main/comparativeDialog/c
 import { FilterTeamsPipe } from './pipes/teamPipes/filterTeams.pipe';
 
 const appRoutes: Routes=[
-  {path: 'home', component: HomeComponent},
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
   {path: 'clasification', component: ClasificationComponent},
   {path: 'players', component: PlayersComponent},
   {path: 'teams', component: TeamsComponent},

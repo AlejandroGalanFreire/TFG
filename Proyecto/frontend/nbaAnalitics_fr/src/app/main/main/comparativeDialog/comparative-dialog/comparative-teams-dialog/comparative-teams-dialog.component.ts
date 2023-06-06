@@ -15,8 +15,7 @@ export class ComparativeTeamsDialogComponent {
   constructor(
     public dialogRef: MatDialogRef<ComparativeTeamsDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-  ) {console.log(data);
-  }
+  ) { }
 
   ngOnInit(): void {
     this.initializeBarChart();

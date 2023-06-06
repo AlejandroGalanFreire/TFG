@@ -29,7 +29,6 @@ export class PlayerDetailComponent implements OnInit {
   ngOnInit(): void {
     this.homeService.playerSelected.subscribe(data => {
       this.playerStats = data;
-      this.playerStats.urlPicture = 'https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/' + this.playerStats.playerId + '.png'
       this.calculatePlayerPerformance(this.playerStats);
 
       // creación de los gráficos
@@ -87,107 +86,118 @@ export class PlayerDetailComponent implements OnInit {
 
   initializeBarChart(player: PlayerStats){
     const barChartCanvas = document.getElementById("barChart") as HTMLCanvasElement;
-    const ctx = barChartCanvas.getContext('2d');
+    if(barChartCanvas){
+      const ctx = barChartCanvas.getContext('2d');
 
-    const barChartData = {
-      labels: ["Valoración", "EFF por partido", "Puntos creados", "Porcentaje real de tiro"],
-      datasets: [
-        {
-          label: player.playerName,
-          data: [player.val, player.EFF_PerGame, player.pointsCreated, player.trueShootingPercentage],
-          backgroundColor: [
-            (player.val < 1000) ? 'red' : (player.val < 2000) ? 'yellow' : 'green',
-            (player.EFF_PerGame < 15) ? 'red' : (player.EFF_PerGame < 20) ? 'yellow' : 'green',
-            (player.pointsCreated < 1000) ? 'red' : (player.pointsCreated < 2000) ? 'yellow' : 'green',
-            (player.trueShootingPercentage < 30) ? 'red' : (player.trueShootingPercentage < 50) ? 'yellow' : 'green'
-          ]
-        }
-      ]
-    };
+      const barChartData = {
+        labels: ["Valoración", "EFF por partido", "Puntos creados", "Porcentaje real de tiro"],
+        datasets: [
+          {
+            label: player.playerName,
+            data: [player.val, player.EFF_PerGame, player.pointsCreated, player.trueShootingPercentage],
+            backgroundColor: [
+              (player.val < 1000) ? 'red' : (player.val < 2000) ? 'yellow' : 'green',
+              (player.EFF_PerGame < 15) ? 'red' : (player.EFF_PerGame < 20) ? 'yellow' : 'green',
+              (player.pointsCreated < 1000) ? 'red' : (player.pointsCreated < 2000) ? 'yellow' : 'green',
+              (player.trueShootingPercentage < 30) ? 'red' : (player.trueShootingPercentage < 50) ? 'yellow' : 'green'
+            ]
+          }
+        ]
+      };
 
-    if(ctx){
-      this.barChart = new Chart(ctx, {
-        type: 'bar',
-        data: barChartData,
-      });
+      if(ctx){
+        this.barChart = new Chart(ctx, {
+          type: 'bar',
+          data: barChartData,
+        });
+      }
+
     }
   }
 
   initializePieChart(player: PlayerStats){
     const pieChartCanvas = document.getElementById("pieChart") as HTMLCanvasElement;
-    const ctx = pieChartCanvas.getContext('2d');
 
-    const pieChartData = {
-      labels: [
-        'rebotes defensivos',
-        'faltas',
-        'bloqueos',
-        'rebotes ofensivos',
-        'tiros anotados',
-        'asistencias'
-      ],
-      datasets: [{
-        label: 'My First Dataset',
-        data: [player.dreb, player.pf, player.blk, player.oreb, player.ftm
-          + player.fgm + player.fg3m, player.ast],
-        backgroundColor: [
-          'red',
-          'yellow',
-          'orange',
-          'blue',
-          'green',
-          'white'
+    if(pieChartCanvas){
+      const ctx = pieChartCanvas.getContext('2d');
+
+      const pieChartData = {
+        labels: [
+          'rebotes defensivos',
+          'faltas',
+          'bloqueos',
+          'rebotes ofensivos',
+          'tiros anotados',
+          'asistencias'
         ],
-        hoverOffset: 4
-      }]
-    };
+        datasets: [{
+          label: 'My First Dataset',
+          data: [player.dreb, player.pf, player.blk, player.oreb, player.ftm
+            + player.fgm + player.fg3m, player.ast],
+          backgroundColor: [
+            'red',
+            'yellow',
+            'orange',
+            'blue',
+            'green',
+            'white'
+          ],
+          hoverOffset: 4
+        }]
+      };
 
-    if(ctx){
-      this.pieChart = new Chart(ctx, {
-        type: 'pie',
-        data: pieChartData,
-      });
+      if(ctx){
+        this.pieChart = new Chart(ctx, {
+          type: 'pie',
+          data: pieChartData,
+        });
+      }
+
     }
   }
 
   initializeRadarChart(player: PlayerStats){
     const radarChartCanvas = document.getElementById("radarChart") as HTMLCanvasElement;
-    const ctx = radarChartCanvas.getContext('2d');
 
-    const radarChartData = {
-      labels: [
-        'tiros libres',
-        'tiros de 2 puntos',
-        'triples',
-      ],
-      datasets: [{
-        label: 'tiros intentados',
-        data: [player.fta, player.fga, player.fg3a],
-        fill: true,
-        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-        borderColor: 'rgb(255, 99, 132)',
-        pointBackgroundColor: 'rgb(255, 99, 132)',
-        pointBorderColor: '#fff',
-        pointHoverBackgroundColor: '#fff',
-        pointHoverBorderColor: 'rgb(255, 99, 132)'
-      }, {
-        label: 'tiros anotados',
-        data: [player.ftm, player.fgm, player.fg3m],
-        fill: true,
-        backgroundColor: 'rgba(54, 162, 235, 0.2)',
-        borderColor: 'rgb(54, 162, 235)',
-        pointBackgroundColor: 'rgb(54, 162, 235)',
-        pointBorderColor: '#fff',
-        pointHoverBackgroundColor: '#fff',
-        pointHoverBorderColor: 'rgb(54, 162, 235)'
-      }]
-    };
+    if(radarChartCanvas){
+      const ctx = radarChartCanvas.getContext('2d');
 
-    if(ctx){
-      this.radarChart = new Chart(ctx, {
-        type: 'radar',
-        data: radarChartData,
-      });
+      const radarChartData = {
+        labels: [
+          'tiros libres',
+          'tiros de 2 puntos',
+          'triples',
+        ],
+        datasets: [{
+          label: 'tiros intentados',
+          data: [player.fta, player.fga, player.fg3a],
+          fill: true,
+          backgroundColor: 'rgba(255, 99, 132, 0.2)',
+          borderColor: 'rgb(255, 99, 132)',
+          pointBackgroundColor: 'rgb(255, 99, 132)',
+          pointBorderColor: '#fff',
+          pointHoverBackgroundColor: '#fff',
+          pointHoverBorderColor: 'rgb(255, 99, 132)'
+        }, {
+          label: 'tiros anotados',
+          data: [player.ftm, player.fgm, player.fg3m],
+          fill: true,
+          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgb(54, 162, 235)',
+          pointBackgroundColor: 'rgb(54, 162, 235)',
+          pointBorderColor: '#fff',
+          pointHoverBackgroundColor: '#fff',
+          pointHoverBorderColor: 'rgb(54, 162, 235)'
+        }]
+      };
+
+      if(ctx){
+        this.radarChart = new Chart(ctx, {
+          type: 'radar',
+          data: radarChartData,
+        });
+      }
+
     }
   }
 

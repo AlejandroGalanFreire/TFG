@@ -4,27 +4,17 @@
   margin: 0;
   height: 91%;
   top: 2.5%;
-
-  ::-webkit-scrollbar{
-    width: 8px;
-    height: 8px;
-    background: #efefef;
-    border-radius: 10px;
-  }
-
-  ::-webkit-scrollbar-thumb{
-    background: rgb(84, 172, 121);
-    border-radius: 10px;
-  }
 }
 
 .table{
   position: relative;
-  top: 2%;
+  top: 1%;
   margin-left: 2%;
   width: 95%;
   height: 100%;
   overflow: auto;
+  color: white;
+  font-size: 18px;
 
   .tableData{
     width: 100%;
@@ -33,16 +23,17 @@
 }
 
 th{
-  background-color: rgb(84, 172, 121);
+  background-color: rgb(71, 69, 69) ;
+  font-weight: 500;
 }
 
 td{
-  background-color: azure;
+  background-color: rgb(107, 106, 106);
 }
 
 td, th{
   border: solid;
-  border-color: rgb(219, 149, 9);
+  border-color: rgb(201, 196, 196);
   border-width: 2px;
   padding: 20px;
 }
@@ -50,4 +41,24 @@ td, th{
 a{
   text-decoration: none;
   color: black;
+}
+
+img{
+  width: 70px;
+  height: 50px;
+}
+
+button{
+  border: none;
+  background-color: rgb(107, 106, 106);
+  text-decoration: underline;
+  color: white;
+}
+
+input{
+  margin-left: 2%;
+  width: 200px;
+  top: 20px;
+  position: relative;
+  font-size: 18px;
 }

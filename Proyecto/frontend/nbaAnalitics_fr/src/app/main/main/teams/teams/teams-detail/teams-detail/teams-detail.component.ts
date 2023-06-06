@@ -35,7 +35,6 @@ export class TeamsDetailComponent implements OnInit {
       this.thirdYear = this.teamStatsByYear[2];
       this.fourthYear = this.teamStatsByYear[3];
       this.fifthYear = this.teamStatsByYear[4];
-      console.log(this.fifthYear);
 
       // creación de los gráficos
       this.initLineChart();
