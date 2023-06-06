@@ -8,10 +8,9 @@ Created on Fri Apr 14 16:19:16 2023
 from nba_api.stats.endpoints._base import Endpoint
 from nba_api.stats.library.http import NBAStatsHTTP
 from nba_api.live.nba.library.http import NBALiveHTTP
-from nba_api.stats.library.parameters import SeasonTypeAllStar, Season, PlayerOrTeamAbbreviation, ConferenceNullable, DivisionSimpleNullable, LeagueIDNullable, LocationNullable, OutcomeNullable, SeasonNullable, SeasonSegmentNullable, SeasonTypeNullable, StarterBenchNullable, DivisionNullable
+from nba_api.stats.library.parameters import SeasonTypeAllStar, Season, PlayerOrTeamAbbreviation, ConferenceNullable, DivisionSimpleNullable, LocationNullable, OutcomeNullable, SeasonNullable, SeasonSegmentNullable, StarterBenchNullable, DivisionNullable
 import json
 import pandas as pd
-import copy
 
 class LeagueGameFinder(Endpoint):
     endpoint = 'leaguegamefinder'

@@ -29,6 +29,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { ComparativePlayersDialogComponent } from './main/main/comparativeDialog/comparative-dialog/comparativePlayers-dialog.component';
 import { ComparativeTeamsDialogComponent } from './main/main/comparativeDialog/comparative-dialog/comparative-teams-dialog/comparative-teams-dialog.component';
 import { FilterTeamsPipe } from './pipes/teamPipes/filterTeams.pipe';
+import { FilterTeamByYearPipe } from './pipes/teamPipes/filter-team-by-year.pipe';
+import { PlayerCardComponent } from './main/main/players/players/player-card/player-card.component';
 
 const appRoutes: Routes=[
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -58,7 +60,9 @@ const appRoutes: Routes=[
     PlayerDetailComponent,
     TeamsDetailComponent,
     ComparativePlayersDialogComponent,
-    ComparativeTeamsDialogComponent
+    ComparativeTeamsDialogComponent,
+    FilterTeamByYearPipe,
+    PlayerCardComponent
   ],
   imports: [
     BrowserModule,

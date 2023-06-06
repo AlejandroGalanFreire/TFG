@@ -1,7 +1,7 @@
 <input type="text" class="form-control" placeholder="Buscar jugador..." name = "filterData" [(ngModel)]="filterData">
 <div class="tableContainer">
   <div class="table">
-    <table class="tableData">
+    <!-- <table class="tableData">
       <caption>Estadísticas jugadores</caption>
       <thead>
         <tr>
@@ -42,127 +42,169 @@
             matTooltip="Derrotas"
             [matTooltipPosition]="position.value!"
             matTooltipHideDelay="50"
-            aria-label="Button that displays a tooltip that hides when scrolled out of the container">D</th>
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            D
+          </th>
           <th
             mat-raised-button #tooltip="matTooltip"
             matTooltip="Porcentaje de victorias"
             [matTooltipPosition]="position.value!"
             matTooltipHideDelay="50"
-            aria-label="Button that displays a tooltip that hides when scrolled out of the container">V_PCT</th>
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            V_PCT
+          </th>
           <th
             mat-raised-button #tooltip="matTooltip"
             matTooltip="Puntos"
             [matTooltipPosition]="position.value!"
             matTooltipHideDelay="50"
-            aria-label="Button that displays a tooltip that hides when scrolled out of the container">PTS</th>
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            PTS
+          </th>
           <th
             mat-raised-button #tooltip="matTooltip"
             matTooltip="Tiros de dos anotados"
             [matTooltipPosition]="position.value!"
             matTooltipHideDelay="50"
-            aria-label="Button that displays a tooltip that hides when scrolled out of the container">FGM</th>
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            FGM
+          </th>
           <th
             mat-raised-button #tooltip="matTooltip"
             matTooltip="Tiros de dos intentados"
             [matTooltipPosition]="position.value!"
             matTooltipHideDelay="50"
-            aria-label="Button that displays a tooltip that hides when scrolled out of the container">FGA</th>
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            FGA
+          </th>
           <th
             mat-raised-button #tooltip="matTooltip"
             matTooltip="Porcentaje tiros de dos"
             [matTooltipPosition]="position.value!"
             matTooltipHideDelay="50"
-            aria-label="Button that displays a tooltip that hides when scrolled out of the container">FG_PCT</th>
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            FG_PCT
+          </th>
           <th
             mat-raised-button #tooltip="matTooltip"
             matTooltip="Tiros de tres anotados"
             [matTooltipPosition]="position.value!"
             matTooltipHideDelay="50"
-            aria-label="Button that displays a tooltip that hides when scrolled out of the container">FG3M</th>
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            FG3M
+          </th>
           <th
             mat-raised-button #tooltip="matTooltip"
             matTooltip="Tiros de tres intentados"
             [matTooltipPosition]="position.value!"
             matTooltipHideDelay="50"
-            aria-label="Button that displays a tooltip that hides when scrolled out of the container">FG3A</th>
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            FG3A
+          </th>
           <th
             mat-raised-button #tooltip="matTooltip"
             matTooltip="Porcentaje tiros de tres"
             [matTooltipPosition]="position.value!"
             matTooltipHideDelay="50"
-            aria-label="Button that displays a tooltip that hides when scrolled out of the container">FG3_PCT</th>
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            FG3_PCT
+          </th>
           <th
             mat-raised-button #tooltip="matTooltip"
             matTooltip="Tiros libres anotados"
             [matTooltipPosition]="position.value!"
             matTooltipHideDelay="50"
-            aria-label="Button that displays a tooltip that hides when scrolled out of the container">FTM</th>
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            FTM
+          </th>
           <th
             mat-raised-button #tooltip="matTooltip"
             matTooltip="Tiros de tres intentados"
             [matTooltipPosition]="position.value!"
             matTooltipHideDelay="50"
-            aria-label="Button that displays a tooltip that hides when scrolled out of the container">FTA</th>
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            FTA
+          </th>
           <th
             mat-raised-button #tooltip="matTooltip"
             matTooltip="Porcentaje tiros libres"
             [matTooltipPosition]="position.value!"
             matTooltipHideDelay="50"
-            aria-label="Button that displays a tooltip that hides when scrolled out of the container">FT_PCT</th>
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            FT_PCT
+          </th>
           <th
             mat-raised-button #tooltip="matTooltip"
             matTooltip="Rebotes ofensivos"
             [matTooltipPosition]="position.value!"
             matTooltipHideDelay="50"
-            aria-label="Button that displays a tooltip that hides when scrolled out of the container">OREB</th>
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            OREB
+          </th>
           <th
             mat-raised-button #tooltip="matTooltip"
             matTooltip="Rebotes defensivos"
             [matTooltipPosition]="position.value!"
             matTooltipHideDelay="50"
-            aria-label="Button that displays a tooltip that hides when scrolled out of the container">DREB</th>
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            DREB
+          </th>
           <th
             mat-raised-button #tooltip="matTooltip"
             matTooltip="Rebotes totales"
             [matTooltipPosition]="position.value!"
             matTooltipHideDelay="50"
-            aria-label="Button that displays a tooltip that hides when scrolled out of the container">REB</th>
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            REB
+          </th>
           <th
             mat-raised-button #tooltip="matTooltip"
             matTooltip="Asistencias"
             [matTooltipPosition]="position.value!"
             matTooltipHideDelay="50"
-            aria-label="Button that displays a tooltip that hides when scrolled out of the container">AST</th>
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            AST
+          </th>
           <th
             mat-raised-button #tooltip="matTooltip"
             matTooltip="Pérdidas"
             [matTooltipPosition]="position.value!"
             matTooltipHideDelay="50"
-            aria-label="Button that displays a tooltip that hides when scrolled out of the container">PER</th>
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            PER
+          </th>
           <th
             mat-raised-button #tooltip="matTooltip"
             matTooltip="Robos"
             [matTooltipPosition]="position.value!"
             matTooltipHideDelay="50"
-            aria-label="Button that displays a tooltip that hides when scrolled out of the container">ROB</th>
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            ROB
+          </th>
           <th
             mat-raised-button #tooltip="matTooltip"
             matTooltip="Bloqueos conseguidos"
             [matTooltipPosition]="position.value!"
             matTooltipHideDelay="50"
-            aria-label="Button that displays a tooltip that hides when scrolled out of the container">BLQ</th>
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            BLQ
+          </th>
           <th
             mat-raised-button #tooltip="matTooltip"
             matTooltip="Bloqueos intentados"
             [matTooltipPosition]="position.value!"
             matTooltipHideDelay="50"
-            aria-label="Button that displays a tooltip that hides when scrolled out of the container">BLQA</th>
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            BLQA
+          </th>
           <th
             mat-raised-button #tooltip="matTooltip"
             matTooltip="Faltas"
             [matTooltipPosition]="position.value!"
             matTooltipHideDelay="50"
-            aria-label="Button that displays a tooltip that hides when scrolled out of the container">FAL</th>
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            FAL
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -198,6 +240,12 @@
           <td>{{ item.pf }}</td>
         </tr>
       </tbody>
-    </table>
+    </table> -->
+    <app-player-card
+      *ngFor="let item of playersStats | filterPlayer:filterData"
+      [player]="item"
+      >
+    </app-player-card>
+
   </div>
 </div>

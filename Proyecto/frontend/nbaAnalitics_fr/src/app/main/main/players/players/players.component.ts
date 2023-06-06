@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PlayerStats } from 'src/app/models/playerStats';
 import { DataService } from 'src/app/services/data-service.service';
 import { HomeService } from '../../services/home.service';
-import {TooltipPosition, MatTooltipModule} from '@angular/material/tooltip';
+import {TooltipPosition} from '@angular/material/tooltip';
 import { FormControl } from '@angular/forms';
 
 @Component({

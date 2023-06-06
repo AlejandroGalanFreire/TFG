@@ -37,6 +37,6 @@
 <input type="text" class="form-control" placeholder="Buscar equipo para comparar" name = "filterTeams"
   [(ngModel)]="filterTeams" (keydown)="setAllTeams()">
 <div *ngIf="filterTeams.length > 0">
-  <button *ngFor="let team of allTeams | filterTeam: filterTeams" (click)="openMenuDialog(team)">{{ team.teamName }}</button>
+  <button *ngFor="let team of allTeams | filterTeamByYear: filterTeams" (click)="openMenuDialog(team)">{{ team.teamName }}</button>
 </div>
 

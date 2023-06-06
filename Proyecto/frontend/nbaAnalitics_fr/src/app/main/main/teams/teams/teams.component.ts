@@ -3,6 +3,8 @@ import { TeamStats } from 'src/app/models/teamStats';
 import { TeamStatsByYear } from 'src/app/models/teamStatsByYear';
 import { DataService } from 'src/app/services/data-service.service';
 import { HomeService } from '../../services/home.service';
+import { FormControl } from '@angular/forms';
+import { TooltipPosition } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-teams',
@@ -13,6 +15,9 @@ export class TeamsComponent implements OnInit{
 
   teamsStats: TeamStats[] = [];
   teamsStatsByYear: TeamStatsByYear[] = [];
+  filterData = '';
+  positionOptions: TooltipPosition[] = ['above'];
+  position = new FormControl(this.positionOptions[0]);
 
   constructor(private dataService: DataService,
     private readonly homeService: HomeService) { }
