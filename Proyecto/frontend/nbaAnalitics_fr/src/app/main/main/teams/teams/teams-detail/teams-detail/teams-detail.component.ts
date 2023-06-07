@@ -1,16 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { HomeService } from 'src/app/main/main/services/home.service';
 import { TeamStatsByYear } from 'src/app/models/teamStatsByYear';
 import Chart from 'chart.js/auto';
 import { MatDialog } from '@angular/material/dialog';
 import { ComparativeTeamsDialogComponent } from 'src/app/main/main/comparativeDialog/comparative-dialog/comparative-teams-dialog/comparative-teams-dialog.component';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-teams-detail',
   templateUrl: './teams-detail.component.html',
   styleUrls: ['./teams-detail.component.scss']
 })
-export class TeamsDetailComponent implements OnInit {
+export class TeamsDetailComponent implements OnInit, OnDestroy {
 
   public teamStatsByYear: TeamStatsByYear[] = [];
   private lineChart: any;
@@ -23,12 +24,19 @@ export class TeamsDetailComponent implements OnInit {
   public fifthYear = this.teamStatsByYear[4];
   filterTeams = '';
   public allTeams: TeamStatsByYear[] = [];
+  teamSelectedSubscription!: Subscription;
+  allTeamsSubscription!: Subscription;
 
   constructor(private readonly homeService: HomeService,
     public comparativeDialog: MatDialog) { }
 
+  ngOnDestroy(): void {
+    this.teamSelectedSubscription.unsubscribe();
+    this.allTeamsSubscription.unsubscribe();
+  }
+
   ngOnInit(): void {
-    this.homeService.teamSelected.subscribe(data => {
+    this.teamSelectedSubscription = this.homeService.teamSelected.subscribe(data => {
       this.teamStatsByYear = data;
       this.firstYear = this.teamStatsByYear[0];
       this.secondYear = this.teamStatsByYear[1];
@@ -181,7 +189,7 @@ export class TeamsDetailComponent implements OnInit {
   }
 
   setAllTeams(){
-    this.homeService.allTeams.subscribe(data => {
+    this.teamSelectedSubscription = this.homeService.allTeams.subscribe(data => {
       this.allTeams = data.filter(team => team.teamId !== this.fifthYear.teamId);
     });
   }

@@ -1,1 +1,16 @@
-<p>team-card works!</p>
+<div class="tarjeta">
+  <div class="title">
+    <img src="assets/img/{{team.teamId}}.png" alt="imagen del jugador">
+    <button class="name" [routerLink]="['/teamDetail']" (click)="setTeamSelectedDetail()">
+      {{team.teamName}}
+    </button>
+  </div>
+  <div class="contenido">
+    <button class="estadisticas" [routerLink]="['/teamDetail']" (click)="setTeamSelectedDetail()">
+      Estadísticas
+    </button>
+    <button class="plantilla">
+      Plantilla
+    </button>
+  </div>
+</div>

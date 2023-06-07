@@ -58,6 +58,6 @@
     <fullyQualifiedTypeName name="com.example.demo.scoreboard.model.ElemScoreboard"/>
     <fullyQualifiedTypeName name="com.example.demo.scoreboard.model.ElemScoreboardDto"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="com.example.demo.players.model.PlayerInfo"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

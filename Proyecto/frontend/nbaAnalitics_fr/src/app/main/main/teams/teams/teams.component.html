@@ -1,9 +1,13 @@
 <input type="text" class="form-control" placeholder="Buscar equipo..." name = "filterData" [(ngModel)]="filterData">
 <div class="tableContainer">
-  <div class="table">
-    <app-teams
+  <div class="cardsContainer row">
+    <app-team-card
       *ngFor="let team of teamsStats | filterTeam:filterData"
-      [team]="team">
-    </app-teams>
+      [team]="team"
+      class="col-sm-12 col-md-6 col-xl-4"
+      >
+    </app-team-card>
+
   </div>
 </div>
+

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { ElemScoreboard } from 'src/app/models/elemScoreboard';
 import { League } from 'src/app/models/league';
 import { DataService } from 'src/app/services/data-service.service';
@@ -9,23 +10,30 @@ import { DataService } from 'src/app/services/data-service.service';
   styleUrls: ['./clasification.component.scss']
 })
 
-export class ClasificationComponent implements OnInit {
+export class ClasificationComponent implements OnInit, OnDestroy {
 
   leagueSelected: League = new League();
   clasification: ElemScoreboard[] = [];
   currentIndex = 0;
+  leagueSelectedSubscription!: Subscription;
+  clasificationSubscription!: Subscription;
 
   constructor(private dataService: DataService) {}
+
+  ngOnDestroy(): void {
+    this.leagueSelectedSubscription.unsubscribe();
+    this.clasificationSubscription.unsubscribe();
+  }
 
   ngOnInit() {
     this.changeLeague('NBA');
   }
 
   changeLeague(leagueName: string){
-    this.dataService.getLeague(leagueName).subscribe(
+    this.leagueSelectedSubscription = this.dataService.getLeague(leagueName).subscribe(
       (resp: any) => {
         this.leagueSelected = JSON.parse(resp);
-        this.dataService.getClasification(this.leagueSelected.leagueName).subscribe(
+        this.clasificationSubscription = this.dataService.getClasification(this.leagueSelected.leagueName).subscribe(
           (resp: any) => {
             this.clasification = JSON.parse(resp);
           }

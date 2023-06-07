@@ -186,7 +186,7 @@ class CommonPlayerInfo(Endpoint):
         
 listaPlayersInfo = []
 
-for i in range(459, 460):
+for i in range(539, 540):
                                           #i
     playerId = playersStats_data['rowSet'][i][0]
     
@@ -217,4 +217,4 @@ for i in range(459, 460):
     listaPlayersInfo.append(playerInfo)
     
 df = pd.DataFrame(listaPlayersInfo)
-df.to_csv('playersInformacion.csv')
+df.to_csv('playersInfo2.csv')

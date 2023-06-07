@@ -11,7 +11,8 @@ export class DataService {
   private leagueUrl = 'http://localhost:8080/rest/league';
   private teamsStatsUrl = 'http://localhost:8080/rest/teamstats';
   private teamsStatsByYearUrl = 'http://localhost:8080/rest/teamstatsbyyear';
-  private playersStatsUrl = 'http://localhost:8080/rest/playersinfo';
+  private playersInfoUrl = 'http://localhost:8080/rest/playersinfo';
+  private playerStatsById = 'http://localhost:8080/rest/playerstatsbyid';
   private gamesStatsUrl = 'http://localhost:8080/rest/gamesstatsbydate';
 
   constructor(private http: HttpClient) { }
@@ -44,7 +45,15 @@ export class DataService {
   }
 
   getPlayersInfo(){
-    return this.http.get(this.playersStatsUrl, {responseType: 'text'});
+    return this.http.get(this.playersInfoUrl, {responseType: 'text'});
+  }
+
+  getPlayerStatsById(playerId: string){
+    return this.http.get(this.playerStatsById, {
+      params:{
+        playerId: playerId
+      },
+      responseType: 'text'});
   }
 
   getGamesStatsByDate(dateValue: string){

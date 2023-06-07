@@ -10,4 +10,6 @@ export class TeamCardComponent {
 
   @Input() team!: TeamStats;
 
+  setTeamSelectedDetail() {}
+
 }

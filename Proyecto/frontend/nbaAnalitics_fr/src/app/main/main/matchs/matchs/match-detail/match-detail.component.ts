@@ -1,25 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { HomeService } from '../../../services/home.service';
 import { GameStats } from 'src/app/models/gameStats';
 import Chart from 'chart.js/auto';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-match-detail',
   templateUrl: './match-detail.component.html',
   styleUrls: ['./match-detail.component.scss']
 })
-export class MatchDetailComponent implements OnInit{
+export class MatchDetailComponent implements OnInit, OnDestroy {
 
   public stats: GameStats[] = [];
   private lineChart: any;
   private barChart: any;
   private radarChart: any;
+  currentMatchSubscription!: Subscription;
 
 
   constructor(private readonly homeService: HomeService){ }
 
+  ngOnDestroy(): void {
+    this.currentMatchSubscription.unsubscribe();
+  }
+
   ngOnInit(): void {
-    this.homeService.currentMatch.subscribe(data => {
+    this.currentMatchSubscription = this.homeService.currentMatch.subscribe(data => {
       this.stats = data;
 
       // creación de los gráficos

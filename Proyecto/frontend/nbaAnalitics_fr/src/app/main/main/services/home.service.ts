@@ -14,9 +14,9 @@ export class HomeService {
   public currentMatch: Observable<GameStats[]> =
     this.currentMatchSubject.asObservable();
 
-  private readonly playerSelectedSubject: BehaviorSubject<PlayerInfo> =
-    new BehaviorSubject<PlayerInfo>(new PlayerInfo());
-  public playerSelected: Observable<PlayerInfo> =
+  private readonly playerSelectedSubject: BehaviorSubject<string> =
+    new BehaviorSubject<string>("");
+  public playerSelected: Observable<string> =
     this.playerSelectedSubject.asObservable();
 
   private readonly allPlayersSubject: BehaviorSubject<PlayerInfo[]> =
@@ -38,8 +38,8 @@ export class HomeService {
     this.currentMatchSubject.next(item);
   }
 
-  setPlayerSelectedDetail(player: PlayerInfo) {
-    this.playerSelectedSubject.next(player);
+  setPlayerSelectedDetail(playerID: string) {
+    this.playerSelectedSubject.next(playerID);
   }
 
   setAllPlayers(players: PlayerInfo[]) {

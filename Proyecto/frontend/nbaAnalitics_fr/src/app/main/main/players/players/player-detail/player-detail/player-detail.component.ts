@@ -1,41 +1,54 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { HomeService } from 'src/app/main/main/services/home.service';
 import { PlayerStats } from 'src/app/models/playerStats';
 import Chart from 'chart.js/auto';
 import { DataService } from 'src/app/services/data-service.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ComparativePlayersDialogComponent } from 'src/app/main/main/comparativeDialog/comparative-dialog/comparativePlayers-dialog.component';
-import ChartDataLabels from 'chartjs-plugin-datalabels';
+import { ChartType } from 'chart.js';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-player-detail',
   templateUrl: './player-detail.component.html',
   styleUrls: ['./player-detail.component.scss']
 })
-export class PlayerDetailComponent implements OnInit {
+export class PlayerDetailComponent implements OnInit, OnDestroy {
 
   public playerStats: PlayerStats = new PlayerStats();
-  private barChart: any;
-  private pieChart: any;
-  private radarChart: any;
+  private barChart!: Chart;
+  private pieChart!: Chart;
+  private radarChart!: Chart;
   public allPlayers: PlayerStats[] = [];
   filterPlayers = '';
+  playerSelectedSubscription!: Subscription;
+  playerByIdSubscription!: Subscription;
 
 
   constructor(private dataService: DataService,
     private readonly homeService: HomeService,
     public comparativeDialog: MatDialog){ }
 
-  ngOnInit(): void {
-    this.homeService.playerSelected.subscribe(data => {
-      // this.playerStats = data;
-      this.calculatePlayerPerformance(this.playerStats);
+  ngOnDestroy(): void {
+    this.playerSelectedSubscription.unsubscribe();
+    this.playerByIdSubscription.unsubscribe();
+  }
 
-      // creación de los gráficos
-      // Chart.register(ChartDataLabels);
-      this.initializeBarChart(this.playerStats);
-      this.initializePieChart(this.playerStats);
-      this.initializeRadarChart(this.playerStats);
+  ngOnInit(): void {
+    this.playerSelectedSubscription = this.homeService.playerSelected.subscribe(data => {
+      this.playerByIdSubscription = this.dataService.getPlayerStatsById(data).subscribe(
+        (resp: any) => {
+          this.playerStats = JSON.parse(resp);
+
+          this.calculatePlayerPerformance(this.playerStats);
+
+          // creación de los gráficos
+          // Chart.register(ChartDataLabels);
+          this.initializeBarChart(this.playerStats);
+          this.initializePieChart(this.playerStats);
+          this.initializeRadarChart(this.playerStats);
+        }
+      );
     });
   }
 
@@ -56,7 +69,7 @@ export class PlayerDetailComponent implements OnInit {
     const missedShots = (player.fg3a - player.fg3m) +
       (player.fga - player.fgm) + (player.fta - player.ftm);
     const tov = player.tov;
-    player.val = points + rebounds + ast + stl + blk + succesfulShots - missedShots - tov;
+    player.val = (points + rebounds + ast + stl + blk + succesfulShots - missedShots - tov) / 82;
   }
 
   calculateEFF(player: PlayerStats) {
@@ -74,7 +87,7 @@ export class PlayerDetailComponent implements OnInit {
   }
 
   calculatePointsCreated(player: PlayerStats) {
-    player.pointsCreated = player.pts + (1.42 * player.ast);
+    player.pointsCreated = (player.pts + (1.42 * player.ast)) / player.gp;
   }
 
   calculateTrueShootingPercentage(player: PlayerStats) {
@@ -85,6 +98,9 @@ export class PlayerDetailComponent implements OnInit {
   }
 
   initializeBarChart(player: PlayerStats){
+    if(this.barChart){
+      this.barChart.destroy(); // lo eliminamos si existe y creamos uno nuevo
+    }
     const barChartCanvas = document.getElementById("barChart") as HTMLCanvasElement;
     if(barChartCanvas){
       const ctx = barChartCanvas.getContext('2d');
@@ -116,6 +132,9 @@ export class PlayerDetailComponent implements OnInit {
   }
 
   initializePieChart(player: PlayerStats){
+    if(this.pieChart){
+      this.pieChart.destroy(); // lo eliminamos si existe y creamos uno nuevo
+    }
     const pieChartCanvas = document.getElementById("pieChart") as HTMLCanvasElement;
 
     if(pieChartCanvas){
@@ -148,8 +167,8 @@ export class PlayerDetailComponent implements OnInit {
 
       if(ctx){
         this.pieChart = new Chart(ctx, {
-          type: 'pie',
-          data: pieChartData,
+          type: 'pie' as ChartType,
+          data: pieChartData
         });
       }
 
@@ -157,6 +176,9 @@ export class PlayerDetailComponent implements OnInit {
   }
 
   initializeRadarChart(player: PlayerStats){
+    if(this.radarChart){
+      this.radarChart.destroy(); // Lo destruimos si ya existe y creamos uno nuevo
+    }
     const radarChartCanvas = document.getElementById("radarChart") as HTMLCanvasElement;
 
     if(radarChartCanvas){

@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { BehaviorSubject, Observable, Subscription } from 'rxjs';
 import { GameStats } from 'src/app/models/gameStats';
 import { DataService } from 'src/app/services/data-service.service';
 import { HomeService } from '../../services/home.service';
@@ -9,22 +9,35 @@ import { HomeService } from '../../services/home.service';
   templateUrl: './matchs.component.html',
   styleUrls: ['./matchs.component.scss']
 })
-export class MatchsComponent {
+export class MatchsComponent implements OnInit, OnDestroy {
 
   gamesStats: Array<GameStats[]> = new Array();
   currentDateSubject: BehaviorSubject<Date> = new BehaviorSubject<Date>(new Date("2023-04-09")); // fecha de fin de temporada regular
   currentDate: Observable<Date> = this.currentDateSubject.asObservable();
   selectedDate: string = "";
+  hasGameInDate = true;
+  currentDateSubscription!: Subscription;
+  gamesSubscription!: Subscription;
 
   constructor(private dataService: DataService,
     private readonly homeService: HomeService){}
 
+  ngOnDestroy(): void {
+    this.currentDateSubscription.unsubscribe();
+    this.gamesSubscription.unsubscribe();
+  }
+
   ngOnInit(): void {
-    this.currentDate.subscribe(date => {
+    this.currentDateSubscription = this.currentDate.subscribe(date => {
       this.selectedDate = date.getFullYear() + "-" + this.formatMonthAndDay(date.getMonth() + 1) + "-"
       + this.formatMonthAndDay(date.getDate());
-      this.dataService.getGamesStatsByDate(this.selectedDate).subscribe(
+      this.gamesSubscription = this.dataService.getGamesStatsByDate(this.selectedDate).subscribe(
         (resp: any) => {
+          if(resp === "[]"){
+            this.hasGameInDate = false;
+          }else{
+            this.hasGameInDate = true;
+          }
           this.gamesStats = JSON.parse(resp);
         }
       );
