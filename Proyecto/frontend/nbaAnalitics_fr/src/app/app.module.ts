@@ -31,6 +31,7 @@ import { ComparativeTeamsDialogComponent } from './main/main/comparativeDialog/c
 import { FilterTeamsPipe } from './pipes/teamPipes/filterTeams.pipe';
 import { FilterTeamByYearPipe } from './pipes/teamPipes/filter-team-by-year.pipe';
 import { PlayerCardComponent } from './main/main/players/players/player-card/player-card.component';
+import { TeamCardComponent } from './main/main/teams/teams/team-card/team-card.component';
 
 const appRoutes: Routes=[
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -62,7 +63,8 @@ const appRoutes: Routes=[
     ComparativePlayersDialogComponent,
     ComparativeTeamsDialogComponent,
     FilterTeamByYearPipe,
-    PlayerCardComponent
+    PlayerCardComponent,
+    TeamCardComponent
   ],
   imports: [
     BrowserModule,

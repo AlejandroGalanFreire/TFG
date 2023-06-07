@@ -42,7 +42,7 @@
 		<item key="RemoveFinal" value="false"/>
 	</section>
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
-		<item key="DIALOG_X_ORIGIN" value="870"/>
+		<item key="DIALOG_X_ORIGIN" value="795"/>
 		<item key="DIALOG_Y_ORIGIN" value="67"/>
 		<item key="DIALOG_WIDTH" value="678"/>
 		<item key="DIALOG_HEIGHT" value="889"/>

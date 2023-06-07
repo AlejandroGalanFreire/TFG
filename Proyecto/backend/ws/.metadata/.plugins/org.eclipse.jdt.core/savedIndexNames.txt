@@ -13,7 +13,6 @@ INDEX VERSION 1.131+F:\4ºCarrera\SEGUNDO CUATRI\TFG\repositorio\Proyecto\backend
 3814835114.index
 2646490916.index
 1959339809.index
-3435648363.index
 3975260844.index
 2744348509.index
 117360673.index

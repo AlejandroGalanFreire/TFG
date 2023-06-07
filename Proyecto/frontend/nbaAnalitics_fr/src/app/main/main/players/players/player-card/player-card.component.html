@@ -1,1 +1,84 @@
-<div>{{player.playerName}}</div>
+<div class="tarjeta">
+  <div class="title">
+    <img src="https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/{{player.playerId}}.png" alt="imagen del jugador">
+    <button class="name" [routerLink]="['/playerDetail']" (click)="setPlayerSelectedDetail()">
+      {{player.playerName}}
+    </button>
+  </div>
+  <div class="table">
+    <table class="tableData">
+      <caption>Estadísticas jugadores</caption>
+      <thead>
+        <tr>
+          <th
+            mat-raised-button #tooltip="matTooltip"
+            matTooltip="País"
+            [matTooltipPosition]="position.value!"
+            matTooltipHideDelay="50"
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            País
+          </th>
+          <th
+            mat-raised-button #tooltip="matTooltip"
+            matTooltip="Altura"
+            [matTooltipPosition]="position.value!"
+            matTooltipHideDelay="50"
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            Altura
+          </th>
+          <th
+            mat-raised-button #tooltip="matTooltip"
+            matTooltip="Peso"
+            [matTooltipPosition]="position.value!"
+            matTooltipHideDelay="50"
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            Peso
+          </th>
+          <th
+            mat-raised-button #tooltip="matTooltip"
+            matTooltip="Experiencia"
+            [matTooltipPosition]="position.value!"
+            matTooltipHideDelay="50"
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            Experiencia
+          </th>
+          <th
+            mat-raised-button #tooltip="matTooltip"
+            matTooltip="Número de camiseta"
+            [matTooltipPosition]="position.value!"
+            matTooltipHideDelay="50"
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            Número
+          </th>
+          <th
+            mat-raised-button #tooltip="matTooltip"
+            matTooltip="Posición"
+            [matTooltipPosition]="position.value!"
+            matTooltipHideDelay="50"
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            Posición
+          </th>
+          <th
+            mat-raised-button #tooltip="matTooltip"
+            matTooltip="Equipo"
+            [matTooltipPosition]="position.value!"
+            matTooltipHideDelay="50"
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            Equipo
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ player.country }}</td>
+          <td>{{ player.height }}</td>
+          <td>{{ player.weight }}</td>
+          <td>{{ player.season_exp }}</td>
+          <td>{{ player.jersey }}</td>
+          <td>{{ player.position }}</td>
+          <td>{{ player.teamAbbrev }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

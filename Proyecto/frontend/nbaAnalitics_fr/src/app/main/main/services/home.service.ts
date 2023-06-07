@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { GameStats } from 'src/app/models/gameStats';
-import { PlayerStats } from 'src/app/models/playerStats';
+import { PlayerInfo } from 'src/app/models/playerInfo';
 import { TeamStatsByYear } from 'src/app/models/teamStatsByYear';
 
 @Injectable({
@@ -14,14 +14,14 @@ export class HomeService {
   public currentMatch: Observable<GameStats[]> =
     this.currentMatchSubject.asObservable();
 
-  private readonly playerSelectedSubject: BehaviorSubject<PlayerStats> =
-    new BehaviorSubject<PlayerStats>(new PlayerStats());
-  public playerSelected: Observable<PlayerStats> =
+  private readonly playerSelectedSubject: BehaviorSubject<PlayerInfo> =
+    new BehaviorSubject<PlayerInfo>(new PlayerInfo());
+  public playerSelected: Observable<PlayerInfo> =
     this.playerSelectedSubject.asObservable();
 
-  private readonly allPlayersSubject: BehaviorSubject<PlayerStats[]> =
-    new BehaviorSubject<PlayerStats[]>([]);
-  public allPlayers: Observable<PlayerStats[]> =
+  private readonly allPlayersSubject: BehaviorSubject<PlayerInfo[]> =
+    new BehaviorSubject<PlayerInfo[]>([]);
+  public allPlayers: Observable<PlayerInfo[]> =
     this.allPlayersSubject.asObservable();
 
   private readonly teamSelectedSubject: BehaviorSubject<TeamStatsByYear[]> =
@@ -38,11 +38,11 @@ export class HomeService {
     this.currentMatchSubject.next(item);
   }
 
-  setPlayerSelectedDetail(player: PlayerStats) {
+  setPlayerSelectedDetail(player: PlayerInfo) {
     this.playerSelectedSubject.next(player);
   }
 
-  setAllPlayers(players: PlayerStats[]) {
+  setAllPlayers(players: PlayerInfo[]) {
     this.allPlayersSubject.next(players);
   }
 

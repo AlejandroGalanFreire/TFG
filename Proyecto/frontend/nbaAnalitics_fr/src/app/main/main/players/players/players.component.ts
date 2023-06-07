@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { PlayerStats } from 'src/app/models/playerStats';
 import { DataService } from 'src/app/services/data-service.service';
 import { HomeService } from '../../services/home.service';
 import {TooltipPosition} from '@angular/material/tooltip';
 import { FormControl } from '@angular/forms';
+import { PlayerInfo } from 'src/app/models/playerInfo';
 
 @Component({
   selector: 'app-players',
@@ -12,7 +12,7 @@ import { FormControl } from '@angular/forms';
 })
 export class PlayersComponent implements OnInit{
 
-  playersStats: PlayerStats[] = [];
+  playersInfo: PlayerInfo[] = [];
   filterData = '';
   positionOptions: TooltipPosition[] = ['above'];
   position = new FormControl(this.positionOptions[0]);
@@ -21,16 +21,11 @@ export class PlayersComponent implements OnInit{
     private readonly homeService: HomeService){}
 
   ngOnInit(): void {
-    this.dataService.getPlayersStats().subscribe(
+    this.dataService.getPlayersInfo().subscribe(
       (resp: any) => {
-        this.playersStats = JSON.parse(resp);
-        this.homeService.setAllPlayers(this.playersStats);
+        this.playersInfo = JSON.parse(resp);
+        this.homeService.setAllPlayers(this.playersInfo);
       }
     );
-  }
-
-  setPlayerSelectedDetail(player: PlayerStats) {
-    player.urlPicture = 'https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/' + player.playerId + '.png'
-    this.homeService.setPlayerSelectedDetail(player);
   }
 }

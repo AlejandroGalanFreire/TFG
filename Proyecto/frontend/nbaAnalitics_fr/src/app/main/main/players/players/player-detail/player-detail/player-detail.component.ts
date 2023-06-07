@@ -28,7 +28,7 @@ export class PlayerDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.homeService.playerSelected.subscribe(data => {
-      this.playerStats = data;
+      // this.playerStats = data;
       this.calculatePlayerPerformance(this.playerStats);
 
       // creación de los gráficos
@@ -202,9 +202,9 @@ export class PlayerDetailComponent implements OnInit {
   }
 
   setAllPlayers(){
-    this.homeService.allPlayers.subscribe(data => {
-      this.allPlayers = data.filter(player => player.playerId !== this.playerStats.playerId);
-    });
+    // this.homeService.allPlayers.subscribe(data => {
+    //   this.allPlayers = data.filter(player => player.playerId !== this.playerStats.playerId);
+    // });
   }
 
   openMenuDialog(playerToCompare: PlayerStats){
