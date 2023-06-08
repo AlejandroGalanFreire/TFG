@@ -32,10 +32,14 @@ export class TeamsDetailComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.teamSelectedSubscription.unsubscribe();
-    this.allTeamsSubscription.unsubscribe();
+    if(this.allTeamsSubscription){
+      this.allTeamsSubscription.unsubscribe();
+    }
   }
 
   ngOnInit(): void {
+    Chart.defaults.font.size = 18;
+
     this.teamSelectedSubscription = this.homeService.teamSelected.subscribe(data => {
       this.teamStatsByYear = data;
       this.firstYear = this.teamStatsByYear[0];
@@ -189,7 +193,7 @@ export class TeamsDetailComponent implements OnInit, OnDestroy {
   }
 
   setAllTeams(){
-    this.teamSelectedSubscription = this.homeService.allTeams.subscribe(data => {
+    this.allTeamsSubscription = this.homeService.allTeams.subscribe(data => {
       this.allTeams = data.filter(team => team.teamId !== this.fifthYear.teamId);
     });
   }

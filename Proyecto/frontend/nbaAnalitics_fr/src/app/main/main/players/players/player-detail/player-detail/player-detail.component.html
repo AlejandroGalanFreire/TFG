@@ -1,28 +1,261 @@
-<!-- Imagen del jugador -->
-<img src="{{playerStats.urlPicture}}" alt="imagen del jugador">
+<!-- CABECERA -->
+<div class="title">
 
-<!-- gráfico de barras para la eficiencia del jugador -->
-<div class="title">Eficiencia por partido</div>
-<div class="barChartContainer">
-  <canvas id="barChart"></canvas>
+  <div class="jugador">
+    <!-- Imagen del jugador -->
+    <img
+      src="https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/{{playerStats.playerId}}.png"
+      alt="imagen del jugador">
+    <div class="name">{{playerStats.playerName}}</div>
+  </div>
+
+  <!-- Valoración del jugador -->
+  <div class="valoracion">
+    <div class="valueVal">{{playerStats.val}}</div>
+    <div class="colorPercentagesBar">
+      <div class="valoracionGraph" [style.height.%]="getHeightVal()" [style.backgroundColor]="getColorVal()">
+      </div>
+    </div>
+    <div class="titleVal">Valoración</div>
+  </div>
+
+  <!-- LEYENDA -->
+  <div class="leyenda">
+
+    <div class="textoLeyenda">Leyenda de colores</div>
+
+    <div class="elementos">
+      <div class="verde">
+        <div class="circuloVerde"></div>
+        <span>Rendimiento destacable</span>
+      </div>
+
+      <div class="amarillo">
+        <div class="circuloAmarillo"></div>
+        <span>Rendimiento en la media</span>
+      </div>
+
+      <div class="rojo">
+        <div class="circuloRojo"></div>
+        <span>Rendimiento malo</span>
+      </div>
+
+      <div class="morado">
+        <div class="circuloMorado"></div>
+        <span>Tonos morados - estadísticas ofensivas</span>
+      </div>
+
+      <div class="rosa">
+        <div class="circuloRosa"></div>
+        <span>Tonos rosas - estadísticas defensivas</span>
+      </div>
+    </div>
+
+  </div>
+
 </div>
 
-<!-- gráfico pie para el conjunto de estadísticas globales del jugador -->
-<div class="title">Eficiencia por partido</div>
-<div class="pieChartContainer">
-  <canvas id="pieChart"></canvas>
+
+<!-- TABLAS CON ESTADISTICAS -->
+<div class="tables row">
+  <!-- TABLA CON ESTADISTICAS DE ACTUACIÓN -->
+  <div class="infoTable col-sm-12 col-md-6 col-lg-5 col-xl-4">
+    <!-- titulo de la tabla -->
+    <div class="titleTable">Estadísticas win rate</div>
+
+    <!-- tabla -->
+    <table class="table">
+      <caption>Estadísticas win rate</caption>
+      <thead>
+        <tr>
+          <th mat-raised-button #tooltip="matTooltip" matTooltip="Partidos jugados" [matTooltipPosition]="position.value!"
+            matTooltipHideDelay="50"
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            PJ
+          </th>
+          <th mat-raised-button #tooltip="matTooltip" matTooltip="Victorias" [matTooltipPosition]="position.value!"
+            matTooltipHideDelay="50"
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            V
+          </th>
+          <th mat-raised-button #tooltip="matTooltip" matTooltip="Derrotas" [matTooltipPosition]="position.value!"
+            matTooltipHideDelay="50"
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            D
+          </th>
+          <th mat-raised-button #tooltip="matTooltip" matTooltip="Porcentaje de victorias"
+            [matTooltipPosition]="position.value!" matTooltipHideDelay="50"
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            V_PCT
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ playerStats.gp }}</td>
+          <td>{{ playerStats.won }}</td>
+          <td>{{ playerStats.lost }}</td>
+          <td>{{ playerStats.wonPct }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TABLA CON ESTADISTICAS OFENSIVAS -->
+  <div class="infoTable col-sm-12 col-md-6 col-lg-5 col-xl-4">
+    <!-- titulo de la tabla -->
+    <div class="titleTable">Estadísticas ofensivas</div>
+
+    <!-- tabla -->
+    <table class="table">
+      <caption>Estadísticas ofensivas jugador</caption>
+      <thead>
+        <tr>
+          <th mat-raised-button #tooltip="matTooltip" matTooltip="Puntos" [matTooltipPosition]="position.value!"
+            matTooltipHideDelay="50"
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            PTS
+          </th>
+          <th mat-raised-button #tooltip="matTooltip" matTooltip="Porcentaje tiros de dos"
+            [matTooltipPosition]="position.value!" matTooltipHideDelay="50"
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            FG_PCT
+          </th>
+          <th mat-raised-button #tooltip="matTooltip" matTooltip="Porcentaje tiros de tres"
+            [matTooltipPosition]="position.value!" matTooltipHideDelay="50"
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            FG3_PCT
+          </th>
+          <th mat-raised-button #tooltip="matTooltip" matTooltip="Porcentaje tiros libres"
+            [matTooltipPosition]="position.value!" matTooltipHideDelay="50"
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            FT_PCT
+          </th>
+          <th mat-raised-button #tooltip="matTooltip" matTooltip="Rebotes ofensivos" [matTooltipPosition]="position.value!"
+            matTooltipHideDelay="50"
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            OREB
+          </th>
+          <th mat-raised-button #tooltip="matTooltip" matTooltip="Asistencias" [matTooltipPosition]="position.value!"
+            matTooltipHideDelay="50"
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            AST
+          </th>
+          <th mat-raised-button #tooltip="matTooltip" matTooltip="Pérdidas" [matTooltipPosition]="position.value!"
+            matTooltipHideDelay="50"
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            PER
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ playerStats.pts }}</td>
+          <td>{{ playerStats.fgPct }}</td>
+          <td>{{ playerStats.fg3Pct }}</td>
+          <td>{{ playerStats.ftPct }}</td>
+          <td>{{ playerStats.oreb }}</td>
+          <td>{{ playerStats.ast }}</td>
+          <td>{{ playerStats.tov }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TABLA CON ESTADISTICAS DEFENSIVAS -->
+  <div class="infoTable col-sm-12 col-md-6 col-lg-5 col-xl-4">
+    <!-- titulo de la tabla -->
+    <div class="titleTable">Estadísticas defensivas</div>
+
+    <!-- tabla -->
+    <table class="table">
+      <caption>Estadísticas defensivas jugador</caption>
+      <thead>
+        <tr>
+          <th mat-raised-button #tooltip="matTooltip" matTooltip="Rebotes defensivos" [matTooltipPosition]="position.value!"
+            matTooltipHideDelay="50"
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            DREB
+          </th>
+          <th mat-raised-button #tooltip="matTooltip" matTooltip="Robos" [matTooltipPosition]="position.value!"
+            matTooltipHideDelay="50"
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            ROB
+          </th>
+          <th mat-raised-button #tooltip="matTooltip" matTooltip="Bloqueos conseguidos"
+            [matTooltipPosition]="position.value!" matTooltipHideDelay="50"
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            BLQ
+          </th>
+          <th mat-raised-button #tooltip="matTooltip" matTooltip="Bloqueos intentados"
+            [matTooltipPosition]="position.value!" matTooltipHideDelay="50"
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            BLQA
+          </th>
+          <th mat-raised-button #tooltip="matTooltip" matTooltip="Faltas" [matTooltipPosition]="position.value!"
+            matTooltipHideDelay="50"
+            aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+            FAL
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ playerStats.dreb }}</td>
+          <td>{{ playerStats.stl }}</td>
+          <td>{{ playerStats.blk }}</td>
+          <td>{{ playerStats.blka }}</td>
+          <td>{{ playerStats.pf }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 
-<!-- gráfico radar para la comparación de tiros realizados y tiros anotados -->
-<div class="title">Eficiencia por partido</div>
-<div class="radarChartContainer">
-  <canvas id="radarChart"></canvas>
+
+<!-- GRAFICOS -->
+<div class="graphs row">
+  <!-- grafico de barras -->
+  <div class="graph col-sm-12 col-md-6 col-xxl-4">
+    <!-- titulo grafico de barras -->
+    <div class="titleGraph">Eficiencia por partido</div>
+
+    <!-- gráfico de barras para la eficiencia del jugador -->
+    <div class="barChartContainer">
+      <canvas id="barChart"></canvas>
+    </div>
+  </div>
+
+  <!-- grafico pie -->
+  <div class="graph col-sm-12 col-md-6 col-xxl-4">
+    <!-- titulo para grafico de estadistica goblales -->
+    <div class="titleGraph">Estadísticas generales</div>
+
+    <!-- gráfico pie para el conjunto de estadísticas globales del jugador -->
+    <div class="pieChartContainer">
+      <canvas id="pieChart"></canvas>
+    </div>
+  </div>
+
+  <!-- grafico radar -->
+  <div class="graphRadar col-sm-12 col-md-6 col-xxl-4">
+    <!-- titulo para grafico de analisis de tiros -->
+    <div class="titleGraph">Análisis de tiros</div>
+
+    <!-- gráfico radar para la comparación de tiros realizados y tiros anotados -->
+    <div class="radarChartContainer">
+      <canvas id="radarChart"></canvas>
+    </div>
+  </div>
 </div>
+
 
 <!-- Buscador para filtrar por el jugador que quieres comparar -->
-<input type="text" class="form-control" placeholder="Buscar jugador para comparar" name = "filterPlayers"
-  [(ngModel)]="filterPlayers" (keydown)="setAllPlayers()">
-<div *ngIf="filterPlayers.length > 0">
-  <button *ngFor="let player of allPlayers | filterPlayer: filterPlayers" (click)="openMenuDialog(player)">{{ player.playerName }}</button>
+<div class="buscador">
+  <input type="text" class="form-control" placeholder="Buscar jugador para comparar" name="filterPlayers"
+    [(ngModel)]="filterPlayers" (keydown)="setAllPlayers()">
+  <div class="playersToCompare row" *ngIf="filterPlayers.length > 0">
+    <button class="col-2" *ngFor="let player of allPlayers | filterPlayer: filterPlayers" (click)="openMenuDialog(player.playerId)">{{
+      player.playerName }}</button>
+  </div>
 </div>
-

@@ -17,3 +17,16 @@
   display: flex;
   align-items: center;
 }
+
+.cerrar{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.vs{
+  font-size: 40px;
+}
+
+.jugadores{
+  text-align: center;
+}

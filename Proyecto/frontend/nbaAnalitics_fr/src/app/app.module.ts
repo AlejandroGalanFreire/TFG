@@ -32,6 +32,7 @@ import { FilterTeamsPipe } from './pipes/teamPipes/filterTeams.pipe';
 import { FilterTeamByYearPipe } from './pipes/teamPipes/filter-team-by-year.pipe';
 import { PlayerCardComponent } from './main/main/players/players/player-card/player-card.component';
 import { TeamCardComponent } from './main/main/teams/teams/team-card/team-card.component';
+import { MatIconModule } from '@angular/material/icon';
 
 const appRoutes: Routes=[
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -81,6 +82,7 @@ const appRoutes: Routes=[
     MatButtonModule,
     MatMenuModule,
     MatDialogModule,
+    MatIconModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

@@ -1,3 +1,15 @@
+<!-- Boton para cerrar -->
+<div class="cerrar">
+    <mat-icon (click)="onNoClick()">close</mat-icon>
+</div>
+
+<!-- IMAGENES JUGADORES -->
+<div class="jugadores">
+  <img src="https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/{{data.playerDetail.playerId}}.png" alt="imagen del jugador">
+  <span class="vs">VS</span>
+  <img src="https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/{{data.playerToCompare.playerId}}.png" alt="imagen del jugador">
+</div>
+
 <!-- gráfico de barras para comparar la eficiencia de los jugadores -->
 <div class="title">Eficiencia por partido</div>
 <div class="barChartContainer">
@@ -14,6 +26,7 @@
       <div class="tresPtsPlayer1"
         [style.width.%]="data.playerDetail.fg3Pct * 100"
         [style.backgroundColor]="'yellow'">
+        {{data.playerDetail.fg3Pct * 100}}
       </div>
      </div>
 

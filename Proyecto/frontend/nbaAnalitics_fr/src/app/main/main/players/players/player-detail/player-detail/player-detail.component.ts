@@ -7,6 +7,9 @@ import { MatDialog } from '@angular/material/dialog';
 import { ComparativePlayersDialogComponent } from 'src/app/main/main/comparativeDialog/comparative-dialog/comparativePlayers-dialog.component';
 import { ChartType } from 'chart.js';
 import { Subscription } from 'rxjs';
+import { TooltipPosition } from '@angular/material/tooltip';
+import { FormControl } from '@angular/forms';
+import { PlayerInfo } from 'src/app/models/playerInfo';
 
 @Component({
   selector: 'app-player-detail',
@@ -19,10 +22,13 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
   private barChart!: Chart;
   private pieChart!: Chart;
   private radarChart!: Chart;
-  public allPlayers: PlayerStats[] = [];
+  public allPlayers: PlayerInfo[] = [];
   filterPlayers = '';
   playerSelectedSubscription!: Subscription;
   playerByIdSubscription!: Subscription;
+  positionOptions: TooltipPosition[] = ['above'];
+  position = new FormControl(this.positionOptions[0]);
+  playerToCompareSubscription!: Subscription;
 
 
   constructor(private dataService: DataService,
@@ -32,9 +38,14 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.playerSelectedSubscription.unsubscribe();
     this.playerByIdSubscription.unsubscribe();
+    if(this.playerToCompareSubscription){
+      this.playerToCompareSubscription.unsubscribe();
+    }
   }
 
   ngOnInit(): void {
+    Chart.defaults.font.size = 18;
+
     this.playerSelectedSubscription = this.homeService.playerSelected.subscribe(data => {
       this.playerByIdSubscription = this.dataService.getPlayerStatsById(data).subscribe(
         (resp: any) => {
@@ -43,7 +54,6 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
           this.calculatePlayerPerformance(this.playerStats);
 
           // creación de los gráficos
-          // Chart.register(ChartDataLabels);
           this.initializeBarChart(this.playerStats);
           this.initializePieChart(this.playerStats);
           this.initializeRadarChart(this.playerStats);
@@ -69,7 +79,7 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
     const missedShots = (player.fg3a - player.fg3m) +
       (player.fga - player.fgm) + (player.fta - player.ftm);
     const tov = player.tov;
-    player.val = (points + rebounds + ast + stl + blk + succesfulShots - missedShots - tov) / 82;
+    player.val = (points + rebounds + ast + stl + blk + succesfulShots - missedShots - tov);
   }
 
   calculateEFF(player: PlayerStats) {
@@ -106,13 +116,12 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
       const ctx = barChartCanvas.getContext('2d');
 
       const barChartData = {
-        labels: ["Valoración", "EFF por partido", "Puntos creados", "Porcentaje real de tiro"],
+        labels: ["EFF por partido", "Puntos creados", "Porcentaje real de tiro"],
         datasets: [
           {
             label: player.playerName,
-            data: [player.val, player.EFF_PerGame, player.pointsCreated, player.trueShootingPercentage],
+            data: [player.EFF_PerGame, player.pointsCreated, player.trueShootingPercentage],
             backgroundColor: [
-              (player.val < 1000) ? 'red' : (player.val < 2000) ? 'yellow' : 'green',
               (player.EFF_PerGame < 15) ? 'red' : (player.EFF_PerGame < 20) ? 'yellow' : 'green',
               (player.pointsCreated < 1000) ? 'red' : (player.pointsCreated < 2000) ? 'yellow' : 'green',
               (player.trueShootingPercentage < 30) ? 'red' : (player.trueShootingPercentage < 50) ? 'yellow' : 'green'
@@ -125,6 +134,17 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
         this.barChart = new Chart(ctx, {
           type: 'bar',
           data: barChartData,
+          options: {
+            plugins: {
+              legend: {
+                labels: {
+                  usePointStyle: true,
+                  pointStyle: 'circle'
+                }
+              }
+            },
+            responsive: true
+          }
         });
       }
 
@@ -142,24 +162,24 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
 
       const pieChartData = {
         labels: [
-          'rebotes defensivos',
-          'faltas',
-          'bloqueos',
-          'rebotes ofensivos',
-          'tiros anotados',
-          'asistencias'
+          'Rebotes defensivos',
+          'Faltas',
+          'Bloqueos',
+          'Rebotes ofensivos',
+          'Tiros anotados',
+          'Asistencias'
         ],
         datasets: [{
-          label: 'My First Dataset',
+          label: 'Valor',
           data: [player.dreb, player.pf, player.blk, player.oreb, player.ftm
             + player.fgm + player.fg3m, player.ast],
           backgroundColor: [
-            'red',
-            'yellow',
-            'orange',
-            'blue',
-            'green',
-            'white'
+            '#ffc0cb',
+            '#df94a0',
+            '#af6d78',
+            '#580058',
+            '#800080',
+            '#a300a3'
           ],
           hoverOffset: 4
         }]
@@ -168,7 +188,18 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
       if(ctx){
         this.pieChart = new Chart(ctx, {
           type: 'pie' as ChartType,
-          data: pieChartData
+          data: pieChartData,
+          options: {
+            plugins: {
+              legend: {
+                labels: {
+                  usePointStyle: true,
+                  pointStyle: 'circle'
+                }
+              }
+            },
+            responsive: true
+          }
         });
       }
 
@@ -194,7 +225,7 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
           label: 'tiros intentados',
           data: [player.fta, player.fga, player.fg3a],
           fill: true,
-          backgroundColor: 'rgba(255, 99, 132, 0.2)',
+          backgroundColor: '#da41674d',
           borderColor: 'rgb(255, 99, 132)',
           pointBackgroundColor: 'rgb(255, 99, 132)',
           pointBorderColor: '#fff',
@@ -204,12 +235,12 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
           label: 'tiros anotados',
           data: [player.ftm, player.fgm, player.fg3m],
           fill: true,
-          backgroundColor: 'rgba(54, 162, 235, 0.2)',
-          borderColor: 'rgb(54, 162, 235)',
-          pointBackgroundColor: 'rgb(54, 162, 235)',
-          pointBorderColor: '#fff',
-          pointHoverBackgroundColor: '#fff',
-          pointHoverBorderColor: 'rgb(54, 162, 235)'
+          backgroundColor: '#036180a6',
+          borderColor: '#036180',
+          pointBackgroundColor: '#036180',
+          pointBorderColor: '#036180',
+          pointHoverBackgroundColor: '#036180',
+          pointHoverBorderColor: '#036180'
         }]
       };
 
@@ -217,6 +248,17 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
         this.radarChart = new Chart(ctx, {
           type: 'radar',
           data: radarChartData,
+          options: {
+            plugins: {
+              legend: {
+                labels: {
+                  usePointStyle: true,
+                  pointStyle: 'circle'
+                }
+              }
+            },
+            responsive: true
+          }
         });
       }
 
@@ -224,18 +266,31 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
   }
 
   setAllPlayers(){
-    // this.homeService.allPlayers.subscribe(data => {
-    //   this.allPlayers = data.filter(player => player.playerId !== this.playerStats.playerId);
-    // });
+    this.homeService.allPlayers.subscribe(data => {
+      this.allPlayers = data.filter(player => parseInt(player.playerId) !== this.playerStats.playerId);
+    });
   }
 
-  openMenuDialog(playerToCompare: PlayerStats){
-    this.calculatePlayerPerformance(playerToCompare);
-    this.comparativeDialog.open(ComparativePlayersDialogComponent, {
-      width: '900px',
-      height: '900px',
-      data: {playerDetail: this.playerStats, playerToCompare: playerToCompare}
-    })
+  openMenuDialog(playerToCompareId: string){
+    let playerToCompare = new PlayerStats();
+    this.playerToCompareSubscription = this.dataService.getPlayerStatsById(playerToCompareId).subscribe((data) => {
+      playerToCompare = JSON.parse(data);
+      this.calculatePlayerPerformance(playerToCompare);
+      this.comparativeDialog.open(ComparativePlayersDialogComponent, {
+        width: '900px',
+        height: '900px',
+        data: {playerDetail: this.playerStats, playerToCompare: playerToCompare}
+      })
+    });
+
+  }
+
+  getHeightVal(){
+    return this.playerStats.val < 1000 ? 33 : this.playerStats.val < 2000? 66 : 100
+  }
+
+  getColorVal(){
+    return this.playerStats.val < 1000 ? 'red' : this.playerStats.val < 2000? 'yellow' : 'green'
   }
 
 }

@@ -15,18 +15,16 @@ import { Subscription } from 'rxjs';
 export class TeamsComponent implements OnInit, OnDestroy {
 
   teamsStats: TeamStats[] = [];
-  teamsStatsByYear: TeamStatsByYear[] = [];
   filterData = '';
   positionOptions: TooltipPosition[] = ['above'];
   position = new FormControl(this.positionOptions[0]);
   teamsSubscription!: Subscription;
-  teamsFiveYearsSubscription!: Subscription;
+
 
   constructor(private dataService: DataService,
     private readonly homeService: HomeService) { }
 
   ngOnDestroy(): void {
-    this.teamsFiveYearsSubscription.unsubscribe();
     this.teamsSubscription.unsubscribe();
   }
 
@@ -36,23 +34,6 @@ export class TeamsComponent implements OnInit, OnDestroy {
         this.teamsStats = JSON.parse(resp)
       }
     );
-
-    this.teamsFiveYearsSubscription = this.dataService.getTeamsStatsLastFiveYears().subscribe(
-      (resp: any) => {
-        this.teamsStatsByYear = JSON.parse(resp)
-        this.homeService.setAllTeams(this.teamsStatsByYear);
-      }
-    );
   }
 
-  setTeamSelectedDetail(teamid: string) {
-    let dataTeam: TeamStatsByYear[] = [];
-    for (let i = 0; i < this.teamsStatsByYear.length; i++) {
-      if (this.teamsStatsByYear[i].teamId === parseInt(teamid) && dataTeam.length < 5) {
-        dataTeam.push(this.teamsStatsByYear[i]);
-      }
-    }
-    this.homeService.setTeamSelectedDetail(dataTeam);
-    dataTeam = [];
-  }
 }

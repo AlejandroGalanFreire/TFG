@@ -22,5 +22,6 @@ export class TeamStats{
   blka!: number;
   pf!: number;
   pts!: number;
-
+  conference!: string;
+  division!: string;
 }
