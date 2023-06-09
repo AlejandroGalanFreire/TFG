@@ -279,6 +279,7 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
       this.comparativeDialog.open(ComparativePlayersDialogComponent, {
         width: '900px',
         height: '900px',
+        panelClass: 'dialogoComparacionJugadores',
         data: {playerDetail: this.playerStats, playerToCompare: playerToCompare}
       })
     });

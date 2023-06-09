@@ -5,9 +5,17 @@
 
 <!-- IMAGENES JUGADORES -->
 <div class="jugadores">
-  <img src="https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/{{data.playerDetail.playerId}}.png" alt="imagen del jugador">
+  <div class="playerDetail">
+    <img src="https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/{{data.playerDetail.playerId}}.png" alt="imagen del jugador">
+    <span class="playerName">{{ data.playerDetail.playerName }}</span>
+  </div>
+
   <span class="vs">VS</span>
-  <img src="https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/{{data.playerToCompare.playerId}}.png" alt="imagen del jugador">
+
+  <div class="playerToCompare">
+    <img src="https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/{{data.playerToCompare.playerId}}.png" alt="imagen del jugador">
+    <span class="playerName">{{ data.playerToCompare.playerName }}</span>
+  </div>
 </div>
 
 <!-- gráfico de barras para comparar la eficiencia de los jugadores -->
@@ -17,87 +25,97 @@
 </div>
 
 <!-- barras para ver la comparación de porcentajes entre los jugadores -->
-<div class="tresPts">
-  <div class="data">
-    %3P
-  </div>
-  <div class="tresPtsGraphs">
-    <div class="colorPercentagesBar">
-      <div class="tresPtsPlayer1"
-        [style.width.%]="data.playerDetail.fg3Pct * 100"
-        [style.backgroundColor]="'yellow'">
-        {{data.playerDetail.fg3Pct * 100}}
-      </div>
-     </div>
+<div class="porcentajes">
+  <div class="titlePorcentajes">Porcentajes en tiros</div>
+  <div class="tresPts">
+    <div class="data">
+      %3P
+    </div>
+    <div class="tresPtsGraphs">
+      <div class="colorPercentagesBar">
+        <div class="tresPtsPlayer1"
+          [style.width.%]="data.playerDetail.fg3Pct * 100"
+          [style.backgroundColor]="'#df94a0'">
+          {{ getRound(data.playerDetail.fg3Pct * 100) }}
+        </div>
+       </div>
 
-     <div class="colorPercentagesBar">
-      <div class="tresPtsPlayer2"
-        [style.width.%]="data.playerToCompare.fg3Pct * 100"
-        [style.backgroundColor]="'blue'">
-      </div>
-     </div>
+       <div class="colorPercentagesBar">
+        <div class="tresPtsPlayer2"
+          [style.width.%]="data.playerToCompare.fg3Pct * 100"
+          [style.backgroundColor]="'#af6d78'">
+          {{ getRound(data.playerToCompare.fg3Pct * 100) }}
+        </div>
+       </div>
+    </div>
   </div>
-</div>
 
-<div class="tirosLibres">
-  <div class="data">
-    %TL
+  <div class="tirosLibres">
+    <div class="data">
+      %TL
+    </div>
+    <div class="tirosLibresGraphs">
+      <div class="colorPercentagesBar">
+        <div class="tirosLibresPlayer1"
+          [style.width.%]="data.playerDetail.ftPct * 100"
+          [style.backgroundColor]="'#df94a0'">
+          {{ getRound(data.playerDetail.ftPct * 100) }}
+        </div>
+       </div>
+
+       <div class="colorPercentagesBar">
+        <div class="tirosLibresPlayer2"
+          [style.width.%]="data.playerToCompare.ftPct * 100"
+          [style.backgroundColor]="'#af6d78'">
+          {{ getRound(data.playerToCompare.ftPct * 100) }}
+        </div>
+       </div>
+    </div>
   </div>
-  <div class="tirosLibresGraphs">
-    <div class="colorPercentagesBar">
-      <div class="tirosLibresPlayer1"
-        [style.width.%]="data.playerDetail.ftPct * 100"
-        [style.backgroundColor]="'yellow'">
-      </div>
-     </div>
 
-     <div class="colorPercentagesBar">
-      <div class="tirosLibresPlayer2"
-        [style.width.%]="data.playerToCompare.ftPct * 100"
-        [style.backgroundColor]="'blue'">
-      </div>
-     </div>
+  <div class="dosPts">
+    <div class="data">
+      %2P
+    </div>
+    <div class="dosPtsGraphs">
+      <div class="colorPercentagesBar">
+        <div class="dosPtsPlayer1"
+          [style.width.%]="data.playerDetail.fgPct * 100"
+          [style.backgroundColor]="'#df94a0'">
+          {{ getRound(data.playerDetail.fgPct * 100) }}
+        </div>
+       </div>
+
+       <div class="colorPercentagesBar">
+        <div class="dosPtsPlayer2"
+          [style.width.%]="data.playerToCompare.fgPct * 100"
+          [style.backgroundColor]="'#af6d78'">
+          {{ getRound(data.playerToCompare.fgPct * 100) }}
+        </div>
+       </div>
+    </div>
   </div>
-</div>
 
-<div class="dosPts">
-  <div class="data">
-    %2P
-  </div>
-  <div class="dosPtsGraphs">
-    <div class="colorPercentagesBar">
-      <div class="dosPtsPlayer1"
-        [style.width.%]="data.playerDetail.fgPct * 100"
-        [style.backgroundColor]="'yellow'">
-      </div>
-     </div>
+  <div class="trueShooting">
+    <div class="data">
+      %TS
+    </div>
+    <div class="trueShootingGraphs">
+      <div class="colorPercentagesBar">
+        <div class="trueShootingPlayer1"
+          [style.width.%]="data.playerDetail.trueShootingPercentage"
+          [style.backgroundColor]="'#df94a0'">
+          {{ getRound(data.playerDetail.trueShootingPercentage) }}
+        </div>
+       </div>
 
-     <div class="colorPercentagesBar">
-      <div class="dosPtsPlayer2"
-        [style.width.%]="data.playerToCompare.fgPct * 100"
-        [style.backgroundColor]="'blue'">
-      </div>
-     </div>
-  </div>
-</div>
-
-<div class="trueShooting">
-  <div class="data">
-    %TS
-  </div>
-  <div class="trueShootingGraphs">
-    <div class="colorPercentagesBar">
-      <div class="trueShootingPlayer1"
-        [style.width.%]="data.playerDetail.trueShootingPercentage"
-        [style.backgroundColor]="'yellow'">
-      </div>
-     </div>
-
-     <div class="colorPercentagesBar">
-      <div class="trueShootingPlayer2"
-        [style.width.%]="data.playerToCompare.trueShootingPercentage"
-        [style.backgroundColor]="'blue'">
-      </div>
-     </div>
+       <div class="colorPercentagesBar">
+        <div class="trueShootingPlayer2"
+          [style.width.%]="data.playerToCompare.trueShootingPercentage"
+          [style.backgroundColor]="'#af6d78'">
+          {{ getRound(data.playerToCompare.trueShootingPercentage) }}
+        </div>
+       </div>
+    </div>
   </div>
 </div>

@@ -34,17 +34,17 @@ export class ComparativePlayersDialogComponent implements OnInit{
       datasets: [
         {
           label: this.data.playerDetail.playerName,
-          data: [this.data.playerDetail.pts / this.data.playerDetail.gp, this.data.playerDetail.ast / this.data.playerDetail.gp,
-                this.data.playerDetail.reb / this.data.playerDetail.gp,
-                this.data.playerDetail.EFF_PerGame],
-          backgroundColor: ['blue']
+          data: [(this.data.playerDetail.pts / this.data.playerDetail.gp).toFixed(2), (this.data.playerDetail.ast / this.data.playerDetail.gp).toFixed(2),
+                (this.data.playerDetail.reb / this.data.playerDetail.gp).toFixed(2),
+                (this.data.playerDetail.EFF_PerGame).toFixed(2)],
+          backgroundColor: ['#df94a0']
         },
         {
           label: this.data.playerToCompare.playerName,
-          data: [this.data.playerToCompare.pts / this.data.playerToCompare.gp, this.data.playerToCompare.ast / this.data.playerToCompare.gp,
-                this.data.playerToCompare.reb / this.data.playerToCompare.gp,
-                this.data.playerToCompare.EFF_PerGame],
-          backgroundColor: ['yellow']
+          data: [(this.data.playerToCompare.pts / this.data.playerToCompare.gp).toFixed(2), (this.data.playerToCompare.ast / this.data.playerToCompare.gp).toFixed(2),
+                (this.data.playerToCompare.reb / this.data.playerToCompare.gp).toFixed(2),
+                (this.data.playerToCompare.EFF_PerGame).toFixed(2)],
+          backgroundColor: ['#af6d78']
         }
       ]
     };
@@ -59,11 +59,42 @@ export class ComparativePlayersDialogComponent implements OnInit{
           plugins: {
             datalabels:{
               anchor: 'end',
-              align: 'end'
+              align: 'end',
+              color: 'white'
+            },
+            legend: {
+              labels: {
+                color: 'white'
+              }
             }
-          }
+          },
+          scales: {
+            x: {
+              ticks: {
+                color: 'white'
+              },
+              grid: {
+                color: 'white'
+              }
+            },
+            y: {
+              ticks: {
+                color: 'white'
+              },
+              grid: {
+                color: 'white'
+              }
+            },
+        }
         }
       });
     }
   }
+
+
+  getRound(numberToRound: number): string{
+    return numberToRound.toFixed(2);
+  }
+
+
 }
