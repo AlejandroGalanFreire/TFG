@@ -5,6 +5,8 @@ import Chart from 'chart.js/auto';
 import { MatDialog } from '@angular/material/dialog';
 import { ComparativeTeamsDialogComponent } from 'src/app/main/main/comparativeDialog/comparative-dialog/comparative-teams-dialog/comparative-teams-dialog.component';
 import { Subscription } from 'rxjs';
+import { TooltipPosition } from '@angular/material/tooltip';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-teams-detail',
@@ -26,6 +28,9 @@ export class TeamsDetailComponent implements OnInit, OnDestroy {
   public allTeams: TeamStatsByYear[] = [];
   teamSelectedSubscription!: Subscription;
   allTeamsSubscription!: Subscription;
+
+  positionOptions: TooltipPosition[] = ['above'];
+  position = new FormControl(this.positionOptions[0]);
 
   constructor(private readonly homeService: HomeService,
     public comparativeDialog: MatDialog) { }
@@ -145,7 +150,7 @@ export class TeamsDetailComponent implements OnInit, OnDestroy {
     const ctx = radarChartCanvas.getContext('2d');
 
     const radarChartData = {
-      labels: ["Tiros","Tiros libres", "Triples"],
+      labels: ["Tiros de 2","Tiros libres", "Triples"],
       datasets: [
         {
           label: this.fifthYear.teamName,
@@ -202,6 +207,7 @@ export class TeamsDetailComponent implements OnInit, OnDestroy {
     this.comparativeDialog.open(ComparativeTeamsDialogComponent, {
       width: '900px',
       height: '900px',
+      panelClass: 'dialogoComparacionEquipos',
       data: {teamDetail: this.teamStatsByYear, teamToCompare: teamToCompare}
     })
   }

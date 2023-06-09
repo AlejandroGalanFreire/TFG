@@ -1,42 +1,195 @@
-<!-- gráfico de líneas para el progreso del equipo -->
-<div class="title">Progreso 5 años</div>
-<div class="lineChartContainer">
-  <canvas id="lineChart"></canvas>
-</div>
+<!-- CABECERA -->
+<div class="title">
 
-<!-- gráfico de barras para las asistencias -->
-<div class="title">Asistencias, rebotes, bloqueos, robos y pérdidas</div>
-<div class="barChartContainer">
-  <canvas id="barChartAst"></canvas>
-</div>
-
-<!-- Barra para saber que año llegó o ganó la copa -->
-<div class="colorPercentagesBar">
-  <div class="element" *ngFor="let item of teamStatsByYear" [style.width.%]="100/5"
-    [style.backgroundColor]="getColorByFinal(item)">
+  <div class="equipo">
+    <!-- Imagen del equipo -->
+    <img
+      src="assets/img/{{fifthYear.teamId}}.png"
+      alt="imagen del equipo">
+    <div class="name">{{ fifthYear.teamName }}</div>
   </div>
+
+  <!-- conferencia -->
+  <div class="conference">
+    <span class="confTitle">CONFERENCIA</span>
+    <span class="confValue">{{ fifthYear.conference }}</span>
+  </div>
+
+  <!-- division -->
+  <div class="division">
+    <span class="diviTitle">DIVISION</span>
+    <span class="diviValue">{{ fifthYear.division }}</span>
+  </div>
+
 </div>
 
-<!-- gráficos tipo radar para comparar tiros realizados con tiros anotados -->
-<div class="title">Porcentajes</div>
-<div class="radarChartContainer">
-  <canvas id="radarChart"></canvas>
+<div class="infoTable">
+  <!-- titulo de la tabla -->
+  <div class="titleTable">Estadísticas últimos 5 años</div>
+
+  <table class="table">
+    <caption>Estadísticas equipo en los últimos 5 años</caption>
+    <thead>
+      <tr>
+        <th>AÑO</th>
+        <th
+          mat-raised-button
+          matTooltip="puntos"
+          [matTooltipPosition]="position.value!"
+          matTooltipHideDelay="50"
+          aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+          PTS
+        </th>
+        <th
+          mat-raised-button #tooltip="matTooltip"
+          matTooltip="Porcentaje tiros de dos"
+          [matTooltipPosition]="position.value!"
+          matTooltipHideDelay="50"
+          aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+          FG_PCT
+        </th>
+        <th
+          mat-raised-button #tooltip="matTooltip"
+          matTooltip="Porcentaje tiros de tres"
+          [matTooltipPosition]="position.value!"
+          matTooltipHideDelay="50"
+          aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+          FG3_PCT
+        </th>
+        <th
+          mat-raised-button #tooltip="matTooltip"
+          matTooltip="Porcentaje tiros libres"
+          [matTooltipPosition]="position.value!"
+          matTooltipHideDelay="50"
+          aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+          FT_PCT
+        </th>
+        <th
+          mat-raised-button #tooltip="matTooltip"
+          matTooltip="Rebotes totales"
+          [matTooltipPosition]="position.value!"
+          matTooltipHideDelay="50"
+          aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+          REB
+        </th>
+        <th
+          mat-raised-button #tooltip="matTooltip"
+          matTooltip="Asistencias"
+          [matTooltipPosition]="position.value!"
+          matTooltipHideDelay="50"
+          aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+          AST
+        </th>
+        <th
+          mat-raised-button #tooltip="matTooltip"
+          matTooltip="Pérdidas"
+          [matTooltipPosition]="position.value!"
+          matTooltipHideDelay="50"
+          aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+          PER
+        </th>
+        <th
+          mat-raised-button #tooltip="matTooltip"
+          matTooltip="Robos"
+          [matTooltipPosition]="position.value!"
+          matTooltipHideDelay="50"
+          aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+          ROB
+        </th>
+        <th
+          mat-raised-button #tooltip="matTooltip"
+          matTooltip="Bloqueos conseguidos"
+          [matTooltipPosition]="position.value!"
+          matTooltipHideDelay="50"
+          aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+          BLQ
+        </th>
+        <th
+          mat-raised-button #tooltip="matTooltip"
+          matTooltip="Faltas"
+          [matTooltipPosition]="position.value!"
+          matTooltipHideDelay="50"
+          aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+          FAL
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of teamStatsByYear; let i = index">
+        <td>{{ i + 1 }} º</td>
+        <td>{{ item.pts }}</td>
+        <td>{{ item.fgPct }}</td>
+        <td>{{ item.fg3Pct }}</td>
+        <td>{{ item.ftPct }}</td>
+        <td>{{ item.reb }}</td>
+        <td>{{ item.ast }}</td>
+        <td>{{ item.tov }}</td>
+        <td>{{ item.stl }}</td>
+        <td>{{ item.blk }}</td>
+        <td>{{ item.pf }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
-<!-- gráfico de barras para las asistencias, rebotes, bloqueos, robos y perdidas -->
-<div class="title">Actuación en PlayOff</div>
-<div class="barChartContainer">
-  <canvas id="barChartPlayOff"></canvas>
+
+<!-- GRAFICOS -->
+<div class="graphs row">
+  <div class="graph col-sm-12 col-md-6 ">
+    <!-- gráfico de líneas para el progreso del equipo -->
+    <div class="titleGraph">Progreso 5 años</div>
+    <div class="lineChartContainer">
+      <canvas id="lineChart"></canvas>
+    </div>
+  </div>
+
+  <div class="graph col-sm-12 col-md-6">
+    <!-- gráfico de barras para las asistencias -->
+    <div class="titleGraph">Asistencias, rebotes, bloqueos, robos y pérdidas</div>
+    <div class="barChartContainer">
+      <canvas id="barChartAst"></canvas>
+    </div>
+  </div>
+
+  <div class="graph col-sm-12 col-md-6">
+    <!-- gráficos tipo radar para comparar tiros realizados con tiros anotados -->
+    <div class="titleGraph">Porcentajes</div>
+    <div class="radarChartContainer">
+      <canvas id="radarChart"></canvas>
+    </div>
+  </div>
+
+  <div class="graph col-sm-12 col-md-6">
+    <!-- gráfico de barras para las asistencias, rebotes, bloqueos, robos y perdidas -->
+    <div class="titleGraph">Actuación en PlayOff último año</div>
+    <div class="barChartContainer">
+      <canvas id="barChartPlayOff"></canvas>
+    </div>
+  </div>
+
+  <!-- Barra para saber que año llegó o ganó la copa -->
+  <div class="graphCopa col-sm-12 col-md-6">
+    <div class="titleGraph">Resultado Copa últimos 5 años</div>
+    <div class="colorPercentagesBar">
+      <div class="element" *ngFor="let item of teamStatsByYear" [style.width.%]="100/5"
+        [style.height.px]="70" [style.backgroundColor]="getColorByFinal(item)">
+        <div *ngIf="fifthYear.nbaFinalsAppearance === 'N/A'">No ha llegado a las finales</div>
+        <div *ngIf="fifthYear.nbaFinalsAppearance === 'FINALS APPEARANCE'">Bicampeón</div>
+        <div *ngIf="fifthYear.nbaFinalsAppearance === 'LEAGUE CHAMPION'">Campeón</div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
-<div *ngIf="fourthYear.nbaFinalsAppearance === 'N/A'">No ha llegado a las finales</div>
-<div *ngIf="fourthYear.nbaFinalsAppearance === 'FINALS APPEARANCE'">Bicampeón</div>
-<div *ngIf="fourthYear.nbaFinalsAppearance === 'LEAGUE CHAMPION'">Campeón</div>
+
+
 
 <!-- Buscador para filtrar por el equipo que quieres comparar -->
-<input type="text" class="form-control" placeholder="Buscar equipo para comparar" name = "filterTeams"
-  [(ngModel)]="filterTeams" (keydown)="setAllTeams()">
-<div *ngIf="filterTeams.length > 0">
-  <button *ngFor="let team of allTeams | filterTeamByYear: filterTeams" (click)="openMenuDialog(team)">{{ team.teamName }}</button>
+<div class="buscador">
+  <input type="text" class="form-control" placeholder="Buscar equipo para comparar" name = "filterTeams"
+    [(ngModel)]="filterTeams" (keydown)="setAllTeams()">
+  <div class="teamsToCompare row" *ngIf="filterTeams.length > 0">
+    <button class="col-2" *ngFor="let team of allTeams | filterTeamByYear: filterTeams" (click)="openMenuDialog(team)">{{ team.teamName }}</button>
+  </div>
 </div>
-

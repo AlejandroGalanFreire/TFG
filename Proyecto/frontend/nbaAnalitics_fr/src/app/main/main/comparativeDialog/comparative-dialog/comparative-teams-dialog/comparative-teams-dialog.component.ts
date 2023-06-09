@@ -25,29 +25,29 @@ export class ComparativeTeamsDialogComponent {
     this.dialogRef.close();
   }
 
-  initializeBarChart(){
+  initializeBarChart() {
     const barChartCanvas = document.getElementById("barChartComparativeTeams") as HTMLCanvasElement;
     const ctx = barChartCanvas.getContext('2d');
 
     const barChartData = {
-      labels: ["PPP", "APP", "RePP", "EffPP"],
+      labels: ["PPP", "APP", "RePP"],
       datasets: [
         {
           label: this.data.teamDetail[4].teamName,
-          data: [this.data.teamDetail[4].pts / this.data.teamDetail[4].gp, this.data.teamDetail[4].ast / this.data.teamDetail[4].gp,
-                this.data.teamDetail[4].reb / this.data.teamDetail[4].gp],
-          backgroundColor: ['blue']
+          data: [(this.data.teamDetail[4].pts / this.data.teamDetail[4].gp).toFixed(2), (this.data.teamDetail[4].ast / this.data.teamDetail[4].gp).toFixed(2),
+          (this.data.teamDetail[4].reb / this.data.teamDetail[4].gp).toFixed(2)],
+          backgroundColor: ['#df94a0']
         },
         {
           label: this.data.teamToCompare.teamName,
-          data: [this.data.teamToCompare.pts / this.data.teamToCompare.gp, this.data.teamToCompare.ast / this.data.teamToCompare.gp,
-                this.data.teamToCompare.reb / this.data.teamToCompare.gp],
-          backgroundColor: ['yellow']
+          data: [(this.data.teamToCompare.pts / this.data.teamToCompare.gp).toFixed(2), (this.data.teamToCompare.ast / this.data.teamToCompare.gp).toFixed(2),
+          (this.data.teamToCompare.reb / this.data.teamToCompare.gp).toFixed(2)],
+          backgroundColor: ['#af6d78']
         }
       ]
     };
 
-    if(ctx){
+    if (ctx) {
       this.barChart = new Chart(ctx, {
         type: 'bar',
         data: barChartData,
@@ -55,13 +55,42 @@ export class ComparativeTeamsDialogComponent {
         options: {
           indexAxis: 'y',
           plugins: {
-            datalabels:{
-              anchor: 'end',
-              align: 'end'
+            datalabels: {
+              anchor: 'center',
+              align: 'center',
+              color: 'white'
+            },
+            legend: {
+              labels: {
+                color: 'white'
+              }
             }
+          },
+          scales: {
+            x: {
+              ticks: {
+                color: 'white'
+              },
+              grid: {
+                color: 'white'
+              }
+            },
+            y: {
+              ticks: {
+                color: 'white'
+              },
+              grid: {
+                color: 'white'
+              }
+            },
           }
         }
       });
     }
   }
+
+  getRound(numberToRound: number): string {
+    return numberToRound.toFixed(2);
+  }
+
 }

@@ -8,14 +8,14 @@ import ChartDataLabels from 'chartjs-plugin-datalabels';
   templateUrl: './comparativePlayers-dialog.component.html',
   styleUrls: ['./comparativePlayers-dialog.component.scss']
 })
-export class ComparativePlayersDialogComponent implements OnInit{
+export class ComparativePlayersDialogComponent implements OnInit {
 
   private barChart: any;
 
   constructor(
     public dialogRef: MatDialogRef<ComparativePlayersDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.initializeBarChart();
@@ -25,7 +25,7 @@ export class ComparativePlayersDialogComponent implements OnInit{
     this.dialogRef.close();
   }
 
-  initializeBarChart(){
+  initializeBarChart() {
     const barChartCanvas = document.getElementById("barChartComparative") as HTMLCanvasElement;
     const ctx = barChartCanvas.getContext('2d');
 
@@ -35,21 +35,21 @@ export class ComparativePlayersDialogComponent implements OnInit{
         {
           label: this.data.playerDetail.playerName,
           data: [(this.data.playerDetail.pts / this.data.playerDetail.gp).toFixed(2), (this.data.playerDetail.ast / this.data.playerDetail.gp).toFixed(2),
-                (this.data.playerDetail.reb / this.data.playerDetail.gp).toFixed(2),
-                (this.data.playerDetail.EFF_PerGame).toFixed(2)],
+          (this.data.playerDetail.reb / this.data.playerDetail.gp).toFixed(2),
+          (this.data.playerDetail.EFF_PerGame).toFixed(2)],
           backgroundColor: ['#df94a0']
         },
         {
           label: this.data.playerToCompare.playerName,
           data: [(this.data.playerToCompare.pts / this.data.playerToCompare.gp).toFixed(2), (this.data.playerToCompare.ast / this.data.playerToCompare.gp).toFixed(2),
-                (this.data.playerToCompare.reb / this.data.playerToCompare.gp).toFixed(2),
-                (this.data.playerToCompare.EFF_PerGame).toFixed(2)],
+          (this.data.playerToCompare.reb / this.data.playerToCompare.gp).toFixed(2),
+          (this.data.playerToCompare.EFF_PerGame).toFixed(2)],
           backgroundColor: ['#af6d78']
         }
       ]
     };
 
-    if(ctx){
+    if (ctx) {
       this.barChart = new Chart(ctx, {
         type: 'bar',
         data: barChartData,
@@ -57,9 +57,9 @@ export class ComparativePlayersDialogComponent implements OnInit{
         options: {
           indexAxis: 'y',
           plugins: {
-            datalabels:{
-              anchor: 'end',
-              align: 'end',
+            datalabels: {
+              anchor: 'center',
+              align: 'center',
               color: 'white'
             },
             legend: {
@@ -85,14 +85,14 @@ export class ComparativePlayersDialogComponent implements OnInit{
                 color: 'white'
               }
             },
-        }
+          }
         }
       });
     }
   }
 
 
-  getRound(numberToRound: number): string{
+  getRound(numberToRound: number): string {
     return numberToRound.toFixed(2);
   }
 

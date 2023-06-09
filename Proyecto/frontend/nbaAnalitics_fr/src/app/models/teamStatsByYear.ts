@@ -3,6 +3,8 @@ export class TeamStatsByYear{
   teamId!: number;
   teamCity!: string;
   teamName!: string;
+  conference!: string;
+  division!: string;
   year!: string;
   gp!: number;
   wins!: number;

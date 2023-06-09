@@ -25,7 +25,11 @@ body {
   background-color: rgb(71, 69, 69);
 }
 
-.dialogoComparacionJugadores{
+.dialogoComparacionEquipos mat-dialog-container .mat-mdc-dialog-surface{
+  background-color: rgb(71, 69, 69);
+}
+
+.dialogoComparacionJugadores, .dialogoComparacionEquipos{
   ::-webkit-scrollbar{
     width: 8px;
     height: 8px;
