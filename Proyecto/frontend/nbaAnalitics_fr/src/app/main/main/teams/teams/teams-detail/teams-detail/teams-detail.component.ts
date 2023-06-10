@@ -37,7 +37,7 @@ export class TeamsDetailComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.teamSelectedSubscription.unsubscribe();
-    if(this.allTeamsSubscription){
+    if (this.allTeamsSubscription) {
       this.allTeamsSubscription.unsubscribe();
     }
   }
@@ -62,12 +62,12 @@ export class TeamsDetailComponent implements OnInit, OnDestroy {
   }
 
   getColorByFinal(item: TeamStatsByYear): string {
-    if(item.nbaFinalsAppearance === 'LEAGUE CHAMPION'){
-      return 'green'
-    }else if(item.nbaFinalsAppearance === 'FINALS APPEARANCE'){
-      return 'yellow'
+    if (item.nbaFinalsAppearance === 'LEAGUE CHAMPION') {
+      return '#ffc0cb'
+    } else if (item.nbaFinalsAppearance === 'FINALS APPEARANCE') {
+      return '#df94a0'
     }
-    return 'red';
+    return '#af6d78';
   }
 
   initLineChart() {
@@ -103,6 +103,27 @@ export class TeamsDetailComponent implements OnInit, OnDestroy {
       this.lineChart = new Chart(ctx, {
         type: 'line',
         data: lineChartData,
+        options: {
+          scales: {
+            x: {
+              ticks: {
+                color: 'black'
+              }
+            },
+            y: {
+              ticks: {
+                color: 'black'
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              labels: {
+                color: 'black'
+              }
+            }
+          }
+        }
       });
     }
   }
@@ -141,32 +162,65 @@ export class TeamsDetailComponent implements OnInit, OnDestroy {
       this.barChart = new Chart(ctx, {
         type: 'bar',
         data: barChartData,
+        options: {
+          scales: {
+            x: {
+              ticks: {
+                color: 'black'
+              }
+            },
+            y: {
+              ticks: {
+                color: 'black'
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              labels: {
+                color: 'black'
+              }
+            }
+          }
+        }
       });
     }
   }
 
-  initRadarChart(){
+  initRadarChart() {
     const radarChartCanvas = document.getElementById("radarChart") as HTMLCanvasElement;
     const ctx = radarChartCanvas.getContext('2d');
 
     const radarChartData = {
-      labels: ["Tiros de 2","Tiros libres", "Triples"],
+      labels: ["Tiros de 2", "Tiros libres", "Triples"],
       datasets: [
         {
-          label: this.fifthYear.teamName,
+          label: 'Tiros intentados',
           data: [this.fifthYear.fga * 100, this.fifthYear.fta * 100, this.fifthYear.fg3a * 100]
         },
         {
-          label: this.fifthYear.teamName,
+          label: 'Tiros anotados',
           data: [this.fifthYear.fgm * 100, this.fifthYear.ftm * 100, this.fifthYear.fg3m * 100]
         }
       ]
     };
 
-    if(ctx){
+    if (ctx) {
       this.radarChart = new Chart(ctx, {
         type: 'radar',
         data: radarChartData,
+        options: {
+          plugins: {
+            legend: {
+              labels: {
+                usePointStyle: true,
+                pointStyle: 'circle',
+                color: 'black'
+              }
+            }
+          },
+          responsive: true
+        }
       });
     }
   }
@@ -193,22 +247,31 @@ export class TeamsDetailComponent implements OnInit, OnDestroy {
       this.barChart = new Chart(ctx, {
         type: 'bar',
         data: barChartData,
+        options: {
+          plugins: {
+            legend: {
+              labels: {
+                color: 'black'
+              }
+            }
+          }
+        }
       });
     }
   }
 
-  setAllTeams(){
+  setAllTeams() {
     this.allTeamsSubscription = this.homeService.allTeams.subscribe(data => {
       this.allTeams = data.filter(team => team.teamId !== this.fifthYear.teamId);
     });
   }
 
-  openMenuDialog(teamToCompare: TeamStatsByYear){
+  openMenuDialog(teamToCompare: TeamStatsByYear) {
     this.comparativeDialog.open(ComparativeTeamsDialogComponent, {
       width: '900px',
       height: '900px',
       panelClass: 'dialogoComparacionEquipos',
-      data: {teamDetail: this.teamStatsByYear, teamToCompare: teamToCompare}
+      data: { teamDetail: this.teamStatsByYear, teamToCompare: teamToCompare }
     })
   }
 

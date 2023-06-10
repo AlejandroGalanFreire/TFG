@@ -33,12 +33,12 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
 
   constructor(private dataService: DataService,
     private readonly homeService: HomeService,
-    public comparativeDialog: MatDialog){ }
+    public comparativeDialog: MatDialog) { }
 
   ngOnDestroy(): void {
     this.playerSelectedSubscription.unsubscribe();
     this.playerByIdSubscription.unsubscribe();
-    if(this.playerToCompareSubscription){
+    if (this.playerToCompareSubscription) {
       this.playerToCompareSubscription.unsubscribe();
     }
   }
@@ -62,14 +62,14 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
     });
   }
 
-  calculatePlayerPerformance(player: PlayerStats){
+  calculatePlayerPerformance(player: PlayerStats) {
     this.calculateVal(player);
     this.calculateEFF(player);
     this.calculatePointsCreated(player);
     this.calculateTrueShootingPercentage(player);
   }
 
-  calculateVal(player: PlayerStats){
+  calculateVal(player: PlayerStats) {
     const points = player.pts;
     const rebounds = player.reb;
     const ast = player.ast;
@@ -103,16 +103,16 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
   calculateTrueShootingPercentage(player: PlayerStats) {
     const fieldShotsAttempted = player.fg3a + player.fga
     const freeShotsAttempted = player.fta;
-    const TS = player.pts / (2*(fieldShotsAttempted + 0.44*freeShotsAttempted));
-    player.trueShootingPercentage = TS*100;
+    const TS = player.pts / (2 * (fieldShotsAttempted + 0.44 * freeShotsAttempted));
+    player.trueShootingPercentage = TS * 100;
   }
 
-  initializeBarChart(player: PlayerStats){
-    if(this.barChart){
+  initializeBarChart(player: PlayerStats) {
+    if (this.barChart) {
       this.barChart.destroy(); // lo eliminamos si existe y creamos uno nuevo
     }
     const barChartCanvas = document.getElementById("barChart") as HTMLCanvasElement;
-    if(barChartCanvas){
+    if (barChartCanvas) {
       const ctx = barChartCanvas.getContext('2d');
 
       const barChartData = {
@@ -130,16 +130,29 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
         ]
       };
 
-      if(ctx){
+      if (ctx) {
         this.barChart = new Chart(ctx, {
           type: 'bar',
           data: barChartData,
           options: {
+            scales: {
+              x: {
+                ticks: {
+                  color: 'black'
+                }
+              },
+              y: {
+                ticks: {
+                  color: 'black'
+                }
+              }
+            },
             plugins: {
               legend: {
                 labels: {
                   usePointStyle: true,
-                  pointStyle: 'circle'
+                  pointStyle: 'circle',
+                  color: 'black'
                 }
               }
             },
@@ -151,13 +164,13 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
     }
   }
 
-  initializePieChart(player: PlayerStats){
-    if(this.pieChart){
+  initializePieChart(player: PlayerStats) {
+    if (this.pieChart) {
       this.pieChart.destroy(); // lo eliminamos si existe y creamos uno nuevo
     }
     const pieChartCanvas = document.getElementById("pieChart") as HTMLCanvasElement;
 
-    if(pieChartCanvas){
+    if (pieChartCanvas) {
       const ctx = pieChartCanvas.getContext('2d');
 
       const pieChartData = {
@@ -185,16 +198,29 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
         }]
       };
 
-      if(ctx){
+      if (ctx) {
         this.pieChart = new Chart(ctx, {
           type: 'pie' as ChartType,
           data: pieChartData,
           options: {
+            scales: {
+              x: {
+                ticks: {
+                  color: 'black'
+                }
+              },
+              y: {
+                ticks: {
+                  color: 'black'
+                }
+              }
+            },
             plugins: {
               legend: {
                 labels: {
                   usePointStyle: true,
-                  pointStyle: 'circle'
+                  pointStyle: 'circle',
+                  color: 'black'
                 }
               }
             },
@@ -206,13 +232,13 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
     }
   }
 
-  initializeRadarChart(player: PlayerStats){
-    if(this.radarChart){
+  initializeRadarChart(player: PlayerStats) {
+    if (this.radarChart) {
       this.radarChart.destroy(); // Lo destruimos si ya existe y creamos uno nuevo
     }
     const radarChartCanvas = document.getElementById("radarChart") as HTMLCanvasElement;
 
-    if(radarChartCanvas){
+    if (radarChartCanvas) {
       const ctx = radarChartCanvas.getContext('2d');
 
       const radarChartData = {
@@ -244,7 +270,7 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
         }]
       };
 
-      if(ctx){
+      if (ctx) {
         this.radarChart = new Chart(ctx, {
           type: 'radar',
           data: radarChartData,
@@ -253,7 +279,8 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
               legend: {
                 labels: {
                   usePointStyle: true,
-                  pointStyle: 'circle'
+                  pointStyle: 'circle',
+                  color: 'black'
                 }
               }
             },
@@ -265,13 +292,13 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
     }
   }
 
-  setAllPlayers(){
+  setAllPlayers() {
     this.homeService.allPlayers.subscribe(data => {
       this.allPlayers = data.filter(player => parseInt(player.playerId) !== this.playerStats.playerId);
     });
   }
 
-  openMenuDialog(playerToCompareId: string){
+  openMenuDialog(playerToCompareId: string) {
     let playerToCompare = new PlayerStats();
     this.playerToCompareSubscription = this.dataService.getPlayerStatsById(playerToCompareId).subscribe((data) => {
       playerToCompare = JSON.parse(data);
@@ -280,18 +307,18 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
         width: '900px',
         height: '900px',
         panelClass: 'dialogoComparacionJugadores',
-        data: {playerDetail: this.playerStats, playerToCompare: playerToCompare}
+        data: { playerDetail: this.playerStats, playerToCompare: playerToCompare }
       })
     });
 
   }
 
-  getHeightVal(){
-    return this.playerStats.val < 1000 ? 33 : this.playerStats.val < 2000? 66 : 100
+  getHeightVal() {
+    return this.playerStats.val < 1000 ? 33 : this.playerStats.val < 2000 ? 66 : 100
   }
 
-  getColorVal(){
-    return this.playerStats.val < 1000 ? 'red' : this.playerStats.val < 2000? 'yellow' : 'green'
+  getColorVal() {
+    return this.playerStats.val < 1000 ? 'red' : this.playerStats.val < 2000 ? 'yellow' : 'green'
   }
 
 }

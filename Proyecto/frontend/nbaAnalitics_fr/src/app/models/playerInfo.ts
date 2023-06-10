@@ -8,4 +8,5 @@ export class PlayerInfo{
   jersey!: string;
   position!: string;
   teamAbbrev!: string;
+  teamId!: number;
 }

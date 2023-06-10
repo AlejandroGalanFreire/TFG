@@ -164,6 +164,9 @@
     <div class="titleGraph">Actuación en PlayOff último año</div>
     <div class="barChartContainer">
       <canvas id="barChartPlayOff"></canvas>
+      <div class="noParticipacionPlayOff" *ngIf="fifthYear.poWins === 0 && fifthYear.poLosses === 0">
+          NO HA PARTICIPADO EN PLAY OFFS
+      </div>
     </div>
   </div>
 
@@ -173,9 +176,9 @@
     <div class="colorPercentagesBar">
       <div class="element" *ngFor="let item of teamStatsByYear" [style.width.%]="100/5"
         [style.height.px]="70" [style.backgroundColor]="getColorByFinal(item)">
-        <div *ngIf="fifthYear.nbaFinalsAppearance === 'N/A'">No ha llegado a las finales</div>
-        <div *ngIf="fifthYear.nbaFinalsAppearance === 'FINALS APPEARANCE'">Bicampeón</div>
-        <div *ngIf="fifthYear.nbaFinalsAppearance === 'LEAGUE CHAMPION'">Campeón</div>
+        <div class="text" *ngIf="item.nbaFinalsAppearance === 'N/A'">No ha llegado a las finales</div>
+        <div class="text" *ngIf="item.nbaFinalsAppearance === 'FINALS APPEARANCE'">Bicampeón</div>
+        <div class="text" *ngIf="item.nbaFinalsAppearance === 'LEAGUE CHAMPION'">Campeón</div>
       </div>
     </div>
   </div>

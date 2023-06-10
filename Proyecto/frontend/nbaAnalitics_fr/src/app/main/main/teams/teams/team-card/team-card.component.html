@@ -9,7 +9,7 @@
     <button class="estadisticas" [routerLink]="['/teamDetail']" (click)="setTeamSelectedDetail(team.teamId)">
       Estadísticas
     </button>
-    <button class="plantilla">
+    <button class="plantilla" [routerLink]="['/teamTemplate']" (click)="obtainTemplate(team.teamId)">
       Plantilla
     </button>
   </div>

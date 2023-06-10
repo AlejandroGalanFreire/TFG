@@ -4,6 +4,7 @@ import { TeamStatsByYear } from 'src/app/models/teamStatsByYear';
 import { DataService } from 'src/app/services/data-service.service';
 import { HomeService } from '../../../services/home.service';
 import { Subscription } from 'rxjs';
+import { PlayerInfo } from 'src/app/models/playerInfo';
 
 @Component({
   selector: 'app-team-card',
@@ -16,6 +17,8 @@ export class TeamCardComponent implements OnInit, OnDestroy {
 
   teamsFiveYearsSubscription!: Subscription;
   teamsStatsByYear: TeamStatsByYear[] = [];
+  teamTemplate: PlayerInfo[] = [];
+  teamTemplateSubscription!: Subscription;
 
   constructor(private dataService: DataService,
     private readonly homeService: HomeService) { }
@@ -27,10 +30,16 @@ export class TeamCardComponent implements OnInit, OnDestroy {
         this.homeService.setAllTeams(this.teamsStatsByYear);
       }
     );
+    this.teamTemplateSubscription = this.dataService.getTeamTemplate(this.team.teamId).subscribe((data) => {
+      this.teamTemplate = JSON.parse(data);
+    });
   }
 
   ngOnDestroy(): void {
     this.teamsFiveYearsSubscription.unsubscribe();
+    if(this.teamTemplateSubscription){
+      this.teamTemplateSubscription.unsubscribe();
+    }
   }
 
   setTeamSelectedDetail(teamid: string) {
@@ -42,6 +51,11 @@ export class TeamCardComponent implements OnInit, OnDestroy {
     }
     this.homeService.setTeamSelectedDetail(dataTeam);
     dataTeam = [];
+  }
+
+  obtainTemplate(teamId: string){
+    this.setTeamSelectedDetail(teamId);
+    this.homeService.setTeamTemplate(this.teamTemplate);
   }
 
 }

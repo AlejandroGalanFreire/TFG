@@ -3,6 +3,9 @@ import { HomeService } from '../../../services/home.service';
 import { GameStats } from 'src/app/models/gameStats';
 import Chart from 'chart.js/auto';
 import { Subscription } from 'rxjs';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
+import { TooltipPosition } from '@angular/material/tooltip';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-match-detail',
@@ -16,6 +19,8 @@ export class MatchDetailComponent implements OnInit, OnDestroy {
   private barChart: any;
   private radarChart: any;
   currentMatchSubscription!: Subscription;
+  positionOptions: TooltipPosition[] = ['above'];
+  position = new FormControl(this.positionOptions[0]);
 
 
   constructor(private readonly homeService: HomeService){ }
@@ -25,6 +30,8 @@ export class MatchDetailComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    Chart.defaults.font.size = 18;
+
     this.currentMatchSubscription = this.homeService.currentMatch.subscribe(data => {
       this.stats = data;
 
@@ -45,11 +52,15 @@ export class MatchDetailComponent implements OnInit, OnDestroy {
       datasets: [
         {
           label: team1.teamName,
-          data: [team1.period1Score, team1.period2Score, team1.period3Score, team1.period4Score]
+          data: [team1.period1Score, team1.period2Score, team1.period3Score, team1.period4Score],
+          backgroundColor: '#DA4167',
+          borderColor: '#DA4167'
         },
         {
           label: team2.teamName,
-          data: [team2.period1Score, team2.period2Score, team2.period3Score, team2.period4Score]
+          data: [team2.period1Score, team2.period2Score, team2.period3Score, team2.period4Score],
+          backgroundColor: '#F49097',
+          borderColor: '#F49097'
         }
       ],
       options: {
@@ -61,6 +72,27 @@ export class MatchDetailComponent implements OnInit, OnDestroy {
       this.lineChart = new Chart(ctx, {
         type: 'line',
         data: lineChartData,
+        options: {
+          scales: {
+            x: {
+              ticks: {
+                color: 'black'
+              }
+            },
+            y: {
+              ticks: {
+                color: 'black'
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              labels: {
+                color: 'black'
+              }
+            }
+          }
+        }
       });
     }
   }
@@ -75,11 +107,15 @@ export class MatchDetailComponent implements OnInit, OnDestroy {
       datasets: [
         {
           label: team1.teamName,
-          data: [team1.ast, team1.reb, team1.stl, team1.tov, team1.pf, team1.blk]
+          data: [team1.ast, team1.reb, team1.stl, team1.tov, team1.pf, team1.blk],
+          backgroundColor: '#DA4167',
+          borderColor: '#DA4167'
         },
         {
           label: team2.teamName,
-          data: [team2.ast, team2.reb, team2.stl, team2.tov, team2.pf, team2.blk]
+          data: [team2.ast, team2.reb, team2.stl, team2.tov, team2.pf, team2.blk],
+          backgroundColor: '#F49097',
+          borderColor: '#F49097'
         }
       ]
     };
@@ -88,6 +124,33 @@ export class MatchDetailComponent implements OnInit, OnDestroy {
       this.barChart = new Chart(ctx, {
         type: 'bar',
         data: barChartData,
+        plugins: [ChartDataLabels],
+        options: {
+          scales: {
+            x: {
+              ticks: {
+                color: 'black'
+              }
+            },
+            y: {
+              ticks: {
+                color: 'black'
+              }
+            }
+          },
+          plugins: {
+            datalabels: {
+              anchor: 'center',
+              align: 'center',
+              color: 'black'
+            },
+            legend: {
+              labels: {
+                color: 'black'
+              }
+            }
+          }
+        }
       });
     }
   }
@@ -100,11 +163,11 @@ export class MatchDetailComponent implements OnInit, OnDestroy {
       labels: ["Tiros","Tiros libres", "Triples"],
       datasets: [
         {
-          label: team1.teamName,
-          data: [team1.fgPct * 100, team1.ftPct * 100, team1.fg3Pct * 100]
+          label: 'Tiros intentados',
+          data: [team1.fgPct * 100, team1.ftPct * 100, team1.fg3Pct * 100],
         },
         {
-          label: team2.teamName,
+          label: 'Tiros anotados',
           data: [team2.fgPct * 100, team2.ftPct * 100, team2.fg3Pct * 100]
         }
       ]
@@ -114,6 +177,15 @@ export class MatchDetailComponent implements OnInit, OnDestroy {
       this.radarChart = new Chart(ctx, {
         type: 'radar',
         data: radarChartData,
+        options: {
+          plugins: {
+            legend: {
+              labels: {
+                color: 'black'
+              }
+            }
+          }
+        }
       });
     }
   }

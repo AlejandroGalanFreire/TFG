@@ -20,6 +20,11 @@
     align-items: center;
     text-align: center;
     display: flex;
+
+    .text{
+      text-align: center;
+      width: 100%;
+    }
   }
 }
 
@@ -113,7 +118,7 @@ caption{
 }
 
 .graphCopa{
-  height: 400px;
+  height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -133,6 +138,12 @@ caption{
   height: 100%;
   display: flex;
   justify-content: center;
+}
+
+.barChartContainer{
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
 }
 
 .buscador{
@@ -162,4 +173,9 @@ button{
   background-color: rgb(107, 106, 106);
   color: white;
   min-width: 125px;
+}
+
+.noParticipacionPlayOff{
+  font-size: 25px;
+  font-weight: bold;
 }

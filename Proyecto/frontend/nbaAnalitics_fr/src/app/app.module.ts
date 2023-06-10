@@ -33,6 +33,7 @@ import { FilterTeamByYearPipe } from './pipes/teamPipes/filter-team-by-year.pipe
 import { PlayerCardComponent } from './main/main/players/players/player-card/player-card.component';
 import { TeamCardComponent } from './main/main/teams/teams/team-card/team-card.component';
 import { MatIconModule } from '@angular/material/icon';
+import { PlantillaTeamComponent } from './main/main/teams/teams/plantilla-team/plantilla-team.component';
 
 const appRoutes: Routes=[
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -43,7 +44,8 @@ const appRoutes: Routes=[
   {path: 'matchs', component: MatchsComponent},
   {path: 'matchDetail', component: MatchDetailComponent},
   {path: 'playerDetail', component: PlayerDetailComponent},
-  {path: 'teamDetail', component: TeamsDetailComponent}
+  {path: 'teamDetail', component: TeamsDetailComponent},
+  {path: 'teamTemplate', component: PlantillaTeamComponent}
 ]
 
 @NgModule({
@@ -65,7 +67,8 @@ const appRoutes: Routes=[
     ComparativeTeamsDialogComponent,
     FilterTeamByYearPipe,
     PlayerCardComponent,
-    TeamCardComponent
+    TeamCardComponent,
+    PlantillaTeamComponent
   ],
   imports: [
     BrowserModule,
