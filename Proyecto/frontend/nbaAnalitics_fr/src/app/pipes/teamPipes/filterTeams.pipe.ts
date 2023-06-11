@@ -9,9 +9,7 @@ export class FilterTeamsPipe implements PipeTransform {
     const resultData =  [];
     for(const data of value){
       if(data.teamName.toLowerCase().indexOf(arg.toLowerCase()) > -1){
-        // if(data.year === '2022-23'){
           resultData.push(data);
-        // }
       }
     }
     return resultData;

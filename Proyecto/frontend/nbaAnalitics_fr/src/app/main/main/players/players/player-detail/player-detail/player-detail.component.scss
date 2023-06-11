@@ -1,7 +1,7 @@
 .colorPercentagesBar{
   width: 50px;
   height: 170px;
-  background-color: rgb(107, 106, 106);;
+  background-color: rgb(107, 106, 106);
   display: flex;
   flex-direction: column-reverse;
   border-radius: 5px;
@@ -72,6 +72,7 @@ table{
   margin-right: 2%;
   margin-left: 2%;
   margin-bottom: 50px;
+  justify-content: space-evenly;
 }
 
 .titleTable{

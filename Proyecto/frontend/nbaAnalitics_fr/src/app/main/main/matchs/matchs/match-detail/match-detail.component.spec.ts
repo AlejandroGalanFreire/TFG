@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MatchDetailComponent } from './match-detail.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('MatchDetailComponent', () => {
   let component: MatchDetailComponent;
@@ -8,7 +9,8 @@ describe('MatchDetailComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MatchDetailComponent ]
+      declarations: [ MatchDetailComponent ],
+      schemas: [NO_ERRORS_SCHEMA]
     })
     .compileComponents();
 

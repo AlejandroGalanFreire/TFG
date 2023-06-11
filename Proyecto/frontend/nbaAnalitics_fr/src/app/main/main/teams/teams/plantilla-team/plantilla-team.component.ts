@@ -14,7 +14,7 @@ export class PlantillaTeamComponent implements OnInit, OnDestroy{
   template!: PlayerInfo[];
   templateSubscription!: Subscription;
 
-  team!: TeamStatsByYear;
+  team: TeamStatsByYear = new TeamStatsByYear();
   teamSubscription!: Subscription;
 
   constructor(private readonly homeService: HomeService){}
@@ -25,7 +25,9 @@ export class PlantillaTeamComponent implements OnInit, OnDestroy{
     });
 
     this.teamSubscription = this.homeService.teamSelected.subscribe((data) => {
-      this.team = data[4];
+      if(data && data.length >= 5){
+        this.team = data[4];
+      }
     });
   }
 

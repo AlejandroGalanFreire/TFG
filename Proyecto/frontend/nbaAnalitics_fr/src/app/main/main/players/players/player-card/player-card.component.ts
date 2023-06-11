@@ -9,7 +9,7 @@ import { HomeService } from '../../../services/home.service';
 })
 export class PlayerCardComponent {
 
-  @Input() player!: PlayerInfo;
+  @Input() player: PlayerInfo = new PlayerInfo;
 
   constructor(private readonly homeService: HomeService){}
 

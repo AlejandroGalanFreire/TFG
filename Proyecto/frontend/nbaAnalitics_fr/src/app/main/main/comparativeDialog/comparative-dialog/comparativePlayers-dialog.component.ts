@@ -26,6 +26,9 @@ export class ComparativePlayersDialogComponent implements OnInit {
   }
 
   initializeBarChart() {
+    if (this.barChart) {
+      this.barChart.destroy(); // lo eliminamos si existe y creamos uno nuevo
+    }
     const barChartCanvas = document.getElementById("barChartComparative") as HTMLCanvasElement;
     const ctx = barChartCanvas.getContext('2d');
 
@@ -93,7 +96,10 @@ export class ComparativePlayersDialogComponent implements OnInit {
 
 
   getRound(numberToRound: number): string {
-    return numberToRound.toFixed(2);
+    if(numberToRound){
+      return numberToRound.toFixed(2);
+    }
+    return '';
   }
 
 

@@ -7,90 +7,55 @@
     <caption>Comparación estadísticas</caption>
     <thead>
       <tr>
-        <th
-          mat-raised-button
-          matTooltip="equipo"
-          [matTooltipPosition]="position.value!"
-          matTooltipHideDelay="50"
+        <th mat-raised-button matTooltip="equipo" [matTooltipPosition]="position.value!" matTooltipHideDelay="50"
           aria-label="Button that displays a tooltip that hides when scrolled out of the container">
-        Equipo
-      </th>
-        <th
-          mat-raised-button
-          matTooltip="puntos"
-          [matTooltipPosition]="position.value!"
-          matTooltipHideDelay="50"
+          Equipo
+        </th>
+        <th mat-raised-button matTooltip="puntos" [matTooltipPosition]="position.value!" matTooltipHideDelay="50"
           aria-label="Button that displays a tooltip that hides when scrolled out of the container">
           PTS
         </th>
-        <th
-          mat-raised-button #tooltip="matTooltip"
-          matTooltip="Porcentaje tiros de dos"
-          [matTooltipPosition]="position.value!"
-          matTooltipHideDelay="50"
+        <th mat-raised-button matTooltip="Porcentaje tiros de dos"
+          [matTooltipPosition]="position.value!" matTooltipHideDelay="50"
           aria-label="Button that displays a tooltip that hides when scrolled out of the container">
           FG_PCT
         </th>
-        <th
-          mat-raised-button #tooltip="matTooltip"
-          matTooltip="Porcentaje tiros de tres"
-          [matTooltipPosition]="position.value!"
-          matTooltipHideDelay="50"
+        <th mat-raised-button matTooltip="Porcentaje tiros de tres"
+          [matTooltipPosition]="position.value!" matTooltipHideDelay="50"
           aria-label="Button that displays a tooltip that hides when scrolled out of the container">
           FG3_PCT
         </th>
-        <th
-          mat-raised-button #tooltip="matTooltip"
-          matTooltip="Porcentaje tiros libres"
-          [matTooltipPosition]="position.value!"
-          matTooltipHideDelay="50"
+        <th mat-raised-button matTooltip="Porcentaje tiros libres"
+          [matTooltipPosition]="position.value!" matTooltipHideDelay="50"
           aria-label="Button that displays a tooltip that hides when scrolled out of the container">
           FT_PCT
         </th>
-        <th
-          mat-raised-button #tooltip="matTooltip"
-          matTooltip="Rebotes totales"
-          [matTooltipPosition]="position.value!"
+        <th mat-raised-button matTooltip="Rebotes totales" [matTooltipPosition]="position.value!"
           matTooltipHideDelay="50"
           aria-label="Button that displays a tooltip that hides when scrolled out of the container">
           REB
         </th>
-        <th
-          mat-raised-button #tooltip="matTooltip"
-          matTooltip="Asistencias"
-          [matTooltipPosition]="position.value!"
+        <th mat-raised-button matTooltip="Asistencias" [matTooltipPosition]="position.value!"
           matTooltipHideDelay="50"
           aria-label="Button that displays a tooltip that hides when scrolled out of the container">
           AST
         </th>
-        <th
-          mat-raised-button #tooltip="matTooltip"
-          matTooltip="Pérdidas"
-          [matTooltipPosition]="position.value!"
+        <th mat-raised-button matTooltip="Pérdidas" [matTooltipPosition]="position.value!"
           matTooltipHideDelay="50"
           aria-label="Button that displays a tooltip that hides when scrolled out of the container">
           PER
         </th>
-        <th
-          mat-raised-button #tooltip="matTooltip"
-          matTooltip="Robos"
-          [matTooltipPosition]="position.value!"
+        <th mat-raised-button matTooltip="Robos" [matTooltipPosition]="position.value!"
           matTooltipHideDelay="50"
           aria-label="Button that displays a tooltip that hides when scrolled out of the container">
           ROB
         </th>
-        <th
-          mat-raised-button #tooltip="matTooltip"
-          matTooltip="Bloqueos conseguidos"
-          [matTooltipPosition]="position.value!"
-          matTooltipHideDelay="50"
+        <th mat-raised-button matTooltip="Bloqueos conseguidos"
+          [matTooltipPosition]="position.value!" matTooltipHideDelay="50"
           aria-label="Button that displays a tooltip that hides when scrolled out of the container">
           BLQ
         </th>
-        <th
-          mat-raised-button #tooltip="matTooltip"
-          matTooltip="Faltas"
-          [matTooltipPosition]="position.value!"
+        <th mat-raised-button matTooltip="Faltas" [matTooltipPosition]="position.value!"
           matTooltipHideDelay="50"
           aria-label="Button that displays a tooltip that hides when scrolled out of the container">
           FAL
@@ -100,9 +65,8 @@
     <tbody>
       <tr *ngFor="let item of stats">
         <td>
-          <img src="assets/img/{{item.teamId}}.png"
-            alt="imagen del equipo">
-            {{ item.teamName }}
+          <img src="assets/img/{{item.teamId}}.png" alt="imagen del equipo">
+          {{ item.teamName }}
         </td>
         <td>{{ item.period1Score + item.period2Score + item.period3Score + item.period4Score }}</td>
         <td>{{ item.fgPct }}</td>

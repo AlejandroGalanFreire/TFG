@@ -4,7 +4,7 @@ export class PlayerInfo{
   country!: string;
   height!: string;
   weight!: string;
-  season_exp!: number;
+  seasonExp!: number;
   jersey!: string;
   position!: string;
   teamAbbrev!: string;

@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PlayerCardComponent } from './player-card.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('PlayerCardComponent', () => {
   let component: PlayerCardComponent;
@@ -8,7 +10,9 @@ describe('PlayerCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PlayerCardComponent ]
+      declarations: [ PlayerCardComponent ],
+      imports: [HttpClientModule],
+      schemas: [NO_ERRORS_SCHEMA]
     })
     .compileComponents();
 

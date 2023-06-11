@@ -54,6 +54,12 @@ ul{
     font-size: 18px;
   }
 
+  a{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
 }
 
 .active {

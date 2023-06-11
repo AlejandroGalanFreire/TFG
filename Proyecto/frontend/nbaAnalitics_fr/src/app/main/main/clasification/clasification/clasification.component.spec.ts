@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientModule } from '@angular/common/http';
 import { ClasificationComponent } from './clasification.component';
+import { MatMenuModule } from '@angular/material/menu';
 
 describe('ClasificationComponent', () => {
   let component: ClasificationComponent;
@@ -8,10 +9,11 @@ describe('ClasificationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ClasificationComponent ],
-      imports: [HttpClientModule]
+      declarations: [ClasificationComponent],
+      imports: [HttpClientModule,
+        MatMenuModule]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(ClasificationComponent);
     component = fixture.componentInstance;
@@ -21,4 +23,18 @@ describe('ClasificationComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should create resetIndex', () => {
+    const spy = spyOn(component, 'resetIndex').and.callThrough();
+    component.resetIndex();
+    expect(spy).toHaveBeenCalled();
+  });
+
+  it('should create getIndex', () => {
+    const spy = spyOn(component, 'getIndex').and.callThrough();
+    component.getIndex();
+    expect(spy).toHaveBeenCalled();
+  });
+
+
 });

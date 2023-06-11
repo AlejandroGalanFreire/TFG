@@ -13,7 +13,7 @@ import { PlayerInfo } from 'src/app/models/playerInfo';
 })
 export class TeamCardComponent implements OnInit, OnDestroy {
 
-  @Input() team!: TeamStats;
+  @Input() team: TeamStats = new TeamStats();
 
   teamsFiveYearsSubscription!: Subscription;
   teamsStatsByYear: TeamStatsByYear[] = [];
@@ -44,13 +44,12 @@ export class TeamCardComponent implements OnInit, OnDestroy {
 
   setTeamSelectedDetail(teamid: string) {
     let dataTeam: TeamStatsByYear[] = [];
-    for (let i = 0; i < this.teamsStatsByYear.length; i++) {
-      if (this.teamsStatsByYear[i].teamId === parseInt(teamid) && dataTeam.length < 5) {
-        dataTeam.push(this.teamsStatsByYear[i]);
+    for (let team of this.teamsStatsByYear) {
+      if (team.teamId === parseInt(teamid) && dataTeam.length < 5) {
+        dataTeam.push(team);
       }
     }
     this.homeService.setTeamSelectedDetail(dataTeam);
-    dataTeam = [];
   }
 
   obtainTemplate(teamId: string){

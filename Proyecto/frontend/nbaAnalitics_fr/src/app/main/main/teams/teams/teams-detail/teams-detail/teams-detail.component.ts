@@ -15,13 +15,13 @@ import { FormControl } from '@angular/forms';
 })
 export class TeamsDetailComponent implements OnInit, OnDestroy {
 
-  public teamStatsByYear: TeamStatsByYear[] = [];
+  public teamStatsByYear: any[] = [];
   private lineChart: any;
   private barChart: any;
   private radarChart: any;
-  private firstYear = this.teamStatsByYear[0];
-  private secondYear = this.teamStatsByYear[1];
-  private thirdYear = this.teamStatsByYear[2];
+  public firstYear = this.teamStatsByYear[0];
+  public secondYear = this.teamStatsByYear[1];
+  public thirdYear = this.teamStatsByYear[2];
   public fourthYear = this.teamStatsByYear[3];
   public fifthYear = this.teamStatsByYear[4];
   filterTeams = '';
@@ -36,7 +36,9 @@ export class TeamsDetailComponent implements OnInit, OnDestroy {
     public comparativeDialog: MatDialog) { }
 
   ngOnDestroy(): void {
-    this.teamSelectedSubscription.unsubscribe();
+    if(this.teamSelectedSubscription){
+      this.teamSelectedSubscription.unsubscribe();
+    }
     if (this.allTeamsSubscription) {
       this.allTeamsSubscription.unsubscribe();
     }
@@ -52,6 +54,10 @@ export class TeamsDetailComponent implements OnInit, OnDestroy {
       this.thirdYear = this.teamStatsByYear[2];
       this.fourthYear = this.teamStatsByYear[3];
       this.fifthYear = this.teamStatsByYear[4];
+
+      if(!this.fifthYear){
+        this.fifthYear = new TeamStatsByYear();
+      }
 
       // creación de los gráficos
       this.initLineChart();
@@ -262,7 +268,7 @@ export class TeamsDetailComponent implements OnInit, OnDestroy {
 
   setAllTeams() {
     this.allTeamsSubscription = this.homeService.allTeams.subscribe(data => {
-      this.allTeams = data.filter(team => team.teamId !== this.fifthYear.teamId);
+      this.allTeams = data.filter(team => team?.teamId !== this.fifthYear?.teamId);
     });
   }
 

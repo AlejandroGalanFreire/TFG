@@ -3733,3 +3733,991 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.jacoco:ja
 2023-06-10 11:55:28,415 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
 2023-06-10 11:55:28,422 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
 2023-06-10 11:55:28,429 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 16:38:22,733 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-06-10 16:38:59,452 [Worker-5: Check for devtools] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.32 has been relocated to com.mysql:mysql-connector-j:jar:8.0.32: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-06-10 16:39:06,580 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-10 16:39:06,614 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-10 16:39:06,619 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 16:39:09,248 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 16:39:09,248 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 16:39:09,252 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 16:39:11,000 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 16:39:11,001 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 16:39:11,004 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 16:39:13,575 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149 [345])
+2023-06-10 16:39:13,628 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149
+2023-06-10 16:39:13,629 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\aether-connector-okhttp-0.17.8.jar
+2023-06-10 16:39:13,629 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\commons-cli-1.4.jar
+2023-06-10 16:39:13,629 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\commons-io-2.6.jar
+2023-06-10 16:39:13,629 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\commons-lang3-3.8.1.jar
+2023-06-10 16:39:13,629 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\guice-4.2.2-no_aop.jar
+2023-06-10 16:39:13,629 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\jansi-2.4.0.jar
+2023-06-10 16:39:13,629 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-artifact-3.8.6.jar
+2023-06-10 16:39:13,630 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-builder-support-3.8.6.jar
+2023-06-10 16:39:13,630 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-compat-3.8.6.jar
+2023-06-10 16:39:13,630 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-core-3.8.6.jar
+2023-06-10 16:39:13,630 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-embedder-3.8.6.jar
+2023-06-10 16:39:13,630 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-model-3.8.6.jar
+2023-06-10 16:39:13,631 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-model-builder-3.8.6.jar
+2023-06-10 16:39:13,631 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-plugin-api-3.8.6.jar
+2023-06-10 16:39:13,631 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-repository-metadata-3.8.6.jar
+2023-06-10 16:39:13,631 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-api-1.6.3.jar
+2023-06-10 16:39:13,631 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-connector-basic-1.6.3.jar
+2023-06-10 16:39:13,631 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-impl-1.6.3.jar
+2023-06-10 16:39:13,632 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-provider-3.8.6.jar
+2023-06-10 16:39:13,632 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-spi-1.6.3.jar
+2023-06-10 16:39:13,632 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-transport-wagon-1.6.3.jar
+2023-06-10 16:39:13,632 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-util-1.6.3.jar
+2023-06-10 16:39:13,632 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-settings-3.8.6.jar
+2023-06-10 16:39:13,632 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-settings-builder-3.8.6.jar
+2023-06-10 16:39:13,632 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-shared-utils-3.3.4.jar
+2023-06-10 16:39:13,632 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\okhttp-3.14.1.jar
+2023-06-10 16:39:13,633 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\okio-1.17.3.jar
+2023-06-10 16:39:13,633 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\org.eclipse.sisu.inject-0.3.5.jar
+2023-06-10 16:39:13,634 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\org.eclipse.sisu.plexus-0.3.5.jar
+2023-06-10 16:39:13,634 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-build-api-0.0.7.jar
+2023-06-10 16:39:13,635 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-cipher-2.0.jar
+2023-06-10 16:39:13,635 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-classworlds-2.6.0.jar
+2023-06-10 16:39:13,635 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-component-annotations-2.1.0.jar
+2023-06-10 16:39:13,635 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-interpolation-1.26.jar
+2023-06-10 16:39:13,635 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-sec-dispatcher-2.0.jar
+2023-06-10 16:39:13,636 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-utils-3.3.1.jar
+2023-06-10 16:39:13,636 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\wagon-file-3.5.1.jar
+2023-06-10 16:39:13,637 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\wagon-provider-api-3.5.1.jar
+2023-06-10 16:39:13,640 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava_30.1.0.v20221112-0806 [22])
+2023-06-10 16:39:13,654 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\com.google.guava_30.1.0.v20221112-0806.jar
+2023-06-10 16:39:13,655 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=slf4j.api_1.7.36 [584])
+2023-06-10 16:39:13,655 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\slf4j.api_1.7.36.jar
+2023-06-10 16:39:13,655 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.inject_1.0.0.v20220405-0441 [49])
+2023-06-10 16:39:13,660 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\javax.inject_1.0.0.v20220405-0441.jar
+2023-06-10 16:39:13,660 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.annotation_1.3.5.v20221112-0806 [47])
+2023-06-10 16:39:13,674 [Worker-1: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\javax.annotation_1.3.5.v20221112-0806.jar
+2023-06-10 16:39:13,677 [Worker-1: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\demo":
+2023-06-10 16:39:13,678 [Worker-1: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean org.jacoco:jacoco-maven-plugin:prepare-agent install
+2023-06-10 16:39:49,086 [Worker-9: Launching sonarCoverageReport] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\demo":
+2023-06-10 16:39:49,087 [Worker-9: Launching sonarCoverageReport] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always sonar:sonar -Dsonar.login=squ_cfbee661ac02824b256a868b9ee8d349a9c4e73a
+2023-06-10 16:50:58,973 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-10 16:50:59,015 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-10 16:50:59,028 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 16:51:29,922 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-10 16:51:29,930 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-10 16:51:29,935 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 16:51:45,829 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-10 16:51:45,836 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-10 16:51:45,853 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 16:51:53,739 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-10 16:51:53,746 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-10 16:51:53,752 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 16:55:42,487 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 16:55:42,487 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 16:55:42,491 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 16:56:05,176 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 16:56:05,176 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 16:56:05,181 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 16:57:37,673 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 16:57:37,673 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 16:57:37,676 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 16:57:38,751 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-10 16:57:38,794 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-10 16:57:38,798 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 16:58:07,933 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 16:58:07,933 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 16:58:07,936 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:06:03,440 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:06:03,440 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:06:03,442 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:07:14,217 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:07:14,217 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:07:14,219 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:07:33,679 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-10 17:07:33,863 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-10 17:07:33,868 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:07:34,890 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-10 17:07:35,135 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-10 17:07:35,141 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:07:58,145 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:07:58,146 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:07:58,152 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:11:07,694 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:11:07,694 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:11:07,696 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:11:30,461 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:11:30,461 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:11:30,464 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:12:37,744 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:12:37,744 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:12:37,746 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:15:38,267 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:15:38,267 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:15:38,271 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:16:45,229 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:16:45,229 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:16:45,231 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:16:47,496 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:16:47,497 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:16:47,499 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:16:51,100 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:16:51,100 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:16:51,102 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:17:22,000 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:17:22,001 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:17:22,003 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:17:28,783 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:17:28,783 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:17:28,785 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:17:30,213 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:17:30,213 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:17:30,215 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:18:24,115 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:18:24,115 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:18:24,118 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:18:30,098 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:18:30,098 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:18:30,104 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:19:28,375 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:19:28,375 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:19:28,378 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:19:43,961 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:19:43,962 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:19:43,963 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:20:49,813 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:20:49,813 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:20:49,815 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:25:17,738 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:25:17,738 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:25:17,740 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:27:39,339 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:27:39,339 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:27:39,342 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:27:45,134 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:27:45,135 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:27:45,137 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:28:48,782 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:28:48,783 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:28:48,786 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:31:41,039 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:31:41,039 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:31:41,041 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:32:19,551 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:32:19,551 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:32:19,553 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:32:34,593 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:32:34,593 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:32:34,596 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:32:41,061 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:32:41,061 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:32:41,063 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:33:44,775 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:33:44,776 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:33:44,777 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:33:52,419 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:33:52,419 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:33:52,421 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:34:00,717 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:34:00,717 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:34:00,720 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:35:21,255 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:35:21,255 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:35:21,257 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:35:22,389 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:35:22,389 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:35:22,390 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:35:49,028 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:35:49,028 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:35:49,030 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:35:59,391 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:35:59,391 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:35:59,394 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:36:01,730 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:36:01,730 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:36:01,733 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:36:26,408 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:36:26,408 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:36:26,411 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:37:50,834 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:37:50,834 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:37:50,836 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:38:30,892 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:38:30,892 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:38:30,894 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:38:35,400 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:38:35,400 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:38:35,402 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:39:49,082 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:39:49,082 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:39:49,086 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:39:52,347 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-10 17:39:52,353 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-10 17:39:52,356 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:39:56,263 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:39:56,263 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:39:56,265 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:42:07,487 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:42:07,487 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:42:07,489 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:43:18,387 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:43:18,387 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:43:18,389 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:43:25,372 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:43:25,373 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:43:25,375 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:43:37,503 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:43:37,503 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:43:37,506 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:49:37,534 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:49:37,534 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:49:37,536 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:50:35,712 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:50:35,712 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:50:35,715 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:51:19,459 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:51:19,459 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:51:19,461 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:51:21,373 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:51:21,373 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:51:21,376 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:51:28,073 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:51:28,073 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:51:28,075 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:51:39,110 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:51:39,110 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:51:39,113 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:52:15,140 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:52:15,141 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:52:15,143 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:53:36,878 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-10 17:53:36,894 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-10 17:53:36,897 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:54:42,005 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:54:42,005 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:54:42,007 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:54:45,516 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:54:45,516 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:54:45,518 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:56:28,761 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:56:28,761 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 17:56:28,764 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 17:56:47,185 [Worker-42: Launching sonarCoverageReport] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\demo":
+2023-06-10 17:56:47,186 [Worker-42: Launching sonarCoverageReport] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always sonar:sonar -Dsonar.login=squ_cfbee661ac02824b256a868b9ee8d349a9c4e73a
+2023-06-10 17:59:49,318 [Worker-40: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\demo":
+2023-06-10 17:59:49,318 [Worker-40: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean org.jacoco:jacoco-maven-plugin:prepare-agent install
+2023-06-10 18:00:35,963 [Worker-40: Launching sonarCoverageReport] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\demo":
+2023-06-10 18:00:35,963 [Worker-40: Launching sonarCoverageReport] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always sonar:sonar -Dsonar.login=squ_cfbee661ac02824b256a868b9ee8d349a9c4e73a
+2023-06-10 18:01:36,260 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-10 18:01:36,302 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-10 18:01:36,307 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:02:14,478 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:02:14,478 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:02:14,480 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:02:15,555 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-10 18:02:15,561 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-10 18:02:15,577 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:02:28,214 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:02:28,214 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:02:28,217 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:02:29,231 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-10 18:02:29,804 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-10 18:02:29,806 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:02:33,830 [Worker-46: Launching sonarCoverageReport] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\demo":
+2023-06-10 18:02:33,830 [Worker-46: Launching sonarCoverageReport] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always sonar:sonar -Dsonar.login=squ_cfbee661ac02824b256a868b9ee8d349a9c4e73a
+2023-06-10 18:03:24,269 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:03:24,269 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:03:24,270 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:03:35,346 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-10 18:03:35,423 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-10 18:03:35,435 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:04:43,493 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:04:43,494 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:04:43,496 [Worker-47: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:05:39,992 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:05:39,992 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:05:39,995 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:06:02,493 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:06:02,493 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:06:02,496 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:08:49,269 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:08:49,269 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:08:49,271 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:09:03,215 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:09:03,215 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:09:03,217 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:09:09,937 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:09:09,937 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:09:09,939 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:10:07,825 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:10:07,825 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:10:07,827 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:10:18,246 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:10:18,246 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:10:18,249 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:10:25,975 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:10:25,975 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:10:25,976 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:10:40,609 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:10:40,609 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:10:40,624 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:13:44,878 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:13:44,878 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:13:44,880 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:13:46,389 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:13:46,389 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:13:46,391 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:14:24,342 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:14:24,342 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:14:24,344 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:14:25,905 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:14:25,905 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:14:25,908 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:14:43,936 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:14:43,936 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:14:43,937 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:17:29,485 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:17:29,485 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:17:29,487 [Worker-52: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:21:36,492 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:21:36,493 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:21:36,495 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:23:16,150 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:23:16,150 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:23:16,151 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:28:47,877 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:28:47,877 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:28:47,879 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:29:21,733 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:29:21,733 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:29:21,735 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:29:25,302 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:29:25,303 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:29:25,319 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:30:16,435 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:30:16,435 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:30:16,436 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:30:28,510 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:30:28,510 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:30:28,513 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:30:52,212 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:30:52,212 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:30:52,213 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:31:26,252 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:31:26,253 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:31:26,256 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:32:38,400 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:32:38,401 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:32:38,402 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:32:46,314 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:32:46,314 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:32:46,315 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:33:08,289 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:33:08,289 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:33:08,291 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:33:46,170 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:33:46,172 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:33:46,177 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:34:05,880 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:34:05,880 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:34:05,883 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:34:24,822 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:34:24,822 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:34:24,825 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:34:49,103 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:34:49,104 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:34:49,106 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:35:06,710 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:35:06,710 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:35:06,712 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:35:28,163 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:35:28,163 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:35:28,164 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:35:38,262 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:35:38,262 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:35:38,264 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:36:48,761 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:36:48,761 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:36:48,762 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:36:52,444 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:36:52,445 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:36:52,448 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:37:04,934 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:37:04,934 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:37:04,936 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:37:44,226 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:37:44,226 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:37:44,227 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:38:33,017 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:38:33,017 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:38:33,019 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:38:51,634 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:38:51,634 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:38:51,637 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:40:04,127 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:40:04,128 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:40:04,129 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:40:06,657 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:40:06,658 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:40:06,659 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:41:08,532 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:41:08,532 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:41:08,538 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:41:43,398 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:41:43,399 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:41:43,408 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:42:13,585 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:42:13,585 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:42:13,587 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:42:46,847 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:42:46,847 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:42:46,849 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:43:05,723 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:43:05,724 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:43:05,725 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:43:24,742 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:43:24,742 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:43:24,743 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:43:34,607 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:43:34,607 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:43:34,611 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:43:46,965 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:43:46,965 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:43:46,967 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:44:13,923 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:44:13,923 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:44:13,924 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:44:40,349 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:44:40,350 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:44:40,353 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:44:50,794 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:44:50,794 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:44:50,795 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:44:56,678 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:44:56,678 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:44:56,680 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:45:01,711 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:45:01,711 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:45:01,712 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:45:33,266 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:45:33,266 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:45:33,268 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:45:43,507 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:45:43,507 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:45:43,509 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:46:32,707 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:46:32,707 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:46:32,708 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:47:19,937 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:47:19,937 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:47:19,939 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:47:26,005 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:47:26,005 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:47:26,007 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:47:36,572 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:47:36,572 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:47:36,579 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:47:57,599 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:47:57,599 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:47:57,600 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:48:25,635 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:48:25,635 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:48:25,636 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:49:05,440 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:49:05,441 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:49:05,442 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:49:06,899 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:49:06,899 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:49:06,901 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:49:56,884 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:49:56,884 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:49:56,885 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:50:00,855 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:50:00,855 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:50:00,857 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:50:28,288 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:50:28,288 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:50:28,290 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:52:18,815 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:52:18,815 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:52:18,817 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:52:32,194 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:52:32,194 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:52:32,196 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:52:53,724 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:52:53,724 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:52:53,727 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:53:19,646 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:53:19,646 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:53:19,648 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:53:47,309 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:53:47,309 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:53:47,311 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:54:11,765 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:54:11,765 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:54:11,767 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:54:20,140 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:54:20,140 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:54:20,142 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:54:21,235 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:54:21,235 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:54:21,237 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:55:20,572 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:55:20,572 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:55:20,575 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:56:24,677 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:56:24,677 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:56:24,678 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:56:26,623 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:56:26,623 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:56:26,625 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:57:45,716 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:57:45,716 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:57:45,717 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:59:27,699 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:59:27,699 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:59:27,702 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 18:59:34,124 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:59:34,124 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 18:59:34,125 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 19:00:06,281 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 19:00:06,281 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 19:00:06,283 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 19:00:30,514 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 19:00:30,514 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 19:00:30,515 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 19:00:36,638 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 19:00:36,638 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 19:00:36,639 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 19:01:29,659 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 19:01:29,659 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 19:01:29,660 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 19:01:32,718 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 19:01:32,718 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 19:01:32,720 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 19:04:41,675 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 19:04:41,675 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 19:04:41,677 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 19:04:55,701 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 19:04:55,701 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 19:04:55,702 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 19:05:02,899 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 19:05:02,899 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 19:05:02,901 [Worker-70: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 19:06:34,028 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 19:06:34,028 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-10 19:06:34,030 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-10 19:06:59,324 [Worker-63: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\demo":
+2023-06-10 19:06:59,324 [Worker-63: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean org.jacoco:jacoco-maven-plugin:prepare-agent install
+2023-06-10 19:07:59,019 [Worker-61: Launching sonarCoverageReport] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\demo":
+2023-06-10 19:07:59,019 [Worker-61: Launching sonarCoverageReport] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always sonar:sonar -Dsonar.login=squ_cfbee661ac02824b256a868b9ee8d349a9c4e73a
+2023-06-11 12:04:42,959 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-06-11 12:07:17,933 [Worker-9: Check for devtools] WARN  o.e.m.c.i.embedder.EclipseLogger - The artifact mysql:mysql-connector-java:jar:8.0.32 has been relocated to com.mysql:mysql-connector-j:jar:8.0.32: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+2023-06-11 12:40:59,902 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 12:41:01,134 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 12:41:01,235 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 12:42:14,842 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 12:42:16,143 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 12:42:16,153 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 12:44:56,337 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 12:44:56,377 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 12:44:56,380 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 12:45:35,551 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 12:45:35,787 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 12:45:35,828 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 12:45:53,904 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 12:45:54,267 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 12:45:54,280 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 12:47:42,502 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 12:47:42,509 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 12:47:42,513 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 12:50:25,063 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 12:50:25,098 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 12:50:25,103 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 12:51:16,270 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 12:51:16,278 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 12:51:16,283 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 12:51:57,215 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-11 12:51:57,215 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-11 12:51:57,218 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 12:51:58,264 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-11 12:51:58,264 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-11 12:51:58,266 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 12:52:22,292 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 12:52:22,333 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 12:52:22,336 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 12:52:31,684 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 12:52:31,692 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 12:52:31,698 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 12:52:58,281 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 12:52:58,289 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 12:52:58,295 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 12:53:50,341 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 12:53:50,352 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 12:53:50,358 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 12:57:34,857 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 12:57:34,890 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 12:57:34,895 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 12:59:16,398 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 12:59:16,411 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 12:59:16,419 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 12:59:25,682 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 12:59:25,689 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 12:59:25,693 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 12:59:34,571 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 12:59:34,578 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 12:59:34,581 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 13:07:21,236 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 13:07:21,243 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 13:07:21,247 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 13:07:36,273 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 13:07:36,310 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 13:07:36,314 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 13:08:11,334 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149 [345])
+2023-06-11 13:08:11,491 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149
+2023-06-11 13:08:11,491 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\aether-connector-okhttp-0.17.8.jar
+2023-06-11 13:08:11,491 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\commons-cli-1.4.jar
+2023-06-11 13:08:11,492 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\commons-io-2.6.jar
+2023-06-11 13:08:11,492 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\commons-lang3-3.8.1.jar
+2023-06-11 13:08:11,492 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\guice-4.2.2-no_aop.jar
+2023-06-11 13:08:11,492 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\jansi-2.4.0.jar
+2023-06-11 13:08:11,492 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-artifact-3.8.6.jar
+2023-06-11 13:08:11,492 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-builder-support-3.8.6.jar
+2023-06-11 13:08:11,492 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-compat-3.8.6.jar
+2023-06-11 13:08:11,492 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-core-3.8.6.jar
+2023-06-11 13:08:11,492 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-embedder-3.8.6.jar
+2023-06-11 13:08:11,492 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-model-3.8.6.jar
+2023-06-11 13:08:11,493 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-model-builder-3.8.6.jar
+2023-06-11 13:08:11,493 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-plugin-api-3.8.6.jar
+2023-06-11 13:08:11,493 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-repository-metadata-3.8.6.jar
+2023-06-11 13:08:11,493 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-api-1.6.3.jar
+2023-06-11 13:08:11,493 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-connector-basic-1.6.3.jar
+2023-06-11 13:08:11,493 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-impl-1.6.3.jar
+2023-06-11 13:08:11,493 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-provider-3.8.6.jar
+2023-06-11 13:08:11,493 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-spi-1.6.3.jar
+2023-06-11 13:08:11,493 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-transport-wagon-1.6.3.jar
+2023-06-11 13:08:11,493 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-resolver-util-1.6.3.jar
+2023-06-11 13:08:11,494 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-settings-3.8.6.jar
+2023-06-11 13:08:11,494 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-settings-builder-3.8.6.jar
+2023-06-11 13:08:11,494 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\maven-shared-utils-3.3.4.jar
+2023-06-11 13:08:11,494 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\okhttp-3.14.1.jar
+2023-06-11 13:08:11,494 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\okio-1.17.3.jar
+2023-06-11 13:08:11,494 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\org.eclipse.sisu.inject-0.3.5.jar
+2023-06-11 13:08:11,494 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\org.eclipse.sisu.plexus-0.3.5.jar
+2023-06-11 13:08:11,494 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-build-api-0.0.7.jar
+2023-06-11 13:08:11,494 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-cipher-2.0.jar
+2023-06-11 13:08:11,494 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-classworlds-2.6.0.jar
+2023-06-11 13:08:11,495 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-component-annotations-2.1.0.jar
+2023-06-11 13:08:11,495 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-interpolation-1.26.jar
+2023-06-11 13:08:11,495 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-sec-dispatcher-2.0.jar
+2023-06-11 13:08:11,495 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\plexus-utils-3.3.1.jar
+2023-06-11 13:08:11,495 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\wagon-file-3.5.1.jar
+2023-06-11 13:08:11,495 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.8.604.20221130-2149\jars\wagon-provider-api-3.5.1.jar
+2023-06-11 13:08:11,496 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava_30.1.0.v20221112-0806 [22])
+2023-06-11 13:08:11,505 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\com.google.guava_30.1.0.v20221112-0806.jar
+2023-06-11 13:08:11,506 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=slf4j.api_1.7.36 [584])
+2023-06-11 13:08:11,506 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\slf4j.api_1.7.36.jar
+2023-06-11 13:08:11,506 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.inject_1.0.0.v20220405-0441 [49])
+2023-06-11 13:08:11,549 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\javax.inject_1.0.0.v20220405-0441.jar
+2023-06-11 13:08:11,549 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=javax.annotation_1.3.5.v20221112-0806 [47])
+2023-06-11 13:08:11,563 [Worker-25: Launching cleanCoverage] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: F:\4ºCarrera\SEGUNDO CUATRI\TFG\sts-4.17.2.RELEASE\plugins\javax.annotation_1.3.5.v20221112-0806.jar
+2023-06-11 13:08:11,615 [Worker-25: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\demo":
+2023-06-11 13:08:11,616 [Worker-25: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean org.jacoco:jacoco-maven-plugin:prepare-agent install
+2023-06-11 13:09:09,035 [Worker-25: Launching sonarCoverageReport] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\demo":
+2023-06-11 13:09:09,036 [Worker-25: Launching sonarCoverageReport] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always sonar:sonar -Dsonar.login=squ_cfbee661ac02824b256a868b9ee8d349a9c4e73a
+2023-06-11 13:14:47,934 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 13:14:47,948 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 13:14:47,953 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 13:16:52,674 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 13:16:52,682 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 13:16:52,686 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 13:17:05,317 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 13:17:05,321 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 13:17:05,324 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 13:21:19,370 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 13:21:19,408 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 13:21:19,414 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 13:21:40,363 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-11 13:21:40,363 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-11 13:21:40,369 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 13:21:41,417 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 13:21:41,424 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 13:21:41,427 [Worker-37: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 13:21:47,853 [Worker-37: Launching sonarCoverageReport] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\demo":
+2023-06-11 13:21:47,853 [Worker-37: Launching sonarCoverageReport] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always sonar:sonar -Dsonar.login=squ_cfbee661ac02824b256a868b9ee8d349a9c4e73a
+2023-06-11 13:24:43,681 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 13:24:43,694 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 13:24:43,701 [Worker-30: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 13:27:33,505 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 13:27:33,512 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 13:27:33,516 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 13:28:19,804 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 13:28:19,812 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 13:28:19,817 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 13:28:34,307 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 13:28:34,531 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 13:28:34,545 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 13:29:37,508 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 13:29:37,515 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 13:29:37,518 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 13:30:20,136 [Worker-41: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\demo":
+2023-06-11 13:30:20,136 [Worker-41: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean org.jacoco:jacoco-maven-plugin:prepare-agent install
+2023-06-11 13:30:56,115 [Worker-41: Launching sonarCoverageReport] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\demo":
+2023-06-11 13:30:56,116 [Worker-41: Launching sonarCoverageReport] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always sonar:sonar -Dsonar.login=squ_cfbee661ac02824b256a868b9ee8d349a9c4e73a
+2023-06-11 13:37:07,087 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 13:37:07,103 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 13:37:07,108 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 13:42:37,327 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 13:42:37,335 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 13:42:37,339 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 13:44:03,622 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 13:44:03,631 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 13:44:03,635 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 13:44:07,729 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 13:44:07,789 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 13:44:07,796 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 13:44:08,843 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 13:44:08,849 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 13:44:08,853 [Worker-56: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 13:45:40,251 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 13:45:40,257 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 13:45:40,260 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 13:47:22,790 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 13:47:22,796 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 13:47:22,800 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:22:11,858 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:22:12,012 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:22:12,022 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:22:13,071 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:22:13,079 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:22:13,082 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:22:50,908 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:22:50,914 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:22:50,917 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:23:21,448 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:23:21,478 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:23:21,482 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:23:58,875 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:23:59,068 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:23:59,070 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:24:31,865 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:24:32,001 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:24:32,006 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:25:01,009 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:25:01,016 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:25:01,021 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:25:43,663 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:25:43,667 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:25:43,670 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:25:56,027 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:25:56,031 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:25:56,034 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:25:57,050 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:25:57,053 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:25:57,055 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:26:18,610 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:26:18,667 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:26:18,674 [Worker-61: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:26:33,823 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:26:33,837 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:26:33,840 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:26:38,040 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:26:38,201 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:26:38,211 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:26:52,525 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:26:52,530 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:26:52,534 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:26:54,544 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:26:54,575 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:26:54,578 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:27:55,517 [Worker-63: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\demo":
+2023-06-11 14:27:55,518 [Worker-63: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean org.jacoco:jacoco-maven-plugin:prepare-agent install
+2023-06-11 14:28:21,771 [Worker-68: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\demo":
+2023-06-11 14:28:21,771 [Worker-68: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean org.jacoco:jacoco-maven-plugin:prepare-agent install
+2023-06-11 14:29:08,585 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-11 14:29:08,585 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-11 14:29:08,588 [Worker-66: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:29:09,641 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:29:09,646 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:29:09,650 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:29:37,669 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-11 14:29:37,670 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-11 14:29:37,672 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:29:51,387 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-11 14:29:51,387 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-11 14:29:51,393 [Worker-63: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:29:52,481 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-11 14:29:52,481 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-11 14:29:52,483 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:30:18,867 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-11 14:30:18,868 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-11 14:30:18,872 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:30:30,628 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-11 14:30:30,628 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-11 14:30:30,631 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:31:01,913 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:31:01,973 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:31:01,985 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:31:03,033 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:31:03,237 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:31:03,249 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:31:11,920 [Worker-57: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\demo":
+2023-06-11 14:31:11,920 [Worker-57: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean org.jacoco:jacoco-maven-plugin:prepare-agent install
+2023-06-11 14:31:49,365 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:31:49,508 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:31:49,513 [Worker-65: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:31:56,063 [Worker-57: Launching sonarCoverageReport] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\demo":
+2023-06-11 14:31:56,064 [Worker-57: Launching sonarCoverageReport] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always sonar:sonar -Dsonar.login=squ_cfbee661ac02824b256a868b9ee8d349a9c4e73a
+2023-06-11 14:46:01,308 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:46:01,328 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:46:01,333 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:47:31,985 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:47:32,039 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:47:32,050 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:49:16,973 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:49:16,979 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:49:16,983 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:49:22,368 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:49:22,377 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:49:22,381 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:49:35,995 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:49:36,005 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:49:36,009 [Worker-76: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:51:44,538 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:51:44,615 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:51:44,618 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:52:08,961 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:52:08,965 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:52:08,968 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:52:18,765 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:52:18,771 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:52:18,774 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:52:37,136 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:52:37,142 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:52:37,145 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:52:40,535 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:52:40,541 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:52:40,558 [Worker-68: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:52:43,852 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:52:43,858 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:52:43,860 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:53:05,079 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:53:05,083 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:53:05,086 [Worker-74: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:53:43,241 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:53:43,246 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:53:43,250 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:53:48,630 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:53:48,748 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:53:48,753 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:59:20,333 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:59:20,339 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:59:20,342 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 14:59:28,519 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 14:59:28,525 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 14:59:28,528 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:00:15,215 [Worker-81: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\demo":
+2023-06-11 15:00:15,215 [Worker-81: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean org.jacoco:jacoco-maven-plugin:prepare-agent install
+2023-06-11 15:00:36,789 [Worker-80: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\demo":
+2023-06-11 15:00:36,790 [Worker-80: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean org.jacoco:jacoco-maven-plugin:prepare-agent install
+2023-06-11 15:02:29,605 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-11 15:02:29,605 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-11 15:02:29,607 [Worker-67: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:02:30,621 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 15:02:30,624 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 15:02:30,627 [Worker-79: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:02:39,016 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-11 15:02:39,017 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-11 15:02:39,019 [Worker-80: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:02:46,607 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-11 15:02:46,608 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-11 15:02:46,609 [Worker-78: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:02:58,450 [Worker-79: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\demo":
+2023-06-11 15:02:58,450 [Worker-79: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean org.jacoco:jacoco-maven-plugin:prepare-agent install
+2023-06-11 15:03:42,614 [Worker-81: Launching sonarCoverageReport] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\demo":
+2023-06-11 15:03:42,614 [Worker-81: Launching sonarCoverageReport] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always sonar:sonar -Dsonar.login=squ_cfbee661ac02824b256a868b9ee8d349a9c4e73a
+2023-06-11 15:05:32,906 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 15:05:32,980 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 15:05:33,054 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:05:47,880 [Worker-74: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\demo":
+2023-06-11 15:05:47,881 [Worker-74: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean org.jacoco:jacoco-maven-plugin:prepare-agent install
+2023-06-11 15:06:26,921 [Worker-83: Launching sonarCoverageReport] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\demo":
+2023-06-11 15:06:26,921 [Worker-83: Launching sonarCoverageReport] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always sonar:sonar -Dsonar.login=squ_cfbee661ac02824b256a868b9ee8d349a9c4e73a
+2023-06-11 15:10:44,281 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 15:10:44,402 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 15:10:44,405 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:11:51,871 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 15:11:52,164 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 15:11:52,179 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:12:42,068 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 15:12:42,441 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 15:12:42,555 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:13:25,356 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 15:13:25,435 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 15:13:25,438 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:14:10,509 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 15:14:10,575 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 15:14:10,578 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:15:16,611 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 15:15:16,630 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 15:15:16,634 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:15:25,980 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 15:15:25,986 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 15:15:25,989 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:15:47,489 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 15:15:47,494 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 15:15:47,498 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:15:48,625 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 15:15:48,632 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 15:15:48,635 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:16:38,766 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 15:16:38,779 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 15:16:38,782 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:16:39,875 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 15:16:39,880 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 15:16:39,883 [Worker-91: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:17:59,668 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 15:17:59,694 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 15:17:59,698 [Worker-86: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:19:29,619 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 15:19:29,623 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 15:19:29,625 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:19:30,701 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 15:19:30,705 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 15:19:30,708 [Worker-87: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:20:01,089 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 15:20:01,118 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 15:20:01,121 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:20:33,579 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 15:20:33,582 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 15:20:33,584 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:20:34,645 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 15:20:34,734 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 15:20:34,737 [Worker-94: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:21:01,328 [Worker-92: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\demo":
+2023-06-11 15:21:01,328 [Worker-92: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean org.jacoco:jacoco-maven-plugin:prepare-agent install
+2023-06-11 15:21:37,266 [Worker-96: Launching sonarCoverageReport] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\demo":
+2023-06-11 15:21:37,267 [Worker-96: Launching sonarCoverageReport] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always sonar:sonar -Dsonar.login=squ_cfbee661ac02824b256a868b9ee8d349a9c4e73a
+2023-06-11 15:24:16,049 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 15:24:16,087 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 15:24:16,090 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:24:17,120 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 15:24:17,133 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 15:24:17,137 [Worker-98: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:24:18,694 [Worker-94: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\demo":
+2023-06-11 15:24:18,694 [Worker-94: Launching cleanCoverage] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean org.jacoco:jacoco-maven-plugin:prepare-agent install
+2023-06-11 15:25:49,912 [Worker-94: Launching sonarCoverageReport] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "F:\demo":
+2023-06-11 15:25:49,912 [Worker-94: Launching sonarCoverageReport] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always sonar:sonar -Dsonar.login=squ_cfbee661ac02824b256a868b9ee8d349a9c4e73a
+2023-06-11 15:36:31,019 [Worker-122: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 15:36:31,335 [Worker-122: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 15:36:31,339 [Worker-122: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:37:59,365 [Worker-121: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 15:37:59,783 [Worker-121: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 15:37:59,787 [Worker-121: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:38:36,413 [Worker-125: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 15:38:36,518 [Worker-125: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 15:38:36,521 [Worker-125: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:39:17,340 [Worker-115: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 15:39:17,432 [Worker-115: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 15:39:17,434 [Worker-115: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:39:18,455 [Worker-120: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-06-11 15:39:18,482 [Worker-120: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources
+2023-06-11 15:39:18,485 [Worker-120: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources
+2023-06-11 15:39:24,492 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-11 15:39:24,492 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-06-11 15:39:24,494 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory F:\demo\src\test\resources

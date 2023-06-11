@@ -107,7 +107,7 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
     player.trueShootingPercentage = TS * 100;
   }
 
-  initializeBarChart(player: PlayerStats) {
+  initializeBarChart(player: any) {
     if (this.barChart) {
       this.barChart.destroy(); // lo eliminamos si existe y creamos uno nuevo
     }
@@ -122,49 +122,79 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
             label: player.playerName,
             data: [player.EFF_PerGame, player.pointsCreated, player.trueShootingPercentage],
             backgroundColor: [
-              (player.EFF_PerGame < 15) ? 'red' : (player.EFF_PerGame < 20) ? 'yellow' : 'green',
-              (player.pointsCreated < 1000) ? 'red' : (player.pointsCreated < 2000) ? 'yellow' : 'green',
-              (player.trueShootingPercentage < 30) ? 'red' : (player.trueShootingPercentage < 50) ? 'yellow' : 'green'
+              this.obtainEFFColor(player.EFF_PerGame),
+              this.obtainPointCreatedColor(player.pointsCreated),
+              this.obtaintrueShootingPercentageColor(player.trueShootingPercentage)
             ]
           }
         ]
       };
 
-      if (ctx) {
-        this.barChart = new Chart(ctx, {
-          type: 'bar',
-          data: barChartData,
-          options: {
-            scales: {
-              x: {
-                ticks: {
-                  color: 'black'
-                }
-              },
-              y: {
-                ticks: {
-                  color: 'black'
-                }
-              }
-            },
-            plugins: {
-              legend: {
-                labels: {
-                  usePointStyle: true,
-                  pointStyle: 'circle',
-                  color: 'black'
-                }
-              }
-            },
-            responsive: true
-          }
-        });
-      }
-
+      this.createBarChart(ctx, barChartData);
     }
   }
 
-  initializePieChart(player: PlayerStats) {
+  createBarChart(ctx: any, barChartData: any){
+    if (ctx) {
+      this.barChart = new Chart(ctx, {
+        type: 'bar',
+        data: barChartData,
+        options: {
+          scales: {
+            x: {
+              ticks: {
+                color: 'black'
+              }
+            },
+            y: {
+              ticks: {
+                color: 'black'
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              labels: {
+                usePointStyle: true,
+                pointStyle: 'circle',
+                color: 'black'
+              }
+            }
+          },
+          responsive: true
+        }
+      });
+    }
+  }
+
+  obtainEFFColor(EFF: number){
+    if(EFF > 20){
+      return 'green';
+    } else if(EFF > 15){
+      return 'yellow';
+    }
+    return 'red';
+  }
+
+  obtainPointCreatedColor(pointCreated: number){
+    if(pointCreated > 2000){
+      return 'green';
+    } else if(pointCreated > 1000){
+      return 'yellow';
+    }
+    return 'red';
+  }
+
+  obtaintrueShootingPercentageColor(trueShootingPercentage: number){
+    if(trueShootingPercentage > 50){
+      return 'green';
+    } else if(trueShootingPercentage > 30){
+      return 'yellow';
+    }
+    return 'red';
+  }
+
+  initializePieChart(player: any) {
     if (this.pieChart) {
       this.pieChart.destroy(); // lo eliminamos si existe y creamos uno nuevo
     }
@@ -232,7 +262,7 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
     }
   }
 
-  initializeRadarChart(player: PlayerStats) {
+  initializeRadarChart(player: any) {
     if (this.radarChart) {
       this.radarChart.destroy(); // Lo destruimos si ya existe y creamos uno nuevo
     }
@@ -314,11 +344,21 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
   }
 
   getHeightVal() {
-    return this.playerStats.val < 1000 ? 33 : this.playerStats.val < 2000 ? 66 : 100
+    if(this.playerStats.val > 2000){
+      return 100;
+    } else if(this.playerStats.val > 1000){
+      return 66
+    }
+    return 33;
   }
 
   getColorVal() {
-    return this.playerStats.val < 1000 ? 'red' : this.playerStats.val < 2000 ? 'yellow' : 'green'
+    if(this.playerStats.val > 2000){
+      return 'green';
+    } else if(this.playerStats.val > 1000){
+      return 'yellow'
+    }
+    return 'red';
   }
 
 }

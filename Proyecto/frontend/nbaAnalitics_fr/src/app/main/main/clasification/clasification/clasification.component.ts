@@ -21,8 +21,12 @@ export class ClasificationComponent implements OnInit, OnDestroy {
   constructor(private dataService: DataService) {}
 
   ngOnDestroy(): void {
-    this.leagueSelectedSubscription.unsubscribe();
-    this.clasificationSubscription.unsubscribe();
+    if(this.leagueSelectedSubscription){
+      this.leagueSelectedSubscription.unsubscribe();
+    }
+    if(this.clasificationSubscription){
+      this.clasificationSubscription.unsubscribe();
+    }
   }
 
   ngOnInit() {
