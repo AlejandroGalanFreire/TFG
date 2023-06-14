@@ -1,0 +1,51 @@
+.contenidoInicial{
+  background-color: white;
+  border: 1px solid black;
+  font-size: 25px;
+  flex-direction: column;
+  display: flex;
+  overflow: auto;
+  padding: 10px;
+}
+
+.contenidoInicial p{
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 1.5;
+}
+
+h1{
+  font-size: 35px;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+}
+
+.inicio{
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.contenidoFotograficoDerecha{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 5%;
+}
+
+.contenidoFotograficoIzquierda{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+}
+
+

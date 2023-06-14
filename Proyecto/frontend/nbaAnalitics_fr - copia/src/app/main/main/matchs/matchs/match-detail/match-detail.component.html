@@ -1,0 +1,112 @@
+<!-- Tabla con estadísticas de ambos equipos -->
+<div class="infoTable">
+  <!-- titulo de la tabla -->
+  <div class="titleTable">Comparación estadísticas</div>
+
+  <table class="table">
+    <caption>Comparación estadísticas</caption>
+    <thead>
+      <tr>
+        <th mat-raised-button matTooltip="equipo" [matTooltipPosition]="position.value!" matTooltipHideDelay="50"
+          aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+          Equipo
+        </th>
+        <th mat-raised-button matTooltip="puntos" [matTooltipPosition]="position.value!" matTooltipHideDelay="50"
+          aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+          PTS
+        </th>
+        <th mat-raised-button matTooltip="Porcentaje tiros de dos"
+          [matTooltipPosition]="position.value!" matTooltipHideDelay="50"
+          aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+          FG_PCT
+        </th>
+        <th mat-raised-button matTooltip="Porcentaje tiros de tres"
+          [matTooltipPosition]="position.value!" matTooltipHideDelay="50"
+          aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+          FG3_PCT
+        </th>
+        <th mat-raised-button matTooltip="Porcentaje tiros libres"
+          [matTooltipPosition]="position.value!" matTooltipHideDelay="50"
+          aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+          FT_PCT
+        </th>
+        <th mat-raised-button matTooltip="Rebotes totales" [matTooltipPosition]="position.value!"
+          matTooltipHideDelay="50"
+          aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+          REB
+        </th>
+        <th mat-raised-button matTooltip="Asistencias" [matTooltipPosition]="position.value!"
+          matTooltipHideDelay="50"
+          aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+          AST
+        </th>
+        <th mat-raised-button matTooltip="Pérdidas" [matTooltipPosition]="position.value!"
+          matTooltipHideDelay="50"
+          aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+          PER
+        </th>
+        <th mat-raised-button matTooltip="Robos" [matTooltipPosition]="position.value!"
+          matTooltipHideDelay="50"
+          aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+          ROB
+        </th>
+        <th mat-raised-button matTooltip="Bloqueos conseguidos"
+          [matTooltipPosition]="position.value!" matTooltipHideDelay="50"
+          aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+          BLQ
+        </th>
+        <th mat-raised-button matTooltip="Faltas" [matTooltipPosition]="position.value!"
+          matTooltipHideDelay="50"
+          aria-label="Button that displays a tooltip that hides when scrolled out of the container">
+          FAL
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of stats">
+        <td>
+          <img src="assets/img/{{item.teamId}}.png" alt="imagen del equipo">
+          {{ item.teamName }}
+        </td>
+        <td>{{ item.period1Score + item.period2Score + item.period3Score + item.period4Score }}</td>
+        <td>{{ item.fgPct }}</td>
+        <td>{{ item.fg3Pct }}</td>
+        <td>{{ item.ftPct }}</td>
+        <td>{{ item.reb }}</td>
+        <td>{{ item.ast }}</td>
+        <td>{{ item.tov }}</td>
+        <td>{{ item.stl }}</td>
+        <td>{{ item.blk }}</td>
+        <td>{{ item.pf }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<div class="graphs row">
+  <!-- gráfico de líneas para los puntos de cada equipo -->
+  <div class="graph col-sm-12 col-md-6 col-xxl-4">
+    <div class="titleGraph">Puntos por cuartos</div>
+    <div class="lineChartContainer">
+      <canvas id="lineChart"></canvas>
+    </div>
+  </div>
+
+  <!-- gráfico de barras para las asistencias, rebotes, robos -->
+  <div class="graph col-sm-12 col-md-6 col-xxl-4">
+    <div class="titleGraph">Asistencias, rebotes, robos, pérdidas, faltas, bloqueos</div>
+    <div class="barChartContainer">
+      <canvas id="barChart"></canvas>
+    </div>
+  </div>
+
+  <!-- gráficos tipo radar para comparar tiros realizados con tiros anotados -->
+  <div class="graphRadar col-sm-12 col-md-6 col-xxl-4">
+    <div class="titleGraph">Porcentajes</div>
+    <div class="radarChartContainer">
+      <canvas id="radarChart"></canvas>
+    </div>
+  </div>
+
+</div>

@@ -9,7 +9,8 @@
     </mat-menu>
   </div>
 
-  <div class="tableContainer">
+  <div *ngIf="emptyClasification" class="noContent">NO SE DISPONE DE DATOS PARA LA LIGA SELECCIONADA</div>
+  <div *ngIf="!emptyClasification" class="tableContainer">
     <div *ngFor="let conference of leagueSelected.conferences;" class="table1">
       {{resetIndex()}}
       <div class="conferencia">{{conference}}</div>

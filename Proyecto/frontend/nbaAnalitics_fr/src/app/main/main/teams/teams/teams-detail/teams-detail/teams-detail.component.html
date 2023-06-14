@@ -1,5 +1,6 @@
+<div *ngIf="emptyData" class="noContent">TIENES QUE VOLVER A SELECCIONAR EL EQUIPO</div>
 <!-- CABECERA -->
-<div class="title">
+<div *ngIf="!emptyData" class="title">
 
   <div class="equipo">
     <!-- Imagen del equipo -->
@@ -21,7 +22,7 @@
 
 </div>
 
-<div class="infoTable">
+<div *ngIf="!emptyData" class="infoTable">
   <!-- titulo de la tabla -->
   <div class="titleTable">Estadísticas últimos 5 años</div>
 

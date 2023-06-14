@@ -1,12 +1,17 @@
 <input type="text" class="form-control" placeholder="Buscar jugador..." name = "filterData" [(ngModel)]="filterData">
-<div class="tableContainer">
+<div *ngIf="emptyData" class="noContent">NO ES POSIBLE ENCONTRAR A LOS JUGADORES</div>
+<div *ngIf="!emptyData" class="tableContainer">
   <div class="cardsContainer row">
-    <app-player-card
-      *ngFor="let player of playersInfo | filterPlayer:filterData"
-      [player]="player"
-      class="col-sm-12 col-md-6 col-xl-4"
-      >
-    </app-player-card>
-
+    <ng-container *ngIf="(playersInfo | filterPlayer:filterData).length > 0; else noResults">
+      <app-player-card
+        *ngFor="let player of playersInfo | filterPlayer:filterData"
+        [player]="player"
+        class="col-sm-12 col-md-6 col-xl-4"
+        >
+      </app-player-card>
+    </ng-container>
+    <ng-template #noResults>
+      <div class="noContent">NO SE ENCUENTRAN COINCIDENCIAS</div>
+    </ng-template>
   </div>
 </div>

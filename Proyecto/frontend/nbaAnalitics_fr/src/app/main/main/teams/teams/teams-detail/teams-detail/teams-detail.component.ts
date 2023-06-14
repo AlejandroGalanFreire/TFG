@@ -28,7 +28,7 @@ export class TeamsDetailComponent implements OnInit, OnDestroy {
   public allTeams: TeamStatsByYear[] = [];
   teamSelectedSubscription!: Subscription;
   allTeamsSubscription!: Subscription;
-
+  emptyData = true;
   positionOptions: TooltipPosition[] = ['above'];
   position = new FormControl(this.positionOptions[0]);
 
@@ -48,6 +48,11 @@ export class TeamsDetailComponent implements OnInit, OnDestroy {
     Chart.defaults.font.size = 18;
 
     this.teamSelectedSubscription = this.homeService.teamSelected.subscribe(data => {
+      if(data.length > 0){
+        this.emptyData = false;
+      }else {
+        this.emptyData = true;
+      }
       this.teamStatsByYear = data;
       this.firstYear = this.teamStatsByYear[0];
       this.secondYear = this.teamStatsByYear[1];
@@ -60,10 +65,14 @@ export class TeamsDetailComponent implements OnInit, OnDestroy {
       }
 
       // creación de los gráficos
-      this.initLineChart();
-      this.initBarChart();
-      this.initRadarChart();
-      this.initPlayOffChart();
+      try {
+        this.initLineChart();
+        this.initBarChart();
+        this.initRadarChart();
+        this.initPlayOffChart();
+      } catch (error) {
+        alert('Se ha producido un error. Vuelve a seleccionar el equipo');
+      }
     });
   }
 

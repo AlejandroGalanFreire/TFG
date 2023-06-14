@@ -1,0 +1,94 @@
+.colorPercentagesBar{
+  display: flex;
+  width: 100%;
+  height: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.tresPts, .tirosLibres, .dosPts{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.tresPtsGraphs, .tirosLibresGraphs, .dosPtsGraphs{
+  width: 80%;
+}
+.data{
+  display: flex;
+  align-items: center;
+}
+
+.cerrar{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.vs{
+  font-size: 40px;
+  color: white;
+}
+
+.teams{
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teamDetail, .teamToCompare{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+img{
+  width: 200px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.teamName{
+  font-size: 22px;
+  font-weight: 500;
+  color: white;
+}
+
+.barChartContainer{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.porcentajes{
+  text-align: center;
+  margin-left: 100px;
+  color: white;
+  font-size: 18px;
+}
+
+mat-icon{
+  color: white;
+}
+
+.tresPtsTeam1, .tresPtsTeam2, .tirosLibresTeam1, .tirosLibresTeam2,
+.dosPtsTeam1, .dosPtsTeam2 {
+  border-radius: 10px;
+}
+
+.title{
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+}
+
+.titlePorcentajes{
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  margin-right: 100px;
+  text-align: center;
+  color: white;
+}

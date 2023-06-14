@@ -18,6 +18,7 @@ export class TeamsComponent implements OnInit, OnDestroy {
   positionOptions: TooltipPosition[] = ['above'];
   position = new FormControl(this.positionOptions[0]);
   teamsSubscription!: Subscription;
+  emptyData = true;
 
 
   constructor(private dataService: DataService,
@@ -31,6 +32,11 @@ export class TeamsComponent implements OnInit, OnDestroy {
     this.teamsSubscription = this.dataService.getTeamsStats().subscribe(
       (resp: any) => {
         this.teamsStats = JSON.parse(resp)
+        if(this.teamsStats.length > 0){
+          this.emptyData = false;
+        } else {
+          this.emptyData = true;
+        }
       }
     );
   }

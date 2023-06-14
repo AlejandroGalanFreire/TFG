@@ -1,0 +1,181 @@
+.colorPercentagesBar{
+  display: flex;
+  width: 100%;
+  height: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+
+  .element:first-child{
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+  }
+
+  .element:last-child{
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+  }
+
+  .element{
+    border: 1px solid white;
+    align-items: center;
+    text-align: center;
+    display: flex;
+
+    .text{
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+
+table{
+  td, th{
+    border: solid;
+    border-color: rgb(201, 196, 196);
+    border-width: 2px;
+    padding: 20px;
+  }
+  th{
+    background-color: rgb(71, 69, 69);
+    font-weight: 500 !important;
+  }
+  td{
+    background-color: rgb(107, 106, 106);
+  }
+  font-size: 18px;
+  color: white;
+}
+
+.title{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  gap: 70px;
+  align-items: flex-end;
+
+  .name{
+    font-size: 30px;
+    font-weight: 700;
+  }
+}
+
+.conference, .division{
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  .confTitle, .diviTitle{
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  .confValue, .diviValue{
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+.equipo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+caption{
+  display: none;
+}
+
+.infoTable{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 2%;
+  margin-left: 2%;
+  margin-bottom: 50px;
+}
+
+.titleTable{
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.graphs{
+  margin-right: 2%;
+  margin-left: 2%;
+  margin-bottom: 50px;
+}
+
+.graph{
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.graphCopa{
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.titleGraph{
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.barChartContainer, .lineChartContainer, .radarChartContainer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.barChartContainer{
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+
+.buscador{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+  gap: 20px;
+}
+
+input{
+  width: 370px;
+  height: 50px;
+  background-color: #036180;
+  text-align: center;
+}
+
+input::placeholder{
+  color: white;
+  font-size: 25px;
+}
+
+button{
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: rgb(107, 106, 106);
+  color: white;
+  min-width: 125px;
+}
+
+.noParticipacionPlayOff{
+  font-size: 25px;
+  font-weight: bold;
+}

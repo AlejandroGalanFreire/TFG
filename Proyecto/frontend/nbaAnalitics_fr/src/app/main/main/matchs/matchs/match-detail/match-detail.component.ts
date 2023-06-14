@@ -21,6 +21,7 @@ export class MatchDetailComponent implements OnInit, OnDestroy {
   currentMatchSubscription!: Subscription;
   positionOptions: TooltipPosition[] = ['above'];
   position = new FormControl(this.positionOptions[0]);
+  emptyData = false;
 
 
   constructor(private readonly homeService: HomeService){ }
@@ -33,12 +34,21 @@ export class MatchDetailComponent implements OnInit, OnDestroy {
     Chart.defaults.font.size = 18;
 
     this.currentMatchSubscription = this.homeService.currentMatch.subscribe(data => {
+      if (data.length > 0) {
+        this.emptyData = false;
+      } else {
+        this.emptyData = true;
+      }
       this.stats = data;
 
       // creación de los gráficos
-      this.initLineChart(this.stats[0], this.stats[1]);
-      this.initBarChart(this.stats[0], this.stats[1]);
-      this.initRadarChart(this.stats[0], this.stats[1]);
+      try {
+        this.initLineChart(this.stats[0], this.stats[1]);
+        this.initBarChart(this.stats[0], this.stats[1]);
+        this.initRadarChart(this.stats[0], this.stats[1]);
+      } catch (error) {
+        alert('Se ha producido un error. Vuelve a seleccionar el partido');
+      }
 
     });
   }

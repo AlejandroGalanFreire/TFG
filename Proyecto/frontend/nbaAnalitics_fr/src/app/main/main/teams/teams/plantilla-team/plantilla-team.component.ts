@@ -16,23 +16,40 @@ export class PlantillaTeamComponent implements OnInit, OnDestroy{
 
   team: TeamStatsByYear = new TeamStatsByYear();
   teamSubscription!: Subscription;
+  emptyDataTeam = true;
+  emptyDataTemplate = true;
 
   constructor(private readonly homeService: HomeService){}
 
   ngOnInit(): void {
     this.templateSubscription = this.homeService.teamTemplate.subscribe((data) => {
+      if(data.length > 0){
+        this.emptyDataTemplate = false;
+      }else {
+        this.emptyDataTemplate = true;
+      }
       this.template = data;
     });
 
     this.teamSubscription = this.homeService.teamSelected.subscribe((data) => {
       if(data && data.length >= 5){
+        if(data.length > 0){
+          this.emptyDataTeam = false;
+        }else {
+          this.emptyDataTeam = true;
+        }
         this.team = data[4];
       }
     });
   }
 
   ngOnDestroy(): void {
-    this.templateSubscription.unsubscribe();
+    if(this.templateSubscription){
+      this.templateSubscription.unsubscribe();
+    }
+    if(this.teamSubscription){
+      this.teamSubscription.unsubscribe();
+    }
   }
 
   setPlayerSelectedDetail(playerId: string) {

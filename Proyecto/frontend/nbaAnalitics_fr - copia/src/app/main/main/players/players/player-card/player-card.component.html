@@ -1,0 +1,49 @@
+<div class="tarjeta">
+  <div class="title">
+    <img src="https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/{{player.playerId}}.png" alt="imagen del jugador">
+    <button class="name" [routerLink]="['/playerDetail']" (click)="setPlayerSelectedDetail()">
+      {{player.playerName}}
+    </button>
+  </div>
+  <div class="table">
+    <table class="tableData">
+      <caption>Estadísticas jugadores</caption>
+      <thead>
+        <tr>
+          <th>
+            País
+          </th>
+          <th>
+            Altura
+          </th>
+          <th>
+            Peso
+          </th>
+          <th>
+            Experiencia
+          </th>
+          <th>
+            Número
+          </th>
+          <th>
+            Posición
+          </th>
+          <th>
+            Equipo
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ player.country }}</td>
+          <td>{{ player.height }}</td>
+          <td>{{ player.weight }}</td>
+          <td>{{ player.seasonExp }}</td>
+          <td>{{ player.jersey }}</td>
+          <td>{{ player.position }}</td>
+          <td>{{ player.teamAbbrev }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

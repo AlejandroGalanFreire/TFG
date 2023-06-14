@@ -1,5 +1,6 @@
+<div *ngIf="emptyData" class="noContent">TIENES QUE VOLVER A SELECCIONAR EL JUGADOR</div>
 <!-- CABECERA -->
-<div class="title">
+<div *ngIf="!emptyData" class="title">
 
   <div class="jugador">
     <!-- Imagen del jugador -->
@@ -57,7 +58,7 @@
 
 
 <!-- TABLAS CON ESTADISTICAS -->
-<div class="tables row">
+<div *ngIf="!emptyData" class="tables row">
   <!-- TABLA CON ESTADISTICAS DE ACTUACIÓN -->
   <div class="infoTable col-9">
     <!-- titulo de la tabla -->
@@ -214,7 +215,7 @@
 
 
 <!-- GRAFICOS -->
-<div class="graphs row">
+<div *ngIf="!emptyData" class="graphs row">
   <!-- grafico de barras -->
   <div class="graph col-sm-12 col-md-6 col-xxl-4">
     <!-- titulo grafico de barras -->
@@ -251,7 +252,7 @@
 
 
 <!-- Buscador para filtrar por el jugador que quieres comparar -->
-<div class="buscador">
+<div *ngIf="!emptyData" class="buscador">
   <input type="text" class="form-control" placeholder="Buscar jugador para comparar" name="filterPlayers"
     [(ngModel)]="filterPlayers" (keydown)="setAllPlayers()">
   <div class="playersToCompare row" *ngIf="filterPlayers.length > 0">

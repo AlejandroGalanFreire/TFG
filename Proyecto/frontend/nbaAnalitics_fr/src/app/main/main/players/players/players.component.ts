@@ -18,6 +18,7 @@ export class PlayersComponent implements OnInit, OnDestroy {
   positionOptions: TooltipPosition[] = ['above'];
   position = new FormControl(this.positionOptions[0]);
   playerInfoSubscription!: Subscription;
+  emptyData = true;
 
   constructor(private dataService: DataService,
     private readonly homeService: HomeService){}
@@ -31,6 +32,11 @@ export class PlayersComponent implements OnInit, OnDestroy {
       (resp: any) => {
         this.playersInfo = JSON.parse(resp);
         this.homeService.setAllPlayers(this.playersInfo);
+        if(this.playersInfo.length > 0){
+          this.emptyData = false;
+        } else {
+          this.emptyData = true;
+        }
       }
     );
   }

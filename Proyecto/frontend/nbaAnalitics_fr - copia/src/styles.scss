@@ -1,0 +1,44 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+app-root{
+  ::-webkit-scrollbar{
+    width: 8px;
+    height: 8px;
+    background: #DA4167;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background: rgb(71, 69, 69);
+    border-radius: 10px;
+  }
+}
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #B1DDF1;
+}
+
+.dialogoComparacionJugadores mat-dialog-container .mat-mdc-dialog-surface{
+  background-color: rgb(71, 69, 69);
+}
+
+.dialogoComparacionEquipos mat-dialog-container .mat-mdc-dialog-surface{
+  background-color: rgb(71, 69, 69);
+}
+
+.dialogoComparacionJugadores, .dialogoComparacionEquipos{
+  ::-webkit-scrollbar{
+    width: 8px;
+    height: 8px;
+    background: #af6d78;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background: #F49097;
+    border-radius: 10px;
+  }
+}

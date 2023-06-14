@@ -1,5 +1,6 @@
+<div *ngIf="emptyDataTemplate" class="noContent">TIENES QUE VOLVER A SELECCIONAR LA OPCIÓN DE PLANTILLA EN EL EQUIPO</div>
 <!-- CABECERA -->
-<div class="title">
+<div *ngIf="!emptyDataTeam" class="title">
 
   <div class="equipo">
     <!-- Imagen del equipo -->
@@ -11,7 +12,7 @@
 
 </div>
 
-<div class="infoTable">
+<div *ngIf="!emptyDataTemplate" class="infoTable">
   <table class="table">
     <caption>Estadísticas jugadores</caption>
     <thead>

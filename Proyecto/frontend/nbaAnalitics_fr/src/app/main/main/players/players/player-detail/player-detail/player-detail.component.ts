@@ -29,6 +29,7 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
   positionOptions: TooltipPosition[] = ['above'];
   position = new FormControl(this.positionOptions[0]);
   playerToCompareSubscription!: Subscription;
+  emptyData = true;
 
 
   constructor(private dataService: DataService,
@@ -36,8 +37,12 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
     public comparativeDialog: MatDialog) { }
 
   ngOnDestroy(): void {
-    this.playerSelectedSubscription.unsubscribe();
-    this.playerByIdSubscription.unsubscribe();
+    if(this.playerSelectedSubscription){
+      this.playerSelectedSubscription.unsubscribe();
+    }
+    if(this.playerByIdSubscription){
+      this.playerByIdSubscription.unsubscribe();
+    }
     if (this.playerToCompareSubscription) {
       this.playerToCompareSubscription.unsubscribe();
     }
@@ -47,18 +52,26 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
     Chart.defaults.font.size = 18;
 
     this.playerSelectedSubscription = this.homeService.playerSelected.subscribe(data => {
-      this.playerByIdSubscription = this.dataService.getPlayerStatsById(data).subscribe(
-        (resp: any) => {
-          this.playerStats = JSON.parse(resp);
+      if(data){
+        this.emptyData = false;
+        this.playerByIdSubscription = this.dataService.getPlayerStatsById(data).subscribe(
+          (resp: any) => {
+            this.playerStats = JSON.parse(resp);
 
-          this.calculatePlayerPerformance(this.playerStats);
+            if(this.playerStats){
+              this.calculatePlayerPerformance(this.playerStats);
 
-          // creación de los gráficos
-          this.initializeBarChart(this.playerStats);
-          this.initializePieChart(this.playerStats);
-          this.initializeRadarChart(this.playerStats);
-        }
-      );
+              // creación de los gráficos
+              this.initializeBarChart(this.playerStats);
+              this.initializePieChart(this.playerStats);
+              this.initializeRadarChart(this.playerStats);
+            }
+
+          }
+        );
+      } else {
+        this.emptyData = true;
+      }
     });
   }
 

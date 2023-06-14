@@ -1,5 +1,6 @@
+<div *ngIf="emptyData" class="noContent">TIENES QUE VOLVER A SELECCIONAR EL PARTIDO</div>
 <!-- Tabla con estadísticas de ambos equipos -->
-<div class="infoTable">
+<div *ngIf="!emptyData" class="infoTable">
   <!-- titulo de la tabla -->
   <div class="titleTable">Comparación estadísticas</div>
 

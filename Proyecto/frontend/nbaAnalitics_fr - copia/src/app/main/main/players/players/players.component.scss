@@ -1,0 +1,69 @@
+.tableContainer{
+  position: relative;
+  width: 100%;
+  margin: 0;
+  height: 91%;
+  top: 2.5%;
+}
+
+.table{
+  position: relative;
+  top: 1%;
+  margin-left: 2%;
+  width: 95%;
+  height: 100%;
+  overflow: auto;
+  color: white;
+  font-size: 18px;
+
+  .tableData{
+    width: 100%;
+    text-align: center;
+  }
+}
+
+th{
+  background-color: rgb(71, 69, 69) ;
+  font-weight: 500;
+}
+
+td{
+  background-color: rgb(107, 106, 106);
+}
+
+td, th{
+  border: solid;
+  border-color: rgb(201, 196, 196);
+  border-width: 2px;
+  padding: 20px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+img{
+  width: 70px;
+  height: 50px;
+}
+
+button{
+  border: none;
+  background-color: rgb(107, 106, 106);
+  text-decoration: underline;
+  color: white;
+}
+
+input{
+  margin-left: 2.8%;
+  width: 200px;
+  top: 20px;
+  position: relative;
+  font-size: 18px;
+}
+
+.cardsContainer{
+  margin-left: 2%;
+  margin-right: 2%;
+}

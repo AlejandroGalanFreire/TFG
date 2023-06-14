@@ -17,6 +17,7 @@ export class ClasificationComponent implements OnInit, OnDestroy {
   currentIndex = 0;
   leagueSelectedSubscription!: Subscription;
   clasificationSubscription!: Subscription;
+  emptyClasification = true;
 
   constructor(private dataService: DataService) {}
 
@@ -40,6 +41,11 @@ export class ClasificationComponent implements OnInit, OnDestroy {
         this.clasificationSubscription = this.dataService.getClasification(this.leagueSelected.leagueName).subscribe(
           (resp: any) => {
             this.clasification = JSON.parse(resp);
+            if(this.clasification.length > 0){
+              this.emptyClasification = false;
+            } else {
+              this.emptyClasification = true;
+            }
           }
         );
       }
