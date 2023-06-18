@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-    <typeInfo handle="=demo/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.players.service{PlayerStatsService.java[PlayerStatsService" modifiers="513" timestamp="1686390109714"/>
-    <typeInfo handle="=demo/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.commonstats{PeriodsStats.java[PeriodsStats" modifiers="513" timestamp="1686487561068"/>
     <typeInfo handle="=demo/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.commonstats{AllCommonResults.java[AllCommonResults" modifiers="513" timestamp="1686489111679"/>
-    <typeInfo handle="=demo/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.commonstats{AllCommonStats.java[AllCommonStats" modifiers="513" timestamp="1686486238112"/>
+    <typeInfo handle="=demo/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.commonstats{AllCommonStats.java[AllCommonStats" modifiers="513" timestamp="1687105316972"/>
 </typeInfoHistroy>

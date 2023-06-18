@@ -22,73 +22,73 @@ class PlayerStatsTest {
 		
 	}
 
-	private void callSets(PlayerStats player1) {
-		player1.setId(1);
-		player1.setPlayerId(1);
-		player1.setPlayerName("pepe");
-		player1.setNickname("nickname");
-		player1.setTeamId(1);
-		player1.setTeamAbbrev("abbrev");
-		player1.setAge(20);
-		player1.setGp(6);
-		player1.setWon(5);
-		player1.setLost(1);
-		player1.setWonPct(90);
-		player1.setFgm(5);
-		player1.setFga(10);
-		player1.setFgPct(50);
-		player1.setFg3m(5);
-		player1.setFg3a(10);
-		player1.setFg3Pct(50);
-		player1.setFtm(5);
-		player1.setFta(10);
-		player1.setFtPct(50);
-		player1.setOreb(5);
-		player1.setDreb(5);
-		player1.setReb(5);
-		player1.setAst(5);
-		player1.setTov(5);
-		player1.setStl(5);
-		player1.setBlk(5);
-		player1.setBlka(5);
-		player1.setPf(5);
-		player1.setPts(5);
-		player1.setMin(5);
+	private void callSets(PlayerStats player) {
+		player.setId(1);
+		player.setPlayerId(1);
+		player.setPlayerName("pepe");
+		player.setNickname("nickname");
+		player.setTeamId(1);
+		player.setTeamAbbrev("abbrev");
+		player.setAge(20);
+		player.setGp(6);
+		player.setWon(5);
+		player.setLost(1);
+		player.setWonPct(90);
+		player.setFgm(5);
+		player.setFga(10);
+		player.setFgPct(50);
+		player.setFg3m(5);
+		player.setFg3a(10);
+		player.setFg3Pct(50);
+		player.setFtm(5);
+		player.setFta(10);
+		player.setFtPct(50);
+		player.setOreb(5);
+		player.setDreb(5);
+		player.setReb(5);
+		player.setAst(5);
+		player.setTov(5);
+		player.setStl(5);
+		player.setBlk(5);
+		player.setBlka(5);
+		player.setPf(5);
+		player.setPts(5);
+		player.setMin(5);
 		
 	}
 	
-	private void callGets(PlayerStats player1) {
-		player1.getId();
-		player1.getPlayerId();
-		player1.getPlayerName();
-		player1.getNickname();
-		player1.getTeamId();
-		player1.getTeamAbbrev();
-		player1.getAge();
-		player1.getGp();
-		player1.getWon();
-		player1.getLost();
-		player1.getWonPct();
-		player1.getFgm();
-		player1.getFga();
-		player1.getFgPct();
-		player1.getFg3m();
-		player1.getFg3a();
-		player1.getFg3Pct();
-		player1.getFtm();
-		player1.getFta();
-		player1.getFtPct();
-		player1.getOreb();
-		player1.getDreb();
-		player1.getReb();
-		player1.getAst();
-		player1.getTov();
-		player1.getStl();
-		player1.getBlk();
-		player1.getBlka();
-		player1.getPf();
-		player1.getPts();
-		player1.getMin();
+	private void callGets(PlayerStats player) {
+		player.getId();
+		player.getPlayerId();
+		player.getPlayerName();
+		player.getNickname();
+		player.getTeamId();
+		player.getTeamAbbrev();
+		player.getAge();
+		player.getGp();
+		player.getWon();
+		player.getLost();
+		player.getWonPct();
+		player.getFgm();
+		player.getFga();
+		player.getFgPct();
+		player.getFg3m();
+		player.getFg3a();
+		player.getFg3Pct();
+		player.getFtm();
+		player.getFta();
+		player.getFtPct();
+		player.getOreb();
+		player.getDreb();
+		player.getReb();
+		player.getAst();
+		player.getTov();
+		player.getStl();
+		player.getBlk();
+		player.getBlka();
+		player.getPf();
+		player.getPts();
+		player.getMin();
 		
 	}
 

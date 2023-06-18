@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
     <fullyQualifiedTypeName name="org.apache.ibatis.annotations.Select"/>
     <fullyQualifiedTypeName name="com.example.demo.teams.mapper.TeamStatsController"/>
     <fullyQualifiedTypeName name="com.example.demo.teams.mapper.TeamStatsMapper"/>
@@ -57,7 +56,8 @@
     <fullyQualifiedTypeName name="com.example.demo.commonStats.CommonStats"/>
     <fullyQualifiedTypeName name="com.example.demo.commonstats.AllCommonStats"/>
     <fullyQualifiedTypeName name="com.example.demo.commonstats.CommonPeriods"/>
-    <fullyQualifiedTypeName name="com.example.demo.commonstats.CommonStats"/>
     <fullyQualifiedTypeName name="com.example.demo.commonstats.CommonStatsAndResults"/>
     <fullyQualifiedTypeName name="com.example.demo.commonstats.CommonResults"/>
+    <fullyQualifiedTypeName name="com.example.demo.commonstats.CommonStats"/>
+    <fullyQualifiedTypeName name="com.example.demo.players.model.Player"/>
 </qualifiedTypeNameHistroy>

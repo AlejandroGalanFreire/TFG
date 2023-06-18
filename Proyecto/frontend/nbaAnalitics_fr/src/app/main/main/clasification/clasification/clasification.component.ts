@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { ElemScoreboard } from 'src/app/models/elemScoreboard';
+import { ClasificationRow } from 'src/app/models/clasificationRow';
 import { League } from 'src/app/models/league';
 import { DataService } from 'src/app/services/data-service.service';
 
@@ -13,7 +13,7 @@ import { DataService } from 'src/app/services/data-service.service';
 export class ClasificationComponent implements OnInit, OnDestroy {
 
   leagueSelected: League = new League();
-  clasification: ElemScoreboard[] = [];
+  clasification: ClasificationRow[] = [];
   currentIndex = 0;
   leagueSelectedSubscription!: Subscription;
   clasificationSubscription!: Subscription;

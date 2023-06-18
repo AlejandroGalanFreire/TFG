@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.games.model.GameStats;
+import com.example.demo.games.model.GameStatsDto;
 import com.example.demo.games.model.Periods;
 import com.example.demo.games.service.GamesStatsService;
 
@@ -24,15 +25,15 @@ public class GamesStatsController {
 	 * @return todos los partidos y sus estadísticas
 	 */
 	@GetMapping("/gamesstats")
-	public List<GameStats> getGamesStats(){
-		return gsService.findAllGamesStats();
+	public List<GameStatsDto> getGamesStats(){
+		return GameStatsDto.gamesStatsToDto(gsService.findAllGamesStats());
 	}
 	
 	/**
 	 * @return Los partidos con las estadísticas de cada equipo dentro del partido
 	 */
 	@GetMapping("/gamesstatsbydate")
-	public List<GameStats[]> getGamesStatsByDate(@RequestParam String date){
+	public List<GameStatsDto[]> getGamesStatsByDate(@RequestParam String date){
 		List<GameStats> allTeamsOfGames = gsService.findAllGamesStatsByDate(date); // todos los equipos que jugaron partidos
 		
 		List<GameStats[]> games = new ArrayList<>(); // agrupaciones de los equipos en el partido que le corresponde
@@ -45,7 +46,7 @@ public class GamesStatsController {
 				GameStats[] game = new GameStats[2];
 				game[0] = allTeamsOfGames.get(i);
 				// obtener puntos en los distintos cuartos del equipo
-				Periods cuartosTeam1 = gsService.findPeriodsOfTeamInGame(Integer.parseInt(game[0].getGameId()), game[0].getTeamId());
+				Periods cuartosTeam1 = gsService.findPeriodsOfTeamInGame(game[0].getGameId(), game[0].getTeamId());
 				game[0].setPeriod1Score(cuartosTeam1.getPeriod1Score());
 				game[0].setPeriod2Score(cuartosTeam1.getPeriod2Score());
 				game[0].setPeriod3Score(cuartosTeam1.getPeriod3Score());
@@ -53,7 +54,7 @@ public class GamesStatsController {
 				
 				game[1] = findOpponent(allTeamsOfGames.get(i), allTeamsOfGames);
 				// obtener puntos en los distintos cuartos del equipo
-				Periods cuartosTeam2 = gsService.findPeriodsOfTeamInGame(Integer.parseInt(game[1].getGameId()), game[1].getTeamId());
+				Periods cuartosTeam2 = gsService.findPeriodsOfTeamInGame(game[1].getGameId(), game[1].getTeamId());
 				game[1].setPeriod1Score(cuartosTeam2.getPeriod1Score());
 				game[1].setPeriod2Score(cuartosTeam2.getPeriod2Score());
 				game[1].setPeriod3Score(cuartosTeam2.getPeriod3Score());
@@ -63,7 +64,7 @@ public class GamesStatsController {
 			}
 		}
 		
-		return games;
+		return GameStatsDto.gamesStatsArrayToDto(games);
 	}
 
 	/*

@@ -26,7 +26,7 @@ public class LeagueDto {
 		dto.setLeagueName(league.getLeagueName());
 		String[] conferences = league.getConferences().split(",");
 		dto.setConferences(conferences);
-		
+
 		return dto;
 	}
 }

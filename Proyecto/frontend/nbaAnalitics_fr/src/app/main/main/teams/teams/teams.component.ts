@@ -1,10 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { TeamStats } from 'src/app/models/teamStats';
 import { DataService } from 'src/app/services/data-service.service';
 import { HomeService } from '../../services/home.service';
 import { FormControl } from '@angular/forms';
 import { TooltipPosition } from '@angular/material/tooltip';
 import { Subscription } from 'rxjs';
+import { TeamByYear } from 'src/app/models/teamByYear';
 
 @Component({
   selector: 'app-teams',
@@ -13,7 +13,7 @@ import { Subscription } from 'rxjs';
 })
 export class TeamsComponent implements OnInit, OnDestroy {
 
-  teamsStats: TeamStats[] = [];
+  teamsStats: TeamByYear[] = [];
   filterData = '';
   positionOptions: TooltipPosition[] = ['above'];
   position = new FormControl(this.positionOptions[0]);
@@ -32,6 +32,7 @@ export class TeamsComponent implements OnInit, OnDestroy {
     this.teamsSubscription = this.dataService.getTeamsStats().subscribe(
       (resp: any) => {
         this.teamsStats = JSON.parse(resp)
+        this.homeService.setAllTeams(this.teamsStats);
         if(this.teamsStats.length > 0){
           this.emptyData = false;
         } else {

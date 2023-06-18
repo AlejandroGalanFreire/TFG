@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { HomeService } from '../../../services/home.service';
-import { PlayerInfo } from 'src/app/models/playerInfo';
 import { Subscription } from 'rxjs';
-import { TeamStatsByYear } from 'src/app/models/teamStatsByYear';
+import { Player } from 'src/app/models/player';
+import { TeamByYear } from 'src/app/models/teamByYear';
 
 @Component({
   selector: 'app-plantilla-team',
@@ -11,10 +11,10 @@ import { TeamStatsByYear } from 'src/app/models/teamStatsByYear';
 })
 export class PlantillaTeamComponent implements OnInit, OnDestroy{
 
-  template!: PlayerInfo[];
+  template!: Player[];
   templateSubscription!: Subscription;
 
-  team: TeamStatsByYear = new TeamStatsByYear();
+  team: TeamByYear = new TeamByYear();
   teamSubscription!: Subscription;
   emptyDataTeam = true;
   emptyDataTemplate = true;
@@ -52,7 +52,7 @@ export class PlantillaTeamComponent implements OnInit, OnDestroy{
     }
   }
 
-  setPlayerSelectedDetail(playerId: string) {
-    this.homeService.setPlayerSelectedDetail(playerId);
+  setPlayerSelectedDetail(player: Player) {
+    this.homeService.setPlayerSelectedDetail(player);
   }
 }

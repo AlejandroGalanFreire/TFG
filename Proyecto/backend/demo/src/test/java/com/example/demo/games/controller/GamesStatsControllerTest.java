@@ -33,7 +33,6 @@ class GamesStatsControllerTest {
 		when(service.findAllGamesStats()).thenReturn(new ArrayList<>());
 		
 		assertNotNull(controller.getGamesStats());
-		//assertNotNull(controller.getGamesStatsByDate("04/09/2023"));
 	}
 	
 	@Test
@@ -48,13 +47,13 @@ class GamesStatsControllerTest {
 		ArrayList<GameStats> mockedList = new ArrayList<>();
 		
 		GameStats game1 = new GameStats();
-		game1.setGameId("1");
+		game1.setGameId(1);
 		game1.setTeamId(1);
 		game1.setTeamAbbreviation("1");
 		game1.setMatchup("1@2");
 		mockedList.add(game1);
 		Periods mockedPeriod1 = new Periods();
-		mockedPeriod1.setGameId(Integer.parseInt(game1.getGameId()));
+		mockedPeriod1.setGameId(game1.getGameId());
 		mockedPeriod1.setTeamId(game1.getTeamId());
 		mockedPeriod1.setPeriod1Score(5);
 		mockedPeriod1.setPeriod2Score(5);
@@ -62,23 +61,23 @@ class GamesStatsControllerTest {
 		mockedPeriod1.setPeriod4Score(5);
 		
 		GameStats game2 = new GameStats();
-		game2.setGameId("2");
+		game2.setGameId(2);
 		game2.setTeamId(2);
 		game2.setTeamAbbreviation("2");
 		game2.setMatchup("1@2");
 		mockedList.add(game2);
 		Periods mockedPeriod2 = new Periods();
-		mockedPeriod2.setGameId(Integer.parseInt(game2.getGameId()));
+		mockedPeriod2.setGameId(game2.getGameId());
 		mockedPeriod2.setTeamId(game2.getTeamId());
 		mockedPeriod2.setPeriod1Score(5);
 		mockedPeriod2.setPeriod2Score(5);
 		mockedPeriod2.setPeriod3Score(5);
 		mockedPeriod2.setPeriod4Score(5);
 		
-		when(service.findPeriodsOfTeamInGame(Integer.parseInt(game1.getGameId()), game1.getTeamId()))
+		when(service.findPeriodsOfTeamInGame(game1.getGameId(), game1.getTeamId()))
 		.thenReturn(mockedPeriod1);
 		
-		when(service.findPeriodsOfTeamInGame(Integer.parseInt(game2.getGameId()), game2.getTeamId()))
+		when(service.findPeriodsOfTeamInGame(game2.getGameId(), game2.getTeamId()))
 		.thenReturn(mockedPeriod2);
 		
 		when(service.findAllGamesStatsByDate("04/09/2023"))

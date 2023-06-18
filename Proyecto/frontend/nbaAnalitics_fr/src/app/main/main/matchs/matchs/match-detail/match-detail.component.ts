@@ -1,11 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { HomeService } from '../../../services/home.service';
-import { GameStats } from 'src/app/models/gameStats';
 import Chart from 'chart.js/auto';
 import { Subscription } from 'rxjs';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { TooltipPosition } from '@angular/material/tooltip';
 import { FormControl } from '@angular/forms';
+import { GameElem } from 'src/app/models/gameElem';
 
 @Component({
   selector: 'app-match-detail',
@@ -14,7 +14,7 @@ import { FormControl } from '@angular/forms';
 })
 export class MatchDetailComponent implements OnInit, OnDestroy {
 
-  public stats: GameStats[] = [];
+  public stats: GameElem[] = [];
   private lineChart: any;
   private barChart: any;
   private radarChart: any;
@@ -47,7 +47,7 @@ export class MatchDetailComponent implements OnInit, OnDestroy {
         this.initBarChart(this.stats[0], this.stats[1]);
         this.initRadarChart(this.stats[0], this.stats[1]);
       } catch (error) {
-        alert('Se ha producido un error. Vuelve a seleccionar el partido');
+        this.emptyData = true;
       }
 
     });

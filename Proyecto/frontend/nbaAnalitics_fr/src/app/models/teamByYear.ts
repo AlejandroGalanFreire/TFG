@@ -1,5 +1,4 @@
-export class TeamStatsByYear{
-  id!: number;
+export class TeamByYear{
   teamId!: number;
   teamCity!: string;
   teamName!: string;

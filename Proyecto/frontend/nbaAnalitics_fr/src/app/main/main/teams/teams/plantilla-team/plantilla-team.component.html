@@ -47,7 +47,7 @@
       <tr *ngFor="let player of template">
         <td>
           <img src="https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/{{player.playerId}}.png" alt="imagen del jugador">
-          <button class="name" [routerLink]="['/playerDetail']" (click)="setPlayerSelectedDetail(player.playerId)">
+          <button class="name" [routerLink]="['/playerDetail']" (click)="setPlayerSelectedDetail(player)">
             {{ player.playerName }}
           </button>
         </td>

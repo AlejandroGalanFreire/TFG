@@ -1,19 +1,17 @@
 package com.example.demo.scoreboard.model;
 
 public class ElemScoreboard {
+	
 	private int id;
 	private int teamId;
 	private String leagueId;
 	private int seasonId;
-	private String standingsdate;
 	private String conference;
 	private String team;
 	private int played;
 	private int won;
 	private int lost;
 	private double wonPct;
-	private String homeRecord;
-	private String roadRecord;
 
 	public int getId() {
 		return id;
@@ -47,14 +45,6 @@ public class ElemScoreboard {
 		this.seasonId = seasonId;
 	}
 
-	public String getStandingsdate() {
-		return standingsdate;
-	}
-
-	public void setStandingsdate(String standingsdate) {
-		this.standingsdate = standingsdate;
-	}
-
 	public String getConference() {
 		return conference;
 	}
@@ -78,7 +68,7 @@ public class ElemScoreboard {
 	public void setPlayed(int played) {
 		this.played = played;
 	}
-
+	
 	public int getWon() {
 		return won;
 	}
@@ -101,22 +91,6 @@ public class ElemScoreboard {
 
 	public void setWonPct(double wonPct) {
 		this.wonPct = wonPct;
-	}
-
-	public String getHomeRecord() {
-		return homeRecord;
-	}
-
-	public void setHomeRecord(String homeRecord) {
-		this.homeRecord = homeRecord;
-	}
-
-	public String getRoadRecord() {
-		return roadRecord;
-	}
-
-	public void setRoadRecord(String roadRecord) {
-		this.roadRecord = roadRecord;
 	}
 
 }

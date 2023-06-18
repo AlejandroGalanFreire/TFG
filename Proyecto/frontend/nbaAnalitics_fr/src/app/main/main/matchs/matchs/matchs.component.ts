@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { BehaviorSubject, Observable, Subscription } from 'rxjs';
-import { GameStats } from 'src/app/models/gameStats';
 import { DataService } from 'src/app/services/data-service.service';
 import { HomeService } from '../../services/home.service';
+import { GameElem } from 'src/app/models/gameElem';
 
 @Component({
   selector: 'app-matchs',
@@ -11,7 +11,7 @@ import { HomeService } from '../../services/home.service';
 })
 export class MatchsComponent implements OnInit, OnDestroy {
 
-  gamesStats: Array<GameStats[]> = new Array();
+  gamesStats: Array<GameElem[]> = new Array();
   currentDateSubject: BehaviorSubject<Date> = new BehaviorSubject<Date>(new Date("2023-04-09")); // fecha de fin de temporada regular
   currentDate: Observable<Date> = this.currentDateSubject.asObservable();
   selectedDate: string = "";

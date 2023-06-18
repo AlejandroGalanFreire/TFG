@@ -1,10 +1,9 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { TeamStats } from 'src/app/models/teamStats';
-import { TeamStatsByYear } from 'src/app/models/teamStatsByYear';
 import { DataService } from 'src/app/services/data-service.service';
 import { HomeService } from '../../../services/home.service';
 import { Subscription } from 'rxjs';
-import { PlayerInfo } from 'src/app/models/playerInfo';
+import { Player } from 'src/app/models/player';
+import { TeamByYear } from 'src/app/models/teamByYear';
 
 @Component({
   selector: 'app-team-card',
@@ -13,11 +12,11 @@ import { PlayerInfo } from 'src/app/models/playerInfo';
 })
 export class TeamCardComponent implements OnInit, OnDestroy {
 
-  @Input() team: TeamStats = new TeamStats();
+  @Input() team: TeamByYear = new TeamByYear();
 
   teamsFiveYearsSubscription!: Subscription;
-  teamsStatsByYear: TeamStatsByYear[] = [];
-  teamTemplate: PlayerInfo[] = [];
+  teamsStatsByYear: TeamByYear[] = [];
+  teamTemplate: Player[] = [];
   teamTemplateSubscription!: Subscription;
 
   constructor(private dataService: DataService,
@@ -42,17 +41,17 @@ export class TeamCardComponent implements OnInit, OnDestroy {
     }
   }
 
-  setTeamSelectedDetail(teamid: string) {
-    let dataTeam: TeamStatsByYear[] = [];
+  setTeamSelectedDetail(teamid: number) {
+    let dataTeam: TeamByYear[] = [];
     for (let team of this.teamsStatsByYear) {
-      if (team.teamId === parseInt(teamid) && dataTeam.length < 5) {
+      if (team.teamId === teamid && dataTeam.length < 5) {
         dataTeam.push(team);
       }
     }
     this.homeService.setTeamSelectedDetail(dataTeam);
   }
 
-  obtainTemplate(teamId: string){
+  obtainTemplate(teamId: number){
     this.setTeamSelectedDetail(teamId);
     this.homeService.setTeamTemplate(this.teamTemplate);
   }

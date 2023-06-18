@@ -85,10 +85,10 @@
 							<goal>report</goal>
 						</goals>
 						<configuration>
-						<formats>
-							<format>XML</format>
-						</formats>
-					</configuration>
+							<formats>
+								<format>XML</format>
+							</formats>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>

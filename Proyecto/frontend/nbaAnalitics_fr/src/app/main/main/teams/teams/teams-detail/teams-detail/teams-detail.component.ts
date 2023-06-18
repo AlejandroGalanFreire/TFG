@@ -1,12 +1,12 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { HomeService } from 'src/app/main/main/services/home.service';
-import { TeamStatsByYear } from 'src/app/models/teamStatsByYear';
 import Chart from 'chart.js/auto';
 import { MatDialog } from '@angular/material/dialog';
 import { ComparativeTeamsDialogComponent } from 'src/app/main/main/comparativeDialog/comparative-dialog/comparative-teams-dialog/comparative-teams-dialog.component';
 import { Subscription } from 'rxjs';
 import { TooltipPosition } from '@angular/material/tooltip';
 import { FormControl } from '@angular/forms';
+import { TeamByYear } from 'src/app/models/teamByYear';
 
 @Component({
   selector: 'app-teams-detail',
@@ -25,7 +25,7 @@ export class TeamsDetailComponent implements OnInit, OnDestroy {
   public fourthYear = this.teamStatsByYear[3];
   public fifthYear = this.teamStatsByYear[4];
   filterTeams = '';
-  public allTeams: TeamStatsByYear[] = [];
+  public allTeams: TeamByYear[] = [];
   teamSelectedSubscription!: Subscription;
   allTeamsSubscription!: Subscription;
   emptyData = true;
@@ -61,7 +61,7 @@ export class TeamsDetailComponent implements OnInit, OnDestroy {
       this.fifthYear = this.teamStatsByYear[4];
 
       if(!this.fifthYear){
-        this.fifthYear = new TeamStatsByYear();
+        this.fifthYear = new TeamByYear();
       }
 
       // creación de los gráficos
@@ -71,12 +71,12 @@ export class TeamsDetailComponent implements OnInit, OnDestroy {
         this.initRadarChart();
         this.initPlayOffChart();
       } catch (error) {
-        alert('Se ha producido un error. Vuelve a seleccionar el equipo');
+        this.emptyData = true;
       }
     });
   }
 
-  getColorByFinal(item: TeamStatsByYear): string {
+  getColorByFinal(item: TeamByYear): string {
     if (item.nbaFinalsAppearance === 'LEAGUE CHAMPION') {
       return '#ffc0cb'
     } else if (item.nbaFinalsAppearance === 'FINALS APPEARANCE') {
@@ -281,7 +281,7 @@ export class TeamsDetailComponent implements OnInit, OnDestroy {
     });
   }
 
-  openMenuDialog(teamToCompare: TeamStatsByYear) {
+  openMenuDialog(teamToCompare: TeamByYear) {
     this.comparativeDialog.open(ComparativeTeamsDialogComponent, {
       width: '900px',
       height: '900px',

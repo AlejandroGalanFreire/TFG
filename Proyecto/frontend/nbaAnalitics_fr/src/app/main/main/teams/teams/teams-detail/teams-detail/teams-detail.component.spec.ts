@@ -5,8 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
-import { TeamStatsByYear } from 'src/app/models/teamStatsByYear';
 import { MatIconModule } from '@angular/material/icon';
+import { TeamByYear } from 'src/app/models/teamByYear';
 
 describe('TeamsDetailComponent', () => {
   let component: TeamsDetailComponent;
@@ -36,25 +36,28 @@ describe('TeamsDetailComponent', () => {
 
   it('should create getColorByFinal league champion', () => {
     const spy = spyOn(component, 'getColorByFinal').and.callThrough();
-    const itemMock = new TeamStatsByYear()
+    const itemMock = new TeamByYear()
     itemMock.nbaFinalsAppearance = 'LEAGUE CHAMPION';
-    component.getColorByFinal(itemMock);
+    const color = component.getColorByFinal(itemMock);
+    expect(color).toEqual('#ffc0cb');
     expect(spy).toHaveBeenCalled();
   });
 
   it('should create getColorByFinal finals appearance', () => {
     const spy = spyOn(component, 'getColorByFinal').and.callThrough();
-    const itemMock = new TeamStatsByYear()
+    const itemMock = new TeamByYear()
     itemMock.nbaFinalsAppearance = 'FINALS APPEARANCE';
-    component.getColorByFinal(itemMock);
+    const color = component.getColorByFinal(itemMock);
+    expect(color).toEqual('#df94a0');
     expect(spy).toHaveBeenCalled();
   });
 
   it('should create getColorByFinal N/A', () => {
     const spy = spyOn(component, 'getColorByFinal').and.callThrough();
-    const itemMock = new TeamStatsByYear()
+    const itemMock = new TeamByYear()
     itemMock.nbaFinalsAppearance = 'N/A';
-    component.getColorByFinal(itemMock);
+    const color = component.getColorByFinal(itemMock);
+    expect(color).toEqual('#af6d78');
     expect(spy).toHaveBeenCalled();
   });
 
@@ -139,7 +142,7 @@ describe('TeamsDetailComponent', () => {
 
   it('should create openMenuDialog', () => {
     const spy = spyOn(component, 'openMenuDialog').and.callThrough();
-    component.openMenuDialog(new TeamStatsByYear());
+    component.openMenuDialog(new TeamByYear());
     expect(spy).toHaveBeenCalled();
   });
 

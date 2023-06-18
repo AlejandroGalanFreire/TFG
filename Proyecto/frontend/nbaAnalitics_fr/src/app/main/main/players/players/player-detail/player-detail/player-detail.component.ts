@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { HomeService } from 'src/app/main/main/services/home.service';
-import { PlayerStats } from 'src/app/models/playerStats';
+import { Player } from 'src/app/models/player';
 import Chart from 'chart.js/auto';
 import { DataService } from 'src/app/services/data-service.service';
 import { MatDialog } from '@angular/material/dialog';
@@ -9,7 +9,6 @@ import { ChartType } from 'chart.js';
 import { Subscription } from 'rxjs';
 import { TooltipPosition } from '@angular/material/tooltip';
 import { FormControl } from '@angular/forms';
-import { PlayerInfo } from 'src/app/models/playerInfo';
 
 @Component({
   selector: 'app-player-detail',
@@ -18,11 +17,11 @@ import { PlayerInfo } from 'src/app/models/playerInfo';
 })
 export class PlayerDetailComponent implements OnInit, OnDestroy {
 
-  public playerStats: PlayerStats = new PlayerStats();
+  public player: Player = new Player();
   private barChart!: Chart;
   private pieChart!: Chart;
   private radarChart!: Chart;
-  public allPlayers: PlayerInfo[] = [];
+  public allPlayers: Player[] = [];
   filterPlayers = '';
   playerSelectedSubscription!: Subscription;
   playerByIdSubscription!: Subscription;
@@ -30,6 +29,7 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
   position = new FormControl(this.positionOptions[0]);
   playerToCompareSubscription!: Subscription;
   emptyData = true;
+  allPlayerSubscription!: Subscription;
 
 
   constructor(private dataService: DataService,
@@ -37,14 +37,17 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
     public comparativeDialog: MatDialog) { }
 
   ngOnDestroy(): void {
-    if(this.playerSelectedSubscription){
+    if (this.playerSelectedSubscription) {
       this.playerSelectedSubscription.unsubscribe();
     }
-    if(this.playerByIdSubscription){
+    if (this.playerByIdSubscription) {
       this.playerByIdSubscription.unsubscribe();
     }
     if (this.playerToCompareSubscription) {
       this.playerToCompareSubscription.unsubscribe();
+    }
+    if(this.allPlayerSubscription){
+      this.allPlayerSubscription.unsubscribe();
     }
   }
 
@@ -52,37 +55,39 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
     Chart.defaults.font.size = 18;
 
     this.playerSelectedSubscription = this.homeService.playerSelected.subscribe(data => {
-      if(data){
+      if (data.playerId) {
         this.emptyData = false;
-        this.playerByIdSubscription = this.dataService.getPlayerStatsById(data).subscribe(
-          (resp: any) => {
-            this.playerStats = JSON.parse(resp);
+        this.player = data;
 
-            if(this.playerStats){
-              this.calculatePlayerPerformance(this.playerStats);
+        if (this.player) {
+          this.calculatePlayerPerformance(this.player);
 
-              // creación de los gráficos
-              this.initializeBarChart(this.playerStats);
-              this.initializePieChart(this.playerStats);
-              this.initializeRadarChart(this.playerStats);
-            }
-
-          }
-        );
+          // creación de los gráficos
+          this.initializeBarChart(this.player);
+          this.initializePieChart(this.player);
+          this.initializeRadarChart(this.player);
+        }
       } else {
         this.emptyData = true;
       }
     });
+
+    this.allPlayerSubscription = this.dataService.getPlayersInfo().subscribe(
+      (resp: any) => {
+        const allPlayers = JSON.parse(resp);
+        this.homeService.setAllPlayers(allPlayers);
+      }
+    );
   }
 
-  calculatePlayerPerformance(player: PlayerStats) {
+  calculatePlayerPerformance(player: Player) {
     this.calculateVal(player);
     this.calculateEFF(player);
     this.calculatePointsCreated(player);
     this.calculateTrueShootingPercentage(player);
   }
 
-  calculateVal(player: PlayerStats) {
+  calculateVal(player: Player) {
     const points = player.pts;
     const rebounds = player.reb;
     const ast = player.ast;
@@ -95,7 +100,7 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
     player.val = (points + rebounds + ast + stl + blk + succesfulShots - missedShots - tov);
   }
 
-  calculateEFF(player: PlayerStats) {
+  calculateEFF(player: Player) {
     const points = player.pts;
     const rebounds = player.reb;
     const ast = player.ast;
@@ -109,11 +114,11 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
     player.EFF_PerMinute = (EFF / player.min) * 48;
   }
 
-  calculatePointsCreated(player: PlayerStats) {
+  calculatePointsCreated(player: Player) {
     player.pointsCreated = (player.pts + (1.42 * player.ast)) / player.gp;
   }
 
-  calculateTrueShootingPercentage(player: PlayerStats) {
+  calculateTrueShootingPercentage(player: Player) {
     const fieldShotsAttempted = player.fg3a + player.fga
     const freeShotsAttempted = player.fta;
     const TS = player.pts / (2 * (fieldShotsAttempted + 0.44 * freeShotsAttempted));
@@ -147,7 +152,7 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
     }
   }
 
-  createBarChart(ctx: any, barChartData: any){
+  createBarChart(ctx: any, barChartData: any) {
     if (ctx) {
       this.barChart = new Chart(ctx, {
         type: 'bar',
@@ -180,28 +185,28 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
     }
   }
 
-  obtainEFFColor(EFF: number){
-    if(EFF > 20){
+  obtainEFFColor(EFF: number) {
+    if (EFF > 20) {
       return 'green';
-    } else if(EFF > 15){
+    } else if (EFF > 15) {
       return 'yellow';
     }
     return 'red';
   }
 
-  obtainPointCreatedColor(pointCreated: number){
-    if(pointCreated > 2000){
+  obtainPointCreatedColor(pointCreated: number) {
+    if (pointCreated > 2000) {
       return 'green';
-    } else if(pointCreated > 1000){
+    } else if (pointCreated > 1000) {
       return 'yellow';
     }
     return 'red';
   }
 
-  obtaintrueShootingPercentageColor(trueShootingPercentage: number){
-    if(trueShootingPercentage > 50){
+  obtaintrueShootingPercentageColor(trueShootingPercentage: number) {
+    if (trueShootingPercentage > 50) {
       return 'green';
-    } else if(trueShootingPercentage > 30){
+    } else if (trueShootingPercentage > 30) {
       return 'yellow';
     }
     return 'red';
@@ -337,12 +342,12 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
 
   setAllPlayers() {
     this.homeService.allPlayers.subscribe(data => {
-      this.allPlayers = data.filter(player => parseInt(player.playerId) !== this.playerStats.playerId);
+      this.allPlayers = data.filter(player => player.playerId !== this.player.playerId);
     });
   }
 
-  openMenuDialog(playerToCompareId: string) {
-    let playerToCompare = new PlayerStats();
+  openMenuDialog(playerToCompareId: number) {
+    let playerToCompare = new Player();
     this.playerToCompareSubscription = this.dataService.getPlayerStatsById(playerToCompareId).subscribe((data) => {
       playerToCompare = JSON.parse(data);
       this.calculatePlayerPerformance(playerToCompare);
@@ -350,25 +355,25 @@ export class PlayerDetailComponent implements OnInit, OnDestroy {
         width: '900px',
         height: '900px',
         panelClass: 'dialogoComparacionJugadores',
-        data: { playerDetail: this.playerStats, playerToCompare: playerToCompare }
+        data: { playerDetail: this.player, playerToCompare: playerToCompare }
       })
     });
 
   }
 
   getHeightVal() {
-    if(this.playerStats.val > 2000){
+    if (this.player.val > 2000) {
       return 100;
-    } else if(this.playerStats.val > 1000){
+    } else if (this.player.val > 1000) {
       return 66
     }
     return 33;
   }
 
   getColorVal() {
-    if(this.playerStats.val > 2000){
+    if (this.player.val > 2000) {
       return 'green';
-    } else if(this.playerStats.val > 1000){
+    } else if (this.player.val > 1000) {
       return 'yellow'
     }
     return 'red';

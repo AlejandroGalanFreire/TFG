@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="com.example.demo.players.mapper.PlayerMapper">
+	<select id="findAllPlayersStats" resultType="com.example.demo.players.model.Player">
+		SELECT * 
+		FROM player
+	</select>
+	
+	<select id="findPlayerStatsById" resultType="com.example.demo.players.model.Player">
+		SELECT * 
+		FROM player
+		WHERE playerId = #{playerId}
+	</select>
+	
+	<select id="findAllPlayersInfo" resultType="com.example.demo.players.model.Player">
+		SELECT *
+		FROM player
+		ORDER BY teamAbbrev
+	</select>
+	
+	<select id="findPlayersInfoByTeamId" resultType="com.example.demo.players.model.Player">
+		SELECT *
+		FROM player
+		WHERE teamId = #{teamId}
+	</select>
+</mapper>

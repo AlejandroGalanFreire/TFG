@@ -1,4 +1,4 @@
-export class GameStats{
+export class GameElem{
   id!: number;
 	seasonId!: number;
 	teamId!: number;

@@ -14,6 +14,8 @@ import org.mockito.quality.Strictness;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.example.demo.players.model.PlayerInfo;
+import com.example.demo.players.model.PlayerStats;
 import com.example.demo.players.service.PlayerStatsService;
 
 @MockitoSettings(strictness = Strictness.LENIENT)
@@ -30,7 +32,40 @@ class PlayerStatsControllerTest {
 	void getPlayerStatsTest() {
 		when(service.findAllPlayersStats()).thenReturn(new ArrayList<>());
 		
-		assertNotNull(controller.getPlayerStats());
+		assertNotNull(controller.getPlayersStats());
+	}
+	
+	@Test
+	void getPlayerStatsByIdTest() {
+		when(service.findPlayerStatsById("1")).thenReturn(new PlayerStats());
+		
+		assertNotNull(controller.getPlayerStatsById("1"));
+	}
+	
+	@Test
+	void getPlayersInfoTest() {
+		PlayerInfo playerMock = new PlayerInfo();
+		playerMock.setHeight("6.6");
+		playerMock.setWeight("200");
+		ArrayList<PlayerInfo> listMock = new ArrayList<>();
+		listMock.add(playerMock);
+		
+		when(service.findAllPlayersInfo()).thenReturn(listMock);
+		
+		assertNotNull(controller.getPlayersInfo());
+	}
+	
+	@Test
+	void getPlayersInfoByTeamIdTest() {
+		PlayerInfo playerMock = new PlayerInfo();
+		playerMock.setHeight("6.6");
+		playerMock.setWeight("200");
+		ArrayList<PlayerInfo> listMock = new ArrayList<>();
+		listMock.add(playerMock);
+		
+		when(service.findPlayersInfoByTeamId("1")).thenReturn(listMock);
+		
+		assertNotNull(controller.getPlayersInfoByTeamId("1"));
 	}
 
 }

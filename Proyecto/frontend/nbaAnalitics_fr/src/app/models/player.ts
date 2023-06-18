@@ -1,5 +1,4 @@
-export class PlayerStats{
-  id!: number;
+export class Player{
 	playerId!: number;
 	playerName!: string;
 	nickname!: string;
@@ -36,4 +35,10 @@ export class PlayerStats{
   EFF_PerMinute!: number;
   pointsCreated!: number;
   trueShootingPercentage!:number;
+  country!: string;
+  height!: string;
+  weight!: string;
+  seasonExp!: number;
+  jersey!: string;
+  position!: string;
 }

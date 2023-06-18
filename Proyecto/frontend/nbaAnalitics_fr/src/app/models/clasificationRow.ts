@@ -1,4 +1,4 @@
-export class ElemScoreboard{
+export class ClasificationRow{
   id!: number;
   teamId!: number;
   leagueId!: number;

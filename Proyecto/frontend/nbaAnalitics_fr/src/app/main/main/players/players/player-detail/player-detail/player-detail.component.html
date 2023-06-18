@@ -5,14 +5,14 @@
   <div class="jugador">
     <!-- Imagen del jugador -->
     <img
-      src="https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/{{playerStats.playerId}}.png"
+      src="https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/{{player.playerId}}.png"
       alt="imagen del jugador">
-    <div class="name">{{playerStats.playerName}}</div>
+    <div class="name">{{player.playerName}}</div>
   </div>
 
   <!-- Valoración del jugador -->
   <div class="valoracion">
-    <div class="valueVal">{{playerStats.val}}</div>
+    <div class="valueVal">{{player.val}}</div>
     <div class="colorPercentagesBar">
       <div class="valoracionGraph" [style.height.%]="getHeightVal()" [style.backgroundColor]="getColorVal()">
       </div>
@@ -93,10 +93,10 @@
       </thead>
       <tbody>
         <tr>
-          <td>{{ playerStats.gp }}</td>
-          <td>{{ playerStats.won }}</td>
-          <td>{{ playerStats.lost }}</td>
-          <td>{{ playerStats.wonPct }}</td>
+          <td>{{ player.gp }}</td>
+          <td>{{ player.won }}</td>
+          <td>{{ player.lost }}</td>
+          <td>{{ player.wonPct }}</td>
         </tr>
       </tbody>
     </table>
@@ -151,13 +151,13 @@
       </thead>
       <tbody>
         <tr>
-          <td>{{ playerStats.pts }}</td>
-          <td>{{ playerStats.fgPct }}</td>
-          <td>{{ playerStats.fg3Pct }}</td>
-          <td>{{ playerStats.ftPct }}</td>
-          <td>{{ playerStats.oreb }}</td>
-          <td>{{ playerStats.ast }}</td>
-          <td>{{ playerStats.tov }}</td>
+          <td>{{ player.pts }}</td>
+          <td>{{ player.fgPct }}</td>
+          <td>{{ player.fg3Pct }}</td>
+          <td>{{ player.ftPct }}</td>
+          <td>{{ player.oreb }}</td>
+          <td>{{ player.ast }}</td>
+          <td>{{ player.tov }}</td>
         </tr>
       </tbody>
     </table>
@@ -202,11 +202,11 @@
       </thead>
       <tbody>
         <tr>
-          <td>{{ playerStats.dreb }}</td>
-          <td>{{ playerStats.stl }}</td>
-          <td>{{ playerStats.blk }}</td>
-          <td>{{ playerStats.blka }}</td>
-          <td>{{ playerStats.pf }}</td>
+          <td>{{ player.dreb }}</td>
+          <td>{{ player.stl }}</td>
+          <td>{{ player.blk }}</td>
+          <td>{{ player.blka }}</td>
+          <td>{{ player.pf }}</td>
         </tr>
       </tbody>
     </table>
@@ -215,7 +215,7 @@
 
 
 <!-- GRAFICOS -->
-<div *ngIf="!emptyData" class="graphs row">
+<div class="graphs row">
   <!-- grafico de barras -->
   <div class="graph col-sm-12 col-md-6 col-xxl-4">
     <!-- titulo grafico de barras -->

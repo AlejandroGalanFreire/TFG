@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { PlayerInfo } from 'src/app/models/playerInfo';
 import { HomeService } from '../../../services/home.service';
+import { Player } from 'src/app/models/player';
 
 @Component({
   selector: 'app-player-card',
@@ -9,11 +9,11 @@ import { HomeService } from '../../../services/home.service';
 })
 export class PlayerCardComponent {
 
-  @Input() player: PlayerInfo = new PlayerInfo;
+  @Input() player: Player = new Player();
 
   constructor(private readonly homeService: HomeService){}
 
   setPlayerSelectedDetail() {
-    this.homeService.setPlayerSelectedDetail(this.player.playerId);
+    this.homeService.setPlayerSelectedDetail(this.player);
   }
 }

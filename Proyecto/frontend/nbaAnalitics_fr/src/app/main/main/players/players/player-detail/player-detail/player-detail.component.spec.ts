@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PlayerDetailComponent } from './player-detail.component';
-import { PlayerStats } from 'src/app/models/playerStats';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -35,7 +34,59 @@ describe('PlayerDetailComponent', () => {
 
   it('should create calculatePlayerPerformance', () => {
     const spy = spyOn(component, 'calculatePlayerPerformance').and.callThrough();
-    component.calculatePlayerPerformance(new PlayerStats());
+
+    const playerStats = {
+      id: 1,
+      playerId: 1,
+      playerName: 'Lebron',
+      nickname: 'James',
+      teamId: 1,
+      teamAbbrev: 'LAK',
+      age: 35,
+      gp: 1,
+      won: 1,
+      lost: 0,
+      wonPct: 100,
+      fgm: 1,
+      fga: 1,
+      fgPct: 1,
+      fg3m: 1,
+      fg3a: 1,
+      fg3Pct: 1,
+      ftm: 1,
+      fta: 1,
+      ftPct: 1,
+      oreb: 1,
+      dreb: 1,
+      reb: 1,
+      ast: 1,
+      tov: 1,
+      stl: 1,
+      blk: 1,
+      blka: 1,
+      pf: 1,
+      pts: 1,
+      min: 1,
+      urlPicture: 'no tiene',
+      val: 1,
+      EFF_PerGame: 1,
+      EFF_PerMinute: 1,
+      pointsCreated: 1,
+      trueShootingPercentage: 1,
+      country: '1',
+      height: '1',
+      weight: '1',
+      seasonExp: 1,
+      jersey: '1',
+      position: '1',
+    };
+
+    component.calculatePlayerPerformance(playerStats);
+
+    expect(playerStats.val).toEqual(7);
+    expect(playerStats.EFF_PerGame).toEqual(4);
+    expect(parseInt(playerStats.pointsCreated.toFixed(0))).toEqual(2);
+    expect(parseInt(playerStats.trueShootingPercentage.toFixed(0))).toEqual(20);
     expect(spy).toHaveBeenCalled();
   });
 
@@ -110,13 +161,13 @@ describe('PlayerDetailComponent', () => {
 
   it('should create openMenuDialog', () => {
     const spy = spyOn(component, 'openMenuDialog').and.callThrough();
-    component.openMenuDialog('5');
+    component.openMenuDialog(5);
     expect(spy).toHaveBeenCalled();
   });
 
   it('should create getHeightVal', () => {
     const spy = spyOn(component, 'getHeightVal').and.callThrough();
-    component.playerStats.val = 2005
+    component.player.val = 2005
     const height = component.getHeightVal();
     expect(height).toEqual(100);
     expect(spy).toHaveBeenCalled();
@@ -124,7 +175,7 @@ describe('PlayerDetailComponent', () => {
 
   it('should create getHeightVal', () => {
     const spy = spyOn(component, 'getHeightVal').and.callThrough();
-    component.playerStats.val = 1005
+    component.player.val = 1005
     const height = component.getHeightVal();
     expect(height).toEqual(66);
     expect(spy).toHaveBeenCalled();
@@ -132,7 +183,7 @@ describe('PlayerDetailComponent', () => {
 
   it('should create getHeightVal', () => {
     const spy = spyOn(component, 'getHeightVal').and.callThrough();
-    component.playerStats.val = 4
+    component.player.val = 4
     const height = component.getHeightVal();
     expect(height).toEqual(33);
     expect(spy).toHaveBeenCalled();
@@ -140,7 +191,7 @@ describe('PlayerDetailComponent', () => {
 
   it('should create getColorVal green', () => {
     const spy = spyOn(component, 'getColorVal').and.callThrough();
-    component.playerStats.val = 2005
+    component.player.val = 2005
     const color = component.getColorVal();
     expect(color).toEqual('green');
     expect(spy).toHaveBeenCalled();
@@ -148,7 +199,7 @@ describe('PlayerDetailComponent', () => {
 
   it('should create getColorVal yellow', () => {
     const spy = spyOn(component, 'getColorVal').and.callThrough();
-    component.playerStats.val = 1005
+    component.player.val = 1005
     const color = component.getColorVal();
     expect(color).toEqual('yellow');
     expect(spy).toHaveBeenCalled();
@@ -156,7 +207,7 @@ describe('PlayerDetailComponent', () => {
 
   it('should create getColorVal red', () => {
     const spy = spyOn(component, 'getColorVal').and.callThrough();
-    component.playerStats.val = 4
+    component.player.val = 4
     const color = component.getColorVal();
     expect(color).toEqual('red');
     expect(spy).toHaveBeenCalled();

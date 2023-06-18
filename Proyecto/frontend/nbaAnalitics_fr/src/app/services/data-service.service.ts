@@ -49,7 +49,7 @@ export class DataService {
     return this.http.get(this.playersInfoUrl, {responseType: 'text'});
   }
 
-  getTeamTemplate(teamId: string){
+  getTeamTemplate(teamId: number){
     return this.http.get(this.teamTemplate, {
       params:{
         teamId
@@ -58,7 +58,7 @@ export class DataService {
     });
   }
 
-  getPlayerStatsById(playerId: string){
+  getPlayerStatsById(playerId: number){
     return this.http.get(this.playerStatsById, {
       params:{
         playerId: playerId

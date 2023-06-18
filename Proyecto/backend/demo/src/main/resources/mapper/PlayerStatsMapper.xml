@@ -8,4 +8,22 @@
 		SELECT * 
 		FROM playersstats
 	</select>
+	
+	<select id="findPlayerStatsById" resultType="com.example.demo.players.model.PlayerStats">
+		SELECT * 
+		FROM playersstats
+		WHERE playerId = #{playerId}
+	</select>
+	
+	<select id="findAllPlayersInfo" resultType="com.example.demo.players.model.PlayerInfo">
+		SELECT * 
+		FROM playersinfo
+		ORDER BY teamAbbrev
+	</select>
+	
+	<select id="findPlayersInfoByTeamId" resultType="com.example.demo.players.model.PlayerInfo">
+		SELECT * 
+		FROM playersinfo
+		WHERE teamId = #{teamId}
+	</select>
 </mapper>

@@ -27,12 +27,14 @@ describe('ClasificationComponent', () => {
   it('should create resetIndex', () => {
     const spy = spyOn(component, 'resetIndex').and.callThrough();
     component.resetIndex();
+    expect(component.currentIndex).toEqual(0);
     expect(spy).toHaveBeenCalled();
   });
 
   it('should create getIndex', () => {
     const spy = spyOn(component, 'getIndex').and.callThrough();
-    component.getIndex();
+    component.resetIndex();
+    expect(component.getIndex()).toEqual(1);
     expect(spy).toHaveBeenCalled();
   });
 
