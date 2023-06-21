@@ -255,8 +255,13 @@
 <div *ngIf="!emptyData" class="buscador">
   <input type="text" class="form-control" placeholder="Buscar jugador para comparar" name="filterPlayers"
     [(ngModel)]="filterPlayers" (keydown)="setAllPlayers()">
-  <div class="playersToCompare row" *ngIf="filterPlayers.length > 0">
-    <button class="col-2" *ngFor="let player of allPlayers | filterPlayer: filterPlayers" (click)="openMenuDialog(player.playerId)">{{
-      player.playerName }}</button>
-  </div>
+    <ng-container *ngIf="(allPlayers | filterPlayer:filterPlayers).length > 0; else noResults">
+      <div class="playersToCompare row" *ngIf="filterPlayers.length > 0">
+        <button class="col-2" *ngFor="let player of allPlayers | filterPlayer: filterPlayers" (click)="openMenuDialog(player.playerId)">{{
+          player.playerName }}</button>
+      </div>
+    </ng-container>
+    <ng-template #noResults>
+      <div class="noCoincidence">NO SE ENCUENTRAN COINCIDENCIAS</div>
+    </ng-template>
 </div>

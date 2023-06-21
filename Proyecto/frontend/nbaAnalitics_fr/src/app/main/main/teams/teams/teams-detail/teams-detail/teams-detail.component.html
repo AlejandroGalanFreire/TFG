@@ -51,23 +51,19 @@
           FT_PCT
         </th>
         <th mat-raised-button #tooltip="matTooltip" matTooltip="Rebotes totales" [matTooltipPosition]="position.value!"
-          matTooltipHideDelay="60"
-          aria-label="tooltip para saber el significado de cada estadística">
+          matTooltipHideDelay="60" aria-label="tooltip para saber el significado de cada estadística">
           REB
         </th>
         <th mat-raised-button #tooltip="matTooltip" matTooltip="Asistencias" [matTooltipPosition]="position.value!"
-          matTooltipHideDelay="60"
-          aria-label="tooltip para saber el significado de cada estadística">
+          matTooltipHideDelay="60" aria-label="tooltip para saber el significado de cada estadística">
           AST
         </th>
         <th mat-raised-button #tooltip="matTooltip" matTooltip="Pérdidas" [matTooltipPosition]="position.value!"
-          matTooltipHideDelay="60"
-          aria-label="tooltip para saber el significado de cada estadística">
+          matTooltipHideDelay="60" aria-label="tooltip para saber el significado de cada estadística">
           PER
         </th>
         <th mat-raised-button #tooltip="matTooltip" matTooltip="Robos" [matTooltipPosition]="position.value!"
-          matTooltipHideDelay="60"
-          aria-label="tooltip para saber el significado de cada estadística">
+          matTooltipHideDelay="60" aria-label="tooltip para saber el significado de cada estadística">
           ROB
         </th>
         <th mat-raised-button #tooltip="matTooltip" matTooltip="Bloqueos conseguidos"
@@ -76,8 +72,7 @@
           BLQ
         </th>
         <th mat-raised-button #tooltip="matTooltip" matTooltip="Faltas" [matTooltipPosition]="position.value!"
-          matTooltipHideDelay="60"
-          aria-label="tooltip para saber el significado de cada estadística">
+          matTooltipHideDelay="60" aria-label="tooltip para saber el significado de cada estadística">
           FAL
         </th>
       </tr>
@@ -160,8 +155,13 @@
 <div class="buscador">
   <input type="text" class="form-control" placeholder="Buscar equipo para comparar" name="filterTeams"
     [(ngModel)]="filterTeams" (keydown)="setAllTeams()">
-  <div class="teamsToCompare row" *ngIf="filterTeams.length > 0">
-    <button class="col-2" *ngFor="let team of allTeams | filterTeamByYear: filterTeams"
-      (click)="openMenuDialog(team)">{{ team.teamName }}</button>
-  </div>
+  <ng-container *ngIf="(allTeams | filterTeam:filterTeams).length > 0; else noResults">
+    <div class="teamsToCompare row" *ngIf="filterTeams.length > 0">
+      <button class="col-2" *ngFor="let team of allTeams | filterTeamByYear: filterTeams"
+        (click)="openMenuDialog(team)">{{ team.teamName }}</button>
+    </div>
+  </ng-container>
+  <ng-template #noResults>
+    <div class="noCoincidence">NO SE ENCUENTRAN COINCIDENCIAS</div>
+  </ng-template>
 </div>
